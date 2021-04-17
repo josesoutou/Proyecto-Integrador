@@ -22,7 +22,7 @@
     display: flex;
     justify-content: right;
     box-sizing: border-box;
-    margin-left: 55%;
+    margin-left: 60%;
     align-items: flex-start;
 }
 
@@ -69,19 +69,38 @@
 
 /*home*/
 
+.body_home{
+    background-color: lightgray;
+    width: 100%;
+}
+
+.epigrafe_artistas{
+    text-align: justify;
+    font-family: 'Raleway', sans-serif;
+}
+
 .artistas_home{
     display: flex;
     flex-direction: column;
     margin: 0%;
+    margin-top: 30px;
     box-sizing: border-box;
     flex-direction: row;
     background-color: lightgray;
+    justify-content: space-around;
+}
+
+#h1_artistas{
+    display: flex;
+    width: 100%;
+    margin: 2,5px;
+    box-sizing: border-box;
 }
 
 #queen_artistas{
     display: flex;
     flex-direction: column;
-    margin: 5%;
+    margin: 10px;
     width: 250px;
     height: 250px;
 }
@@ -89,7 +108,7 @@
 #ariana_artistas{
     display: flex;
     flex-direction: column;
-    margin: 5%;
+    margin: 10px;
     width: 250px;
     height: 250px;
 }
@@ -97,7 +116,7 @@
 #hygo_artistas{
     display: flex;
     flex-direction: column;
-    margin: 5%;
+    margin: 10px;
     width: 250px;
     height: 250px;
 }
@@ -105,7 +124,7 @@
 #velapuerca_artistas{
     display: flex;
     flex-direction: column;
-    margin: 5%;
+    margin: 10px;
     width: 250px;
     height: 250px;
 }
@@ -113,7 +132,7 @@
 #callejeros_artistas{
     display: flex;
     flex-direction: column;
-    margin: 5%;
+    margin: 10px;
     width: 250px;
     height: 250px;
 }
@@ -121,9 +140,25 @@
 #bts_artistas{
     display: flex;
     flex-direction: column;
-    margin: 5%;
+    margin: 10px;
     width: 250px;
     height: 250px;
+}
+
+.titulos_artistas{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.albums_home{
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+    margin-top: 30px;
+    box-sizing: border-box;
+    flex-direction: row;
+    background-color: lightgray;
+    justify-content: space-around;
 }
 
 /*detalles home*/
