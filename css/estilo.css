@@ -69,6 +69,62 @@
 
 /*home*/
 
+.artistas_home{
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+    box-sizing: border-box;
+    flex-direction: row;
+    background-color: lightgray;
+}
+
+#queen_artistas{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    width: 250px;
+    height: 250px;
+}
+
+#ariana_artistas{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    width: 250px;
+    height: 250px;
+}
+
+#hygo_artistas{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    width: 250px;
+    height: 250px;
+}
+
+#velapuerca_artistas{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    width: 250px;
+    height: 250px;
+}
+
+#callejeros_artistas{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    width: 250px;
+    height: 250px;
+}
+
+#bts_artistas{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    width: 250px;
+    height: 250px;
+}
 
 /*detalles home*/
 
@@ -91,6 +147,7 @@ body{
     width: 25%;
     border-radius: 5%;
 }
+
 /*detalles genero*/
 
 
