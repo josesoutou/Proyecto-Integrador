@@ -179,17 +179,36 @@
 *{
     box-sizing: border-box;
 }
-body{
+.bodyG{
     display: flex;
     flex-direction: column;
+    background-image: url(https://cdn.statically.io/img/englishlive.ef.com/es-mx/blog/wp-content/uploads/sites/8/2016/05/music-genres-768x530.jpg?quality=80&f=auto);
+}
+.padre{
+    align-items: center;
+    width: 30%;
     
 }
-
-.rock{
-    background-color: gray;
-    width: 25%;
-    border-radius: 5%;
+.palabra{
+    color: cornsilk;
+    background-color: brown;
 }
+.opciones{
+    display: flex;
+    flex-direction: row;
+}
+.opciones li, .opciones a{ 
+    list-style: none;
+    background-color: brown;
+    text-transform: uppercase;
+    margin: 2px;
+    text-align:center;
+    height: 70px; 
+    border-radius:20%;
+}
+
+
+
 
 /*detalles genero*/
 
