@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0%;
-    background-color:lightgray;
+    background-color:#d0e1e1;
     width: 100%;
 }
 
@@ -31,6 +31,7 @@
     box-sizing: border-box;
     justify-content: left;
     margin-right: 45%;
+    margin-left: 2%;
 }
 
 #logo_header{
@@ -50,7 +51,7 @@
     margin: 0%;
     width: 100%;
     justify-content: space-between;
-    background-color: lightgray;
+    background-color: #d0e1e1;
     align-items: baseline;
 }
 
@@ -68,6 +69,12 @@
 }
 
 /*home*/
+
+.home_container{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+}
 
 .body_home{
     background-color: lightgray;
@@ -113,7 +120,7 @@
     height: 250px;
 }
 
-#hygo_artistas{
+#kygo_artistas{
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -147,7 +154,8 @@
 
 .titulos_artistas{
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .albums_home{
