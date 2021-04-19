@@ -51,114 +51,242 @@
 
 /*home*/
 
-.home_container{
-    display: flex;
+*{
+    margin: 0%;
+    padding: 0%;
     box-sizing: border-box;
-    flex-direction: column;
-    flex-wrap: wrap;
 }
 
-.body_home{
-    background-color: lightgray;
-    width: 100%;
+.container_home{
+    max-width: 1200px;
+    width: 1200px;
+    margin: auto;
+
+    /*FLEX*/
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
+    flex: 1 1 100%;
 }
 
-.epigrafe_artistas{
-    text-align: justify;
+.home_container{
+    width: 100%;
+
+    /*FLEX*/
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/*ARTISTAS*/
+
+#h1_artistas{
+    font-size: 20px;
     font-family: 'Raleway', sans-serif;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 1200px;
+    text-align: left;
+    padding: 10px;
 }
 
 .artistas_home{
     display: flex;
-    flex-direction: column;
-    margin: 0%;
-    margin-top: 30px;
-    box-sizing: border-box;
-    flex-direction: row;
-    background-color: lightgray;
+    flex-flow: row wrap;
+}
+
+.artistas{
+    /*GENERAL*/
+    width: 180px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #ff6f43;
+
+    /*TEXTO*/
+    text-align: justify;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+
+    /*FLEX*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+}
+
+.artistas h3{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 5px;
+    height: 20px;
+}
+
+.artistas p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 130px;
+}
+
+.artistas a{
+    text-decoration: none;
+    color: white;
+    margin-top: 5px;
+    height: 10px;
+}
+.artistas a:hover{
+    background-color: #e74c3c;
+}
+
+.fotos_artistas{
+    width: 150px;
+    height: 150px;
+}
+
+/*ALBUMS*/
+.h1_album p{
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 1200px;
+    text-align: left;
+    padding: 10px;
+}
+
+.albums{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.album_artista{
+    /*GENERAL*/
+    width: 180px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #ff6f43;
+
+    /*TEXTO*/
+    text-align: center;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+
+    /*FLEX*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+}
+
+.album_artista h3{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.album_artista p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.album_artista a{
+    text-decoration: none;
+    color: white;
+    margin-top: 5px;
+    width: 100%;
+}
+.album_artista a:hover{
+    background-color: #e74c3c;
+}
+
+.portadas_albums{
+    width: 130px;
+    border-radius: 15px;
+}
+
+/*CANCIONES*/
+
+.container_canciones{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.h1_canciones{
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 1200px;
+    text-align: left;
+    padding: 10px;
+}
+
+.canciones{
+    width: 1200px;
+
+    /*FLEX*/
+    display: flex;
+    flex-flow: row;
+}
+
+.par_cancion{
+    display: flex;
+    flex-flow: column wrap;
+    width: 400px;
     justify-content: space-around;
 }
 
-#h1_artistas{
-    display: flex;
-    width: 100%;
-    margin: 2,5px;
-    box-sizing: border-box;
-}
-
-#queen_artistas{
-    display: flex;
-    flex-direction: column;
+.cancion_uno{
+    justify-content: space-around;
+    width: 400px;
     margin: 10px;
-    width: 250px;
-    height: 250px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: darkgrey;
-}
 
-#ariana_artistas{
+
+    /*FLEX*/
     display: flex;
-    flex-direction: column;
-    margin: 10px;
-    width: 250px;
-    height: 250px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: darkgrey;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content:center;
 }
 
-#kygo_artistas{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    width: 250px;
-    height: 250px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: darkgrey;
-}
-
-#velapuerca_artistas{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    width: 250px;
-    height: 250px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: darkgrey;
-}
-
-#callejeros_artistas{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    width: 250px;
-    height: 250px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: darkgrey;
-}
-
-#bts_artistas{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    width: 250px;
-    height: 250px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: darkgrey;
-}
-
-.titulos_artistas{
+.cancion_uno h3{
+    font-size: 16px;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    width: 110px;
+    height: 60px;
 }
 
+.cancion_uno p{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 23px;
+    margin-bottom: 23px;
+    width: 90px;
+    height: 60px;
+}
+
+.cancion_uno i{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 21px;
+    margin-bottom: 21px;
+    width: 15px;
+}
+
+.imagen_cancion{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
 
 /*detalles home*/
 

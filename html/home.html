@@ -10,18 +10,18 @@
     <link rel="shortcut icon" href="../img/logo.png" />
     <title>Home</title>
 </head>
-<body class="body_home">
+<body class="container_home">
     <header>
         <div class="header">
             <div class="logo">
-                <img src="../img/logo.png" alt="logo" id="logo_header">
+                <img src="../img/logonaranja.png" alt="logo" id="logo_header">
             </div>
             <div class="header_links">
-                        <a href="home.html" class="links">HOME | </a> 
-                        <a href="playlist.html" class="links"> PLAYLIST | </a>
-                        <a href="generos.html" class="links"> GÉNEROS | </a>
-                        <a href="genero_detalle.html" class="links"> DETALLES GÉNEROS | </a>
-                        <a href="busqueda.html" class="links"> RESULTADOS | </a>
+                        <a href="home.html" class="links">Home </a> 
+                        <a href="playlist.html" class="links"> Playlist </a>
+                        <a href="generos.html" class="links"> Géneros </a>
+                        <a href="genero_detalle.html" class="links"> Detalles géneros </a>
+                        <a href="busqueda.html" class="links"> Resultados </a>
             </div>
         </div>
     </header>
@@ -32,9 +32,9 @@
                 <h2>Los mejores artistas</h2>
             </div>
 
-            <div id="queen_artistas">
-                <p id="titulos_artistas"><strong>Queen</strong></p>
-                <img src="../img/queen_fotogrupal.jpg">
+            <div class="artistas">
+                <h3><strong>Queen</strong></h3>
+                <img src="../img/queen_fotogrupal.jpg" class="fotos_artistas">
                 <p class="epigrafe_artistas">
                     Integrantes: Freddie Mercury, 
                     el guitarrista Brian May, el baterista Roger Taylor y el 
@@ -46,9 +46,9 @@
                 </p>
             </div>
 
-            <div id="ariana_artistas">
-                <p id="titulos_artistas"><strong>Ariana Grande</strong></p>
-                <img src="../img/ariana_grande.png">
+            <div class="artistas">
+                <h3><strong>Ariana Grande</strong></h3>
+                <img src="../img/ariana_grande.png" class="fotos_artistas">
                 <p class="epigrafe_artistas">Ariana Grande Butera ​ es una cantante, 
                     compositora, actriz, productora musical y
                      diseñadora de modas estadounidense
@@ -59,9 +59,9 @@
                 </p>
             </div>
 
-            <div id="kygo_artistas">
-                <p id="titulos_artistas"> <strong>Kygo</strong></p>
-                <img src="../img/kygo.jpg">
+            <div class="artistas">
+                <h3> <strong>Kygo</strong></h3>
+                <img src="../img/kygo.jpg" class="fotos_artistas">
                 <p class="epigrafe_artistas">Kyrre Gørvell-Dahll, más conocido por su nombre artístico Kygo,
                      es un DJ y productor noruego
                      <br>
@@ -71,9 +71,9 @@
                 </p>
             </div>
 
-            <div id="velapuerca_artistas">
-                <p id="titulos_artistas"><strong>La vela puerca</strong> </p>
-                <img src="../img/velapuerca.jpg">
+            <div class="artistas">
+                <h3><strong>La vela puerca</strong> </h3>
+                <img src="../img/velapuerca.jpg" class="fotos_artistas">
                 <p class="epigrafe_artistas">Integrantes: Freddie Mercury, Brian May, 
                     Roger Taylor y John Deacon.
                     <br>
@@ -83,9 +83,9 @@
                 </p>
             </div>
 
-            <div id="callejeros_artistas">
-                <p id="titulos_artistas"><strong>Callejeros</strong> </p>
-                <img src="../img/callejeros.jpg">
+            <div class="artistas">
+                <h3><strong>Callejeros</strong> </h3>
+                <img src="../img/callejeros.jpg" class="fotos_artistas">
                 <p class="epigrafe_artistas">
                     Integrantes: Sebastián Teysera, Nicolás Mandril Lieutier 
                     Sebastián Cebolla Cebreiro, José Pepe Canedo; Rafael Di Bello, Santiago Butler,
@@ -97,9 +97,9 @@
                 </p>
             </div>
 
-            <div id="bts_artistas">
-                <p id="titulos_artistas"><strong>BTS</strong></p>
-                <img src="../img/bts.jpg">
+            <div class="artistas">
+                <h3><strong>BTS</strong></h3>
+                <img src="../img/bts.jpg" alt="Foto grupal BTS" class="fotos_artistas">
                 <p class="epigrafe_artistas">
                     Integrantes: Jin, Suga, J-Hope, RM, Jimin, V y Jungkook.
                     <br>
@@ -107,25 +107,166 @@
                     <a href="detail-album.html"> album</a>
                     <a href="detail-artist.html"> artista</a>
                 </p>
-            </div> -->
+            </div> 
         </div>
     </div>
 
+    <div class="album_home">
+        <div class="h1_album">
+            <p><strong>Lo mejor de cada artista</strong></p>
+        </div>
 
-    2<footer>
+        <div class="albums">
+            <div class="album_artista">
+                <img src="../img/album_queen.jpg" alt="Portada de A night at the opera" class="portadas_albums">
+                <h3>A night at the opera</h3>
+                <p> Queen</p>
+                <a href="">Bohemian Rhapsody</a>
+                <br>
+                <a href="">Love of my life</a>
+                <br>
+                <a href="">You´re my best friend</a>
+                <br>
+                <a href="">Death on two legs</a>
+                <br>
+                <a href="">God save the queen</a>
+            </div>
+
+            <div class="album_artista">
+                <img src="../img/ariana_album.jpg" alt="Portada album positions" class="portadas_albums">
+                <h3>Positions</h3>
+                <p> Ariana Grande</p>
+                <a href="">Positions</a>
+                <br>
+                <a href="">34+35</a>
+                <br>
+                <a href="">Just like magic</a>
+                <br>
+                <a href="">My hair</a>
+                <br>
+                <a href="">Love language</a>
+            </div>
+
+            <div class="album_artista">
+                <img src="../img/kygo_album.jpg" alt="Portada album Cloud nine" class="portadas_albums">
+                <h3>Cloud nine</h3>
+                <p> Kygo</p>
+                <a href="">Fragile</a>
+                <br>
+                <a href="">Firestone</a>
+                <br>
+                <a href="">Stole the show</a>
+                <br>
+                <a href="">Stay</a>
+                <br>
+                <a href="">Carry me</a>
+            </div>
+
+            <div class="album_artista">
+                <img src="../img/velapuerca_album.jpg" alt="Portada album A contraluz" class="portadas_albums">
+                <h3>A Contraluz</h3>
+                <p> La Vela Puerca</p>
+                <a href="">Llenos de magia</a>
+                <br>
+                <a href="">Sin palabras</a>
+                <br>
+                <a href="">Dice</a>
+                <br>
+                <a href="">Va a acampar</a>
+                <br>
+                <a href="">Escobas</a>
+            </div>
+
+            <div class="album_artista">
+                <img src="../img/callejeros_album.jpg" alt="Portada album Señales" class="portadas_albums">
+                <h3>Señales</h3>
+                <p>Callejeros</p>
+                <a href="">Daños</a>
+                <br>
+                <a href="">Puede</a>
+                <br>
+                <a href="">Límites</a>
+                <br>
+                <a href="">Creo</a>
+                <br>
+                <a href="">Frente al río</a>
+            </div>
+
+            <div class="album_artista">
+                <img src="../img/bts_album.jpg" alt="Portada album BE" class="portadas_albums">
+                <h3>BE</h3>
+                <p>BTS</p>
+                <a href="">Life goes on</a>
+                <br>
+                <a href="">Blue & Grey</a>
+                <br>
+                <a href="">Telepathy</a>
+                <br>
+                <a href="">Stay</a>
+                <br>
+                <a href="">Dynamite</a>
+            </div>
+    
+            <div class="container_canciones">
+                <div class="h1_canciones"><strong>Los mejores singles</strong></div>
+                <div class="canciones"> 
+                    <div class="par_cancion">
+                        <div class="cancion_uno">
+                            <img src="../img/album_queen.jpg" alt="portada album A night at the opera" class="imagen_cancion">
+                            <h3 class="nombre_canción">Bohemian Rhapsody</h3>
+                            <p class="nombre_album">A night at the opera</p>
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="cancion_uno">
+                            <img src="../img/callejeros_album.jpg" alt="portada album señales de callejeros" class="imagen_cancion">
+                            <h3 class="nombre_canción">Daños</h3>
+                            <p class="nombre_album">Señales</p>
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="par_cancion">
+                        <div class="cancion_uno">
+                            <img src="../img/ariana_album.jpg" alt="portada album positions" class="imagen_cancion">
+                            <h3 class="nombre_canción">Positions</h3>
+                            <p class="nombre_album">Positions</p>
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="cancion_uno">
+                            <img src="../img/bts_album.jpg" alt="portada album BE de BTS" class="imagen_cancion">
+                            <h3 class="nombre_canción">Life goes on</h3>
+                            <p class="nombre_album">BE</p>
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+        
+                    <div class="par_cancion">
+                        <div class="cancion_uno">
+                            <img src="../img/kygo_album.jpg" alt="portada album Cloud nine de kygo" class="imagen_cancion">
+                            <h3 class="nombre_canción">Fragile</h3>
+                            <p class="nombre_album">Cloud Nine</p>
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="cancion_uno">
+                            <img src="../img/velapuerca_album.jpg" alt="portada album a contraluz de la vela puerca" class="imagen_cancion">
+                            <h3 class="nombre_canción">Llenos de magia</h3>
+                            <p class="nombre_album">A Contraluz</p>
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    <footer>
         <div class="footer">
             <div class="nombres">
                 <p>Aldana Lescano & José Souto</p>
             </div>
             <div class="contacto">
-                <ul>
-                    <li class="icons">
-                        <i class="fab fa-whatsapp"></i>Whatsapp:</li>
-                    <li class="icons">
-                        <i class="fas fa-inbox"></i>E-mail: nombrepagina@gmail.com</li>
-                </ul>
+                    <p><i class="fab fa-whatsapp"></i> Whatsapp:</p>
+                    <p><i class="fas fa-inbox"></i> E-mail: nombrepagina@gmail.com</p>
             </div>
         </div>
-    </footer>
+    </footer> 
 </body>
 </html>
