@@ -1,3 +1,8 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
 
 /*header*/
 .header{
@@ -43,30 +48,6 @@
     margin-right: 45%;
 }
 
-/*footer*/
-
-.footer{
-    display: flex;
-    box-sizing: border-box;
-    margin: 0%;
-    width: 100%;
-    justify-content: space-between;
-    background-color: #d0e1e1;
-    align-items: baseline;
-}
-
-.icons{
-    color: black;
-    list-style-type: none;
-}
-
-.contacto{
-    margin-right: 5%;
-}
-
-.nombres{
-    margin-left: 5%;
-}
 
 /*home*/
 
@@ -74,11 +55,14 @@
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .body_home{
     background-color: lightgray;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .epigrafe_artistas{
@@ -110,6 +94,9 @@
     margin: 10px;
     width: 250px;
     height: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: darkgrey;
 }
 
 #ariana_artistas{
@@ -118,6 +105,9 @@
     margin: 10px;
     width: 250px;
     height: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: darkgrey;
 }
 
 #kygo_artistas{
@@ -126,6 +116,9 @@
     margin: 10px;
     width: 250px;
     height: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: darkgrey;
 }
 
 #velapuerca_artistas{
@@ -134,6 +127,9 @@
     margin: 10px;
     width: 250px;
     height: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: darkgrey;
 }
 
 #callejeros_artistas{
@@ -142,6 +138,9 @@
     margin: 10px;
     width: 250px;
     height: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: darkgrey;
 }
 
 #bts_artistas{
@@ -150,24 +149,16 @@
     margin: 10px;
     width: 250px;
     height: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: darkgrey;
 }
 
 .titulos_artistas{
     text-align: center;
     font-family: 'Roboto', sans-serif;
-
 }
 
-.albums_home{
-    display: flex;
-    flex-direction: column;
-    margin: 0%;
-    margin-top: 30px;
-    box-sizing: border-box;
-    flex-direction: row;
-    background-color: lightgray;
-    justify-content: space-around;
-}
 
 /*detalles home*/
 
@@ -183,7 +174,7 @@
     display: flex;
     flex-direction: column;
     background-image: url(https://cdn.statically.io/img/englishlive.ef.com/es-mx/blog/wp-content/uploads/sites/8/2016/05/music-genres-768x530.jpg?quality=80&f=auto);
-}
+    }
 .padre{
     align-items: center;
     width: 30%;
@@ -216,3 +207,27 @@
 /*pagina resultados*/
 
 
+/*footer*/
+
+.footer{
+    display: flex;
+    box-sizing: border-box;
+    margin: 0%;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #d0e1e1;
+    align-items: baseline;
+}
+
+.icons{
+    color: black;
+    list-style-type: none;
+}
+
+.contacto{
+    margin-right: 5%;
+}
+
+.nombres{
+    margin-left: 5%;
+}
