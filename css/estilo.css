@@ -3,7 +3,9 @@
     padding: 0%;
     box-sizing: border-box;
 }
-
+body{
+    background-color:#395F60;
+}
 /*header*/
 .header{
     display: flex;
@@ -301,11 +303,14 @@
 
 .bodyG{
    
-    background-image: url(https://previews.123rf.com/images/eleana/eleana1202/eleana120200036/12152472-m%C3%BAsica-de-fondo.jpg);
+    /* background-image: url(https://previews.123rf.com/images/eleana/eleana1202/eleana120200036/12152472-m%C3%BAsica-de-fondo.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+img{
+    border-radius: 50%;
+    
+}
 .titulo{
     text-transform: uppercase;
     text-align: center;
@@ -316,35 +321,41 @@
     display: flex;
     flex-direction: column;
 }
-
+.titulo{
+    color: blanchedalmond;
+}
 .generos{
     text-transform: uppercase;
-    margin: 10px;
+    margin: 10px 20px 30px 0px;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 0px;
     
     
 }
 .generos a{
     text-decoration: none;
-    color: black;
+    color:white;
     background-color: ;
 }
 .genero1{
     width: 600px;
-    background-color: #ff6f43;
+    background-color:black;
     margin-left:30px ;
     border: black solid;
     padding: 15px;
-    border-radius: 30%;
+    border-radius: 20% 20% 20% 0;
     
 }
 .genero1 h2 {
     text-align: center;
+    color: blanchedalmond;
+
 }
 .genero1 p{
     margin: 10px;
+    color: blanchedalmond;
+    
 }
 
     
@@ -359,7 +370,14 @@
 
 
 /*detalles genero*/
-
+.detalle{
+    background-color: tomato;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 50%;
+    height: 300px;
+}
 
 /*pagina resultados*/
 
