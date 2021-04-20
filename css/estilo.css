@@ -3,7 +3,9 @@
     padding: 0%;
     box-sizing: border-box;
 }
-
+body{
+    background-color:#395F60;
+}
 /*header*/
 .header{
     width: 1200px;
@@ -292,39 +294,84 @@
 *{
     box-sizing: border-box;
 }
+
 .bodyG{
-    display: flex;
-    flex-direction: column;
-    background-image: url(https://cdn.statically.io/img/englishlive.ef.com/es-mx/blog/wp-content/uploads/sites/8/2016/05/music-genres-768x530.jpg?quality=80&f=auto);
-    }
-.padre{
-    align-items: center;
-    width: 30%;
+   
+    /* background-image: url(https://previews.123rf.com/images/eleana/eleana1202/eleana120200036/12152472-m%C3%BAsica-de-fondo.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+img{
+    border-radius: 50%;
     
 }
-.palabra{
-    color: cornsilk;
-    background-color: brown;
-}
-.opciones{
-    display: flex;
-    flex-direction: row;
-}
-.opciones li, .opciones a{ 
-    list-style: none;
-    background-color: brown;
+.titulo{
     text-transform: uppercase;
-    margin: 2px;
-    text-align:center;
-    height: 70px; 
-    border-radius:20%;
+    text-align: center;
+}
+.padre{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.titulo{
+    color: blanchedalmond;
+}
+.generos{
+    text-transform: uppercase;
+    margin: 10px 20px 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    
+    
+}
+.generos a{
+    text-decoration: none;
+    color:white;
+    background-color: ;
+}
+.genero1{
+    width: 600px;
+    background-color:black;
+    margin-left:30px ;
+    border: black solid;
+    padding: 15px;
+    border-radius: 20% 20% 20% 0;
+    
+}
+.genero1 h2 {
+    text-align: center;
+    color: blanchedalmond;
+
+}
+.genero1 p{
+    margin: 10px;
+    color: blanchedalmond;
+    
 }
 
+    
+    
+    
+
+
+    
+
+    
 
 
 
 /*detalles genero*/
-
+.detalle{
+    background-color: tomato;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 50%;
+    height: 300px;
+}
 
 /*pagina resultados*/
 
