@@ -8,7 +8,7 @@ body{
 }
 /*header*/
 .header{
-    width: 1200px;
+    width: 100%;
     padding: 20px;
     background-color: #0d0d0d;
 
@@ -53,8 +53,8 @@ body{
 }
 
 .container_home{
-    max-width: 1200px;
-    width: 1200px;
+    max-width: 90%;
+    width: 90%;
     margin: auto;
     background-color: #262626;
 
@@ -91,7 +91,7 @@ body{
 
 .artistas{
     /*GENERAL*/
-    width: 180px;
+    width: 15%; 
     height: 300px;
     margin: 10px;
     border-radius: 15px;
@@ -157,7 +157,7 @@ body{
 
 .album_artista{
     /*GENERAL*/
-    width: 180px;
+    width: 15%;
     height: 300px;
     margin: 10px;
     border-radius: 15px;
@@ -317,6 +317,7 @@ img{
 }
 .titulo{
     color: blanchedalmond;
+    margin: 15px;
 }
 .generos{
     text-transform: uppercase;
@@ -364,13 +365,25 @@ img{
 
 
 /*detalles genero*/
+.t{
+    text-align: center;
+    
+}
+.PadreD{
+    display: flex;
+    background-color: burlywood;
+    
+}
+
+
 .detalle{
-    background-color: tomato;
-    margin: auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    
+    
+    background-color: brown;
+    margin: 10px;
     width: 50%;
     height: 300px;
+    
 }
 
 /*pagina resultados*/
