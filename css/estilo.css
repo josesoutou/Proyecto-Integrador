@@ -286,33 +286,87 @@ body{
 
 /*detalles home*/
 
+/* detalles de artista */
 
 /*playlist*/
-.PadreP img{
-    background-color: chartreuse;
+.tit{
+    color: black;
+    background-color:white;
+    height: 80px;
+    width: 20%;
+    border-radius:5%;
+    margin: auto;
+    padding: 10px;
+}
+.fa-play-circle{
+    padding: 10px;
+    margin-left: auto;
+    
+    padding: 17px;
+}   
+.PadreP{
+    
+    margin: 50px;
+}
+.infoP{
+    background-color: rgb(31, 29, 29);
+    width: 97%;
+    margin: auto;
+    margin-top: 10px;
+    height: 40px;
+    color: cornsilk;
+    padding: 10px;
     display: flex;
-    flex-direction: column;
+}
+    
+
+.A{
+    
+    margin-left: auto;
+    
+}
+
+.MINUTOS{
+    padding: 10px;
+    margin-left: auto;
 }
 .imgP{
     border-radius: 50%;
 }
-.imgPP{
-    width: 200px;
-    margin-top: 10px;
-    margin: auto;
-
+.textoP{
+    /* background-color: darkblue;  */
+    margin-left: 15PX;
+    color: white;
+    width: 80%;
+    
 }
+.buttonP{
+    background-color:black;
+    font-size: 180%;
+    text-decoration: none;
+    width: 15%;
+    height: 50px;
+    border-radius: 20%;
+    color: blanchedalmond;
+    
+}
+
 .tituloP{
     text-align: center;
+    color: cornsilk;
+    font-size: 20px;
 }
 .cancionP {
     display: flex;
-    background-color: chocolate;
-    height: 70px;
+    background-color: rgb(56, 49, 45);
+    height: 80px;
     margin-top: 5px;
     margin: 20px;
+    margin-bottom: 5px;
     font-size: 150%;
     padding: 5px;
+    color: white;
+    
     
     
 
@@ -324,7 +378,7 @@ body{
 
 .bodyG{
    
-    /* background-image: url(https://previews.123rf.com/images/eleana/eleana1202/eleana120200036/12152472-m%C3%BAsica-de-fondo.jpg); */
+   
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -396,7 +450,7 @@ body{
     text-align: center;
     color: blanchedalmond;
     margin-top: 15PX;
-    
+    font-size: 300%;
     
 }
 .PadreD{
@@ -409,6 +463,7 @@ body{
 
 
 .detalle{
+    
     background-color:black;
     margin: auto;
     margin-top: 10px;
@@ -439,14 +494,90 @@ body{
 
 }
 .text1{
+    display: flex;
     color: darkgrey;
     padding-top: 60px;
     padding-left: 10px;
     text-transform: uppercase;
     width: 100px;
+    
 }
 
 /*pagina resultados*/
+.counterstrike{
+    
+}
+.titt{
+    font-size:300%;
+    text-align: center;
+    color: white;
+}
+.textopop{
+    display: flex;
+    flex-direction: column;
+    margin: 55px;
+    
+    
+
+}
+.hist{
+    background-color:black;
+    color: rgb(46, 36, 36);
+    margin: 10px;
+    list-style-type: none;
+    color: blanchedalmond;
+    padding: 10px;
+    
+}
+.hist li{
+    background-color: rgb(27, 27, 27);
+    color: rgb(243, 236, 236);
+    margin: 10px;
+    list-style-type: none;
+    font-size: 200%;
+}
+.hist p, .hist h2{
+    font-size: 200%;
+}
+.artistapop {
+    background-color: rgba(255, 255, 255, 0.747);
+    width: 100%;
+    font-size: 200%;
+    display: flex;
+    margin-top: 4%;
+}
+.hola{
+    
+    
+}
+.hola h2{
+    font-size: 200%;
+    text-align: center;
+}
+.error {
+    background-color: tomato;
+    font-size: 150%;
+    list-style-type: none;
+    
+}
+.sugerencias li{
+    list-style-type: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*footer*/
@@ -477,3 +608,6 @@ body{
     padding: 5px;
     margin: 5px;
 }
+
+/* en ipad */
+@media (min-with=728)
