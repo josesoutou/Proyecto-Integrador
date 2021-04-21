@@ -288,8 +288,35 @@ body{
 
 
 /*playlist*/
+.PadreP img{
+    background-color: chartreuse;
+    display: flex;
+    flex-direction: column;
+}
+.imgP{
+    border-radius: 50%;
+}
+.imgPP{
+    width: 200px;
+    margin-top: 10px;
+    margin: auto;
 
+}
+.tituloP{
+    text-align: center;
+}
+.cancionP {
+    display: flex;
+    background-color: chocolate;
+    height: 70px;
+    margin-top: 5px;
+    margin: 20px;
+    font-size: 150%;
+    padding: 5px;
+    
+    
 
+}
 /*generos*/
 *{
     box-sizing: border-box;
@@ -301,7 +328,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-img{
+.img1{
     border-radius: 50%;
     
 }
@@ -367,23 +394,56 @@ img{
 /*detalles genero*/
 .t{
     text-align: center;
+    color: blanchedalmond;
+    margin-top: 15PX;
+    
     
 }
 .PadreD{
     display: flex;
-    background-color: burlywood;
+    
+    margin-top: 10px;
+    flex-wrap: wrap;
     
 }
 
 
 .detalle{
+    background-color:black;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 30%;
+    height: 550px;
+    text-align: center;
+    border-radius: 20%;
+    color: blanchedalmond;
+    border:burlywood solid 5px;
     
     
-    background-color: brown;
+}
+.imgD{
+    border-radius: 50%;
+}
+
+.list1{
+    list-style: none;
     margin: 10px;
-    width: 50%;
-    height: 300px;
+    justify-content: space-around;
     
+}
+.uno{
+    margin: 15px;
+    display: flex;
+    
+
+}
+.text1{
+    color: darkgrey;
+    padding-top: 60px;
+    padding-left: 10px;
+    text-transform: uppercase;
+    width: 100px;
 }
 
 /*pagina resultados*/
@@ -392,7 +452,7 @@ img{
 /*footer*/
 
 .footer{
-    width: 1200px;
+    width: 100%;
     padding: 20px;
     background-color: #0d0d0d;
 
