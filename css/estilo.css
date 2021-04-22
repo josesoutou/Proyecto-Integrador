@@ -7,7 +7,8 @@
 body{
     background-color:#395F60;
 }
-/*header*/
+/*HEADER*/
+
 .header{
     width: 100%;
     padding: 20px;
@@ -308,8 +309,41 @@ body{
     border-radius: 15px;
 }
 
+
 /*DETALLES ARTISTA*/
 
+.container_artistas_detalles{
+
+    /*GENERAL*/
+
+    /*TEXTO*/
+
+    /*FLEX*/
+    flex-flow: column wrap;
+
+}
+
+.h1_detalle_artista{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-left: 2%;
+    font-size: 30px;
+    color: white;
+}
+
+.infoartista{
+    color: white;
+    margin: 5%;
+}
+
+.infoartista h2{
+    font-size: 25px;
+    margin-bottom: 2%;
+}
+
+.foto_artista_detalle{
+    width: 40% ;
+}
 
 /* DETALLES ALBUM */
 
