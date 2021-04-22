@@ -310,6 +310,8 @@ body{
 }
 
 
+
+
 /*DETALLES ARTISTA*/
 
 .container_artistas_detalles{
@@ -319,6 +321,7 @@ body{
     /*TEXTO*/
 
     /*FLEX*/
+    display: flex;
     flex-flow: column wrap;
 
 }
@@ -334,15 +337,30 @@ body{
 .infoartista{
     color: white;
     margin: 5%;
+    margin-top: 0%;
+    background-color: black;
+
+    /*FLEX*/
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
 }
 
-.infoartista h2{
+.detalle_artista{
     font-size: 25px;
-    margin-bottom: 2%;
+    margin-left: 5%;
+    margin-bottom: 1%;
+    color: white;
+}
+
+.texto_d_artista{
+    width: 45%;
+    margin: 5%;
 }
 
 .foto_artista_detalle{
     width: 40% ;
+    margin: 2%;
 }
 
 /* DETALLES ALBUM */
