@@ -384,14 +384,15 @@ body{
     margin: 2%;
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 
 .album_d{
-    width: 40%;
+    width: 20%;
     background-color: black;
     color: white;
-    margin: 5%;
+    margin: 1%;
     padding: 10px;
     border-radius: 15px;
 
