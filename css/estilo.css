@@ -538,6 +538,7 @@ body{
 }
 
 .bodyG{
+    flex-wrap: wrap;
    
    
     background-repeat: no-repeat;
@@ -556,6 +557,7 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
+    
 }
 .titulo{
     color: blanchedalmond;
@@ -607,6 +609,7 @@ body{
 
 
 /*detalles genero*/
+
 .t{
     text-align: center;
     color: blanchedalmond;
@@ -624,13 +627,14 @@ body{
 
 
 .detalle{
-    
+    flex-wrap: wrap;
+    padding: 10px;
     background-color:black;
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
     width: 30%;
-    height: 550px;
+    height: 750px;
     text-align: center;
     border-radius: 20%;
     color: blanchedalmond;
@@ -640,21 +644,38 @@ body{
 }
 .imgD{
     border-radius: 50%;
+    flex-wrap: wrap;
 }
 
 .list1{
     list-style: none;
     margin: 10px;
     justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+Ul{
+    margin-left: 30px;
+}
+.UL li{
+    color: black;
+    background-color: rgb(211, 192, 118);
+    margin: 16px;
+    list-style-type: none;
+    font-size: 160%;
+    flex-wrap: wrap;
+    width: 90%;
     
 }
 .uno{
     margin: 15px;
     display: flex;
+    flex-wrap: wrap;
     
 
 }
 .text1{
+    flex-wrap: wrap;
     display: flex;
     color: darkgrey;
     padding-top: 60px;
@@ -666,21 +687,27 @@ body{
 
 /*pagina resultados*/
 .counterstrike{
-    
+    flex-wrap: wrap;
+}
+.p{
+    background-color: brown;
+    width: 30%;
+    margin: 5%;
+    font-size: 200%;
 }
 .titt{
     font-size:300%;
     text-align: center;
     color: white;
+    margin-top: 7%;
 }
 .textopop{
     display: flex;
     flex-direction: column;
     margin: 55px;
     
-    
-
 }
+
 .hist{
     background-color:black;
     color: rgb(46, 36, 36);
@@ -708,12 +735,20 @@ body{
     margin-top: 4%;
 }
 .hola{
-    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     
 }
 .hola h2{
     font-size: 200%;
     text-align: center;
+}
+.info{
+    background-color: brown;
+    width: 30%;
+    margin: 2%;
+    font-size: 150%;
 }
 .error {
     background-color: tomato;
@@ -760,4 +795,7 @@ body{
 }
 
 /* en ipad */
-@media (min-with=728)
+@media(max-width="720"){
+
+   
+}
