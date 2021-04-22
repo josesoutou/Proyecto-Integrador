@@ -115,14 +115,14 @@ body{
 .artistas h3{
     font-size: 20px;
     text-align: center;
-    margin-bottom: 5px;
+    margin: 2%;
     height: 10%;
 }
 
 .artistas p{
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5%;
     height: 30%;
+    text-align: justify;
 }
 
 .artistas a{
@@ -131,8 +131,9 @@ body{
     margin-top: 5px;
     height: 10%;
 }
+
 .artistas a:hover{
-    background-color: #e74c3c;
+    background-color: #262626;
 }
 
 .fotos_artistas{
@@ -278,8 +279,18 @@ body{
     width: 30%;
 }
 
+.cancion_uno a{
+    text-decoration: none;
+    color: white;
+}
+
+.cancion_uno a:hover{
+    background-color: #262626;
+}
+
+
 .cancion_uno i{
-    font-size: 10px;
+    font-size: 15px;
     text-align: center;
     margin: 2%;
     width: 10%;
