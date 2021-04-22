@@ -315,15 +315,9 @@ body{
 /*DETALLES ARTISTA*/
 
 .container_artistas_detalles{
-
-    /*GENERAL*/
-    
-    /*TEXTO*/
-
     /*FLEX*/
     display: flex;
     flex-flow: column wrap;
-
 }
 
 .h1_detalle_artista{
@@ -373,8 +367,72 @@ body{
     background-color: #262626;
 }
 
+
+
 /* DETALLES ALBUM */
 
+.container_albums_d{
+    width: 100%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.pares_albums_d{
+    width: 100%;
+    margin: 2%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+.album_d{
+    width: 40%;
+    background-color: black;
+    color: white;
+    margin: 5%;
+    padding: 10px;
+    border-radius: 15px;
+
+    /*FLEX*/
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.album_d h2{
+    font-size: 20px;
+    margin: 5%;
+}
+
+.album_d h3{
+    font-size: 18px;
+    margin: 2%;
+}
+
+.album_d h4{
+    font-size: 16px;
+    margin: 5%;
+}
+
+.album_d p{
+    margin: 2%;
+}
+
+.album_d a{
+    text-decoration: none;
+    color: white;
+}
+
+.album_d img{
+    width: 50%;
+}
+
+.album_d a:hover{
+    background-color: #262626;
+}
 
 /* DETALLES CANCIONES */
 
