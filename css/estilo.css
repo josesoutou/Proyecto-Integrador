@@ -214,6 +214,10 @@ body{
     border-radius: 15px;
 }
 
+.año_album{
+    font-size: 12px;
+}
+
 /*CANCIONES*/
 
 .container_canciones{
@@ -443,6 +447,52 @@ body{
 }
 
 /* DETALLES CANCIONES */
+
+.canciones_d{
+    color: white;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+
+    /*FLEX*/
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
+.cancion_d{
+    width: 100%;
+    background-color: #0d0d0d;
+    /* border: 10px; */
+    border-color: black;
+
+    /*FLEX*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cancion_d h2{
+    font-size: 18px;
+}
+
+.cancion_d a{
+    text-decoration: none;
+    color: white;
+}
+
+.cancion_d i{
+    font-size: 16px;
+}
+
+.cancion_d img{
+    width: 5%;
+}
+
+
+
 
 
 /*playlist*/
