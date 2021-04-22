@@ -733,7 +733,6 @@ body{
 .generos a{
     text-decoration: none;
     color:white;
-    background-color: ;
 }
 
 .genero1{
@@ -853,7 +852,7 @@ body{
     flex-wrap: wrap;
 }
 .p{
-    background-color: brown;
+    background-color: #ff6f43;
     width: 30%;
     margin: 5%;
     font-size: 200%;
@@ -927,14 +926,14 @@ body{
     text-align: center;
 }
 .info{
-    background-color: brown;
+    background-color: #ff6f43;
     width: 30%;
     margin: 2%;
     font-size: 150%;
 }
 
 .error {
-    background-color: tomato;
+    background-color: #ff6f43;
     font-size: 150%;
     list-style-type: none;  
 }
@@ -1067,6 +1066,72 @@ body{
     .artistapop p{
         width: 100%;
     }
+}
 
+@media (max-width: 320px){
+    /*HOME*/
+    .home_container{
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .artistas_home{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-content: center;
+        margin-left: 8%;
+    }
+
+    .artistas{
+        width: 100%;
+        padding: 5%;
+    }
+
+    .artistas p{
+        font-size: 16px;
+        text-align: left;
+        height: 35%;
+        text-align: center;
+    }
+
+    .artistas h3{
+        font-size: 20px;
+        margin-bottom: 5%;
+        height: 10%;
+    }
+
+    .artistas a{
+        font-size: 16px;
+    }
+
+    .album_home{
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+
+    .album_artista{
+        flex-wrap: column wrap;
+        width: 48%;
+        padding: 2%;
+        margin: 1%;
+    }
+
+    .canciones{
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+
+    .par_cancion{
+        width: 100%;
+    }
+
+    .cancion_uno h3{
+        font-size: 12px;
+    }
+
+    .cancion_uno p{
+        font-size: 12px;
+    }
 
 }
