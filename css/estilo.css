@@ -466,6 +466,7 @@ body{
     background-color: #0d0d0d;
     /* border: 10px; */
     border-color: black;
+    padding: 0.5%;
 
     /*FLEX*/
     display: flex;
@@ -476,15 +477,18 @@ body{
 
 .cancion_d h2{
     font-size: 18px;
+    width: 20%;
 }
 
 .cancion_d a{
     text-decoration: none;
     color: white;
+    width: 40%;
 }
 
 .cancion_d i{
     font-size: 16px;
+    width: 10%;
 }
 
 .cancion_d img{
