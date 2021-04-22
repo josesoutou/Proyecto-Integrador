@@ -27,8 +27,8 @@ body{
 }
 
 .header_links{
-    width: 45%;
     padding: 2%;
+    justify-self: right;
 }
 
 .header_links a{
@@ -374,6 +374,16 @@ body{
 
 
 /* DETALLES ALBUM */
+
+
+.titulo_album_d{
+    width: 100%;
+    font-size: 150%;
+    color: white;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
 
 .container_albums_d{
     width: 100%;
