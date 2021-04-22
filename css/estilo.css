@@ -451,9 +451,6 @@ body{
 .canciones_d{
     color: white;
     width: 100%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-
 
     /*FLEX*/
     display: flex;
@@ -461,10 +458,47 @@ body{
     justify-content: space-around;
 }
 
+.titulo_canciones_d h1{
+    color: white;
+    width: 100%;
+    margin-top: 5%;
+    font-size: 250%;
+    background-color: #0d0d0d;
+    text-align: center;
+    padding: 2%;
+}
+
+.header_canciones_d{
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 1%;
+
+    /*FLEX*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#titulo_d{
+    width: 30%;
+    text-align: center;
+}
+
+#artista_d{
+    width: 25%;
+    text-align: center;
+}
+
+#album_d{
+    width: 36%;
+    margin-left: 9%;
+}
+
 .cancion_d{
     width: 100%;
     background-color: #0d0d0d;
-    /* border: 10px; */
     border-color: black;
     padding: 0.5%;
 
@@ -486,6 +520,10 @@ body{
     width: 40%;
 }
 
+.cancion_d a:hover{
+    color: gainsboro;
+}
+
 .cancion_d i{
     font-size: 16px;
     width: 10%;
@@ -495,7 +533,23 @@ body{
     width: 5%;
 }
 
+.footer_canciones_d{
+    width: 100%;
+    margin-bottom: 5%;
+    font-size: 80%;
+    background-color: black;
+    text-align: center;
+    padding: 2%;
+}
 
+.footer_canciones_d a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer_canciones_d a:hover{
+    color: gainsboro;
+}
 
 
 
