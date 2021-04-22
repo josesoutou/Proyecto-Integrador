@@ -24,6 +24,20 @@ body{
 #logo_header{
     width: 60px;
     border-radius: 15px;
+    color: white;
+}
+
+.logo{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 20%;
+}
+
+.logo h2{
+    color: white;
+    margin: 1%;
+
 }
 
 .header_links{
@@ -67,7 +81,6 @@ body{
     /*FLEX*/
     display: flex;
     flex-flow: row wrap;
-    flex: 1 1 100%;
 }
 
 .home_container{
@@ -567,16 +580,13 @@ body{
 
 .tit{
     color: black;
-    background-color:white;
-    height: 80px;
     width: 20%;
     border-radius:5%;
-    margin: auto;
     padding: 10px;
+    margin: auto;
 }
 
 .fa-play-circle{
-    padding: 10px;
     margin-left: auto;
 
     padding: 17px;
@@ -606,6 +616,7 @@ body{
 .MINUTOS{
     padding: 10px;
     margin-left: auto;
+    align-self: center;
 }
 
 .imgP{
@@ -625,7 +636,6 @@ body{
     text-decoration: none;
     width: 15%;
     height: 50px;
-    border-radius: 20%;
     color: blanchedalmond;    
 }
 
@@ -645,13 +655,16 @@ body{
     padding: 5px;
     color: white;
 }
+
+.cancionP i{
+    align-self: center;
+}
+
 .AGREGAR {
-    margin:29px;
-    width: 30%;
-    height: 50px;
-    padding-top: 8px;
-    padding-left: 3px;
-    list-style-type: none;
+    margin:5%;
+    width: 60%;
+    height: 10%;
+    padding: 2%;
     color: blanchedalmond;
     background-color: black;
 }
@@ -670,16 +683,27 @@ body{
     box-sizing: border-box;
 }
 
-.bodyG{
-    flex-wrap: wrap;
-   
-   
-    background-repeat: no-repeat;
-    background-size: cover;
+.genero1 h2{
+    height: 10%;
 }
+
+
+.parrafo_g{
+    height: 10%;
+    margin-bottom: 5%;
+}
+
+
+.hipervinculo{
+    height: 10%;
+    margin: 2%;
+}
+
 .img1{
+    width: 90%;
     border-radius: 50%;
-    
+    height: 70%;
+    margin-top: 5%;
 }
 .titulo{
     text-transform: uppercase;
@@ -698,22 +722,22 @@ body{
 }
 .generos{
     text-transform: uppercase;
-    margin: 10px 20px 30px 0px;
+    margin: 30px 0px;
     display: flex;
     justify-content: space-between;
     padding: 0px;
     margin-top: 70px;
     margin-bottom: 100px
-    
-    
 }
+
 .generos a{
     text-decoration: none;
     color:white;
     background-color: ;
 }
+
 .genero1{
-    width: 600px;
+    width: 20%;
     background-color:black;
     margin-left:30px ;
     border: black solid;
@@ -754,8 +778,7 @@ body{
 }
 .PadreD{
     display: flex;
-    
-    margin-top: 40px;
+    margin: 40px;
     flex-wrap: wrap;
     
 }
@@ -822,6 +845,7 @@ body{
 }
 
 /*pagina resultados*/
+
 .links{
     text-decoration: none;
 }
@@ -834,12 +858,14 @@ body{
     margin: 5%;
     font-size: 200%;
 }
+
 .titt{
     font-size:300%;
     text-align: center;
     color: white;
     margin-top: 7%;
 }
+
 .h32{
     background-color: honeydew;
     margin-top: 20px;
@@ -877,7 +903,19 @@ body{
     font-size: 200%;
     display: flex;
     margin-top: 4%;
+    padding: 2%;
 }
+
+.artistapop img{
+    width: 25%;
+    height: 80%;
+}
+
+.artistapop p{
+    width: 50%;
+    margin-left: 5%;
+}
+
 .hola{
     display: flex;
     flex-direction: column;
@@ -894,14 +932,16 @@ body{
     margin: 2%;
     font-size: 150%;
 }
+
 .error {
     background-color: tomato;
     font-size: 150%;
-    list-style-type: none;
-    
+    list-style-type: none;  
 }
-.sugerencias li{
-    list-style-type: none;
+
+.links3{
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -937,20 +977,96 @@ body{
     padding: 5px;
     margin: 5px;
 }
-#ft{
-    width: 255%;
-    padding: 20px;
-    background-color: #111010;
 
-    /*FLEX*/
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-}
 
 /* en ipad */
-@media(max-width="720"){
+@media (max-width: 768px){
 
+    /*HOME*/
+    .home_container{
+        flex-wrap: wrap;
+    }
+    
+    .artistas_home{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+    }
+
+    .artistas{
+        flex-wrap: wrap;
+        width: 30%;
+    }
+
+    .album_home{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin-left: 5%;
+    }
+
+    .album_artista{
+        flex-wrap: wrap;
+        width: 30%;
+    }
+
+    .canciones{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        margin-right: 5%;
+    }
+
+    .par_cancion{
+        width: 100%;
+        margin-bottom: 0%;
+    }
+
+    /*DETALLE ALBUM*/
+
+    .container_albums_d{
+        flex-flow: column wrap;
+    }
+
+    .album_d{
+        width: 40%;
+    }
+
+    /*PLAYLIST*/
+    .buttonP{
+        width: 50%;
+    }
+    
+    .tit{
+        text-align: center;
+        margin-left: 35%;
+    }
+
+    .cancionP{
+        height: 150px;
+    }
+
+
+    /*GENEROS*/
+    .genero1{
+        flex-flow: row wrap;
+    }
    
+
+    /*BUSCADOR*/
+    .artistapop{
+        flex-flow: column wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .artistapop img{
+        align-self: center;
+    }
+
+    .artistapop p{
+        width: 100%;
+    }
+
+
 }
