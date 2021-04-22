@@ -645,6 +645,21 @@ body{
     padding: 5px;
     color: white;
 }
+.AGREGAR {
+    margin:29px;
+    width: 30%;
+    height: 50px;
+    padding-top: 8px;
+    padding-left: 3px;
+    list-style-type: none;
+    color: blanchedalmond;
+    background-color: black;
+}
+.AGREGAR a{
+    color: blanchedalmond;
+    text-decoration: none;
+
+}
 
 
 
@@ -687,6 +702,8 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 0px;
+    margin-top: 70px;
+    margin-bottom: 100px
     
     
 }
@@ -731,14 +748,14 @@ body{
 .t{
     text-align: center;
     color: blanchedalmond;
-    margin-top: 15PX;
+    margin-top: 100PX;
     font-size: 300%;
     
 }
 .PadreD{
     display: flex;
     
-    margin-top: 10px;
+    margin-top: 40px;
     flex-wrap: wrap;
     
 }
@@ -749,10 +766,10 @@ body{
     padding: 10px;
     background-color:black;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 100px;
     margin-bottom: 10px;
     width: 30%;
-    height: 750px;
+    height: 720px;
     text-align: center;
     border-radius: 20%;
     color: blanchedalmond;
@@ -772,13 +789,14 @@ body{
     flex-wrap: wrap;
     
 }
-Ul{
-    margin-left: 30px;
+.links2{
+    text-decoration: none;
+    color: honeydew;
 }
 .UL li{
-    color: black;
-    background-color: rgb(211, 192, 118);
-    margin: 16px;
+    color: white;
+    
+    margin: 15px;
     list-style-type: none;
     font-size: 160%;
     flex-wrap: wrap;
@@ -804,6 +822,9 @@ Ul{
 }
 
 /*pagina resultados*/
+.links{
+    text-decoration: none;
+}
 .counterstrike{
     flex-wrap: wrap;
 }
@@ -818,6 +839,11 @@ Ul{
     text-align: center;
     color: white;
     margin-top: 7%;
+}
+.h32{
+    background-color: honeydew;
+    margin-top: 20px;
+    width: 50%;
 }
 .textopop{
     display: flex;
@@ -910,6 +936,17 @@ Ul{
     background-color: #ff6f43;
     padding: 5px;
     margin: 5px;
+}
+#ft{
+    width: 255%;
+    padding: 20px;
+    background-color: #111010;
+
+    /*FLEX*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* en ipad */
