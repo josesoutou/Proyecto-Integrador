@@ -579,11 +579,10 @@ body{
 /*playlist*/
 
 .tit{
-    color: black;
+    color: white;
     width: 20%;
-    border-radius:5%;
-    padding: 10px;
     margin: auto;
+    font-size: 200%;
 }
 
 .fa-play-circle{
@@ -600,32 +599,32 @@ body{
     background-color: rgb(31, 29, 29);
     width: 97%;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 2%;
     height: 40px;
     color: cornsilk;
-    padding: 10px;
+    padding: 0.9%;
     display: flex;
 }
     
-
+.imagen_playlist{
+    width: 7%;
+}
 .A{
     
     margin-left: auto;
 }
 
 .MINUTOS{
-    padding: 10px;
+    padding: 0.9%;
     margin-left: auto;
     align-self: center;
 }
 
-.imgP{
-    border-radius: 50%;
-}
+
 
 .textoP{
     /* background-color: darkblue;  */
-    margin-left: 15PX;
+    margin-left: 2%;
     color: white;
     width: 80%;
 }
@@ -634,7 +633,7 @@ body{
     background-color:black;
     font-size: 180%;
     text-decoration: none;
-    width: 15%;
+    width: 200px;
     height: 50px;
     color: blanchedalmond;    
 }
@@ -642,15 +641,15 @@ body{
 .tituloP{
     text-align: center;
     color: cornsilk;
-    font-size: 20px;
+    font-size: 130%;
 }
 .cancionP {
     display: flex;
     background-color: rgb(56, 49, 45);
     height: 80px;
-    margin-top: 5px;
-    margin: 20px;
-    margin-bottom: 5px;
+    margin-top: 1%;
+    margin: 2%;
+    margin-bottom: 1%;
     font-size: 150%;
     padding: 5px;
     color: white;
@@ -662,7 +661,7 @@ body{
 
 .AGREGAR {
     margin:5%;
-    width: 60%;
+    width: 35%;
     height: 10%;
     padding: 2%;
     color: blanchedalmond;
@@ -701,7 +700,7 @@ body{
 
 .img1{
     width: 90%;
-    border-radius: 50%;
+    
     height: 70%;
     margin-top: 5%;
 }
@@ -721,13 +720,18 @@ body{
     margin: 15px;
 }
 .generos{
+    flex-wrap: wrap;
     text-transform: uppercase;
-    margin: 30px 0px;
     display: flex;
-    justify-content: space-between;
+    width: 100%;
     padding: 0px;
-    margin-top: 70px;
-    margin-bottom: 100px
+    justify-content: space-evenly;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    
+    
+    
+    
 }
 
 .generos a{
@@ -736,9 +740,11 @@ body{
 }
 
 .genero1{
-    width: 20%;
+    
+    width: 230px;
+    height: 600px;
     background-color:black;
-    margin-left:30px ;
+    margin: 5px;
     border: black solid;
     padding: 15px;
     border-radius: 20% 20% 20% 0;
@@ -753,6 +759,11 @@ body{
     margin: 10px;
     color: blanchedalmond;
     
+}
+.genero22{
+    background-color: hotpink;
+    width: 300px;
+    border-radius: 50%;
 }
 
     
@@ -777,6 +788,7 @@ body{
 }
 .PadreD{
     display: flex;
+    
     margin: 40px;
     flex-wrap: wrap;
     
@@ -784,14 +796,16 @@ body{
 
 
 .detalle{
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     padding: 10px;
     background-color:black;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 60px;
     margin-bottom: 10px;
-    width: 30%;
-    height: 720px;
+    width: 28%;
+    height: 50%;
     text-align: center;
     border-radius: 20%;
     color: blanchedalmond;
@@ -826,20 +840,23 @@ body{
     
 }
 .uno{
-    margin: 15px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    margin: 5%;
+
     
 
 }
 .text1{
+    font-size: 100%;
     flex-wrap: wrap;
     display: flex;
     color: darkgrey;
-    padding-top: 60px;
-    padding-left: 10px;
+    padding-top: 3%;
+    padding-left: 1%;
     text-transform: uppercase;
-    width: 100px;
+    width: 10%;
     
 }
 
@@ -1035,7 +1052,9 @@ body{
     .buttonP{
         width: 50%;
     }
-    
+    .imagen_playlist{
+        width: 20%;
+    }
     .tit{
         text-align: center;
         margin-left: 35%;
@@ -1051,7 +1070,11 @@ body{
         flex-flow: row wrap;
     }
    
-
+    /* DETALLES GENEROS */
+    .detalle{
+        width: 310px;
+        /* height: 450PX */
+    }
     /*BUSCADOR*/
     .artistapop{
         flex-flow: column wrap;
@@ -1068,7 +1091,32 @@ body{
     }
 }
 
-@media (max-width: 320px){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:420px){
     /*HOME*/
     .home_container{
         display: flex;
@@ -1133,5 +1181,139 @@ body{
     .cancion_uno p{
         font-size: 12px;
     }
+
+    /* PLAYLIST */
+    .PadreP{
+        width: 98%;
+        margin:50px 50px 0px 0px;
+        padding: 0px;
+    }
+    .tit{
+        text-align: center;
+        margin-left: 0%;
+        
+        width: 100%;
+    }
+    .buttonP{
+        background-color:black;
+        font-size: 180%;
+        text-decoration: none;
+        width: 200px;
+        height: 50px;
+        color: blanchedalmond;    
+    }
+    .fa-play-circle{
+        margin-left: auto;
+        
+    
+        padding: 17px;
+    }   
+    .infoP{
+        background-color: rgb(31, 29, 29);
+        width: 97%;
+        margin: auto;
+        margin-top: 2%;
+        height: 30px;
+        color: cornsilk;
+        padding: 0.9%;
+        display: flex;
+    }
+    .infoP p{
+        font-size: 70%;
+    }
+    
+    .cancionP {
+        color: rgb(0, 0, 0);
+        width: 100%;
+        height: 50px;
+    
+    }
+    .textoP{
+        font-size: 50%;
+        
+    }
+    .imagen_playlist{
+        width: 10%;
+    }
+    .AGREGAR{
+        width: 37%;
+    }
+    .AGREGAR h2{
+        
+        font-size: 100%;
+    }
+    /* DETALLES GENEROS */
+    .uno{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Resultados */
+    .hist{
+        margin: 5px;
+    }
+    .textopop{
+        margin: 0%;
+    }
+    .p{
+        width: 90%;
+        
+    }
+    .hist h2{
+        font-size: 30px;
+    }
+    .hist p{
+        font-size: 20px;
+    }
+    .hist li{
+        font-size: 20px;
+
+    }
+    .h32{
+        width: 100%;
+    }
+    .artistapop img{
+        width: 100%;
+    }
+    
+    
+    
+    
+    .info{
+        width: 100%;
+        margin: 0%;
+        margin-bottom: 10px;
+        margin-top:10px ;
+        
+    }
+
+    
+
+
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
