@@ -1,5 +1,5 @@
 window.addEventListener('load', function(){
-    const proxy = 'https://cors-anywhere.herokuapp.com/`;
+    const proxy = 'https://cors-anywhere.herokuapp.com/';
     let api = `${proxy}https://api.deezer.com/gnere/`;
 
     fetch(api)
@@ -10,7 +10,7 @@ window.addEventListener('load', function(){
     .then(function (datos){
         console.log(datos);
         //aca ponemos los let, seleccionadndo las clases y seleccionamos las
-        //imagenes y crear eveentos y toda la bola
+        //imagenes y crear eventos y toda la bola
         
     })
     .cath(function (error){
@@ -20,13 +20,13 @@ window.addEventListener('load', function(){
 
     
     
-    const buscador = document.querySelector(".barra_buscador")
-    if (buscador == " ") {
-        alert("Tiene que completar el campo de busqueda")
+    // const buscador = document.querySelector(".barra_buscador")
+    // if (buscador == " ") {
+    //     alert("Tiene que completar el campo de busqueda")
         
-     } else {
+    //  } else {
         
-     }
+    //  }
 
 });
 
