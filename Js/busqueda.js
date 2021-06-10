@@ -13,7 +13,7 @@ window.addEventListener("load", function() {
         .then(function (datos) {
             console.log(datos);
             let artistas = document.querySelectorAll(".fotos_artistas");
-            artistas.innerHTML[0] = `<img src="${datos.object.picture_big}">`;
+            artistas.innerHTML = `<img src="${datos.data[0].picture_big}">`;
             // artistas.innerHTML[1] = `<img src="${}">`;
             // artistas.innerHTML[2] = `<img src="${}">`;
             // artistas.innerHTML[3] = `<img src="${}">`;

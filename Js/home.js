@@ -9,8 +9,15 @@ window.addEventListener("load", function() {
         })
         .then(function (datos) {
             console.log(datos);
-            let artistas = document.querySelectorAll(".fotos_artistas");
-            artistas.innerHTML[0] = `<img src="${datos.object.picture_big}">`;
+            let artistas = document.querySelector('#buenas');
+            artistas.innerHTML = ` <h3><strong> <a href="detail-artist.html#queen_d">Queen</a> </strong></h3>
+            <img src="${datos.data[0].picture_medium}" class="fotos_artistas" >
+            <p class="epigrafe_artistas">
+                Último album: <a href="detail-album.html">A night at the opera</a>
+                <br><br>
+                Canción más popular:<a href="detail-song.html"> Bohemian Rhapsody</a>
+            </p> `
+    
             
                           
       
