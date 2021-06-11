@@ -355,7 +355,7 @@ window.addEventListener("load", function() {
                 console.log(datos);
                 let Bohemian = document.querySelector('#bohemianRhapsody');
                 Bohemian.innerHTML = `
-                    <img src="${datos.tracks.data[2].cover_big}" alt="portada album A night at the opera" class="imagen_cancion">
+                    <img src="${datos.data[2].cover_big}" alt="portada album A night at the opera" class="imagen_cancion">
                     <h3 class="nombre_canción"> <a href="detail-song.html">Bohemian Rhapsody</a></h3>
                     <p class="nombre_album"> 
                     <a href="detail-album.html">A night at the opera</a>
