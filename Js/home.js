@@ -1,8 +1,9 @@
 window.addEventListener("load", function() {
     const proxy = 'https://cors-anywhere.herokuapp.com/';
-    let apiQueen = `${proxy}https://api.deezer.com/artist/412`;
     
     //Queen
+    let apiQueen = `${proxy}https://api.deezer.com/artist/412`;
+
     fetch(apiQueen)
         .then(function (response) {
             return response.json();
@@ -19,80 +20,78 @@ window.addEventListener("load", function() {
             <br><br>
             Canción más popular:<a href="detail-song.html"> Bohemian Rhapsody</a>
             </p> `
-    
-            
-                          
-      
-        
+
         })
         .catch(function (error) {
             console.log('Tu error es: ' + error);
         });
-        let apiAriana = `${proxy}https://api.deezer.com/artist/1562681`;
 
-        //Ariana
-        fetch(apiAriana)
+    //Ariana
+
+    let apiAriana = `${proxy}https://api.deezer.com/artist/1562681`;
+
+    fetch(apiAriana)
+        .then(function (response) {
+                return response.json();
+        })
+        .then(function (datos) {
+            console.log(datos);
+            let artistasAriana = document.querySelector('#ariana--');
+            artistasAriana.innerHTML = ` 
+                
+            <h3> <strong><a href="detail-artist.html#ariana_d">${datos.name}</a></strong> </h3>
+            <img src="${datos.picture_big}" class="fotos_artistas">
+            <p class="epigrafe_artistas">
+            Último album: <a href="detail-album.html"> Positions</a>
+            <br><br>
+            Canción más popular: <a href="detail-song.html"> 34+35</a>
+            </p>`
+        
+                
+        })
+        .catch(function (error) {
+            console.log('Tu error es: ' + error);
+        });
+
+    //kygo
+        let apiKygo = `${proxy}https://api.deezer.com/artist/4768753`;
+            
+        fetch(apiKygo)
             .then(function (response) {
                 return response.json();
             })
             .then(function (datos) {
                 console.log(datos);
-                let artistasAriana = document.querySelector('#ariana--');
-                artistasAriana.innerHTML = ` 
-                
-                <h3> <strong><a href="detail-artist.html#ariana_d">${datos.name}</a></strong> </h3>
-                <img src="${datos.picture_big}" class="fotos_artistas">
-                <p class="epigrafe_artistas">
-                Último album: <a href="detail-album.html"> Positions</a>
-                <br><br>
-                Canción más popular: <a href="detail-song.html"> 34+35</a>
-                </p>`
-        
-                
+                let artistasKygo = document.querySelector('#kigo');
+                artistasKygo.innerHTML = ` 
+                    
+            <h3> <a href="detail-artist.html#kygo_d"> <strong>${datos.name}</strong> </a> </h3>
+            <img src="${datos.picture_big}" class="fotos_artistas">
+            <p class="epigrafe_artistas">
+            Último album: <a href="detail-album.html">Cloud nine</a>
+            <br><br>
+            Canción más popular:<a href="detail-song.html"> Fragile</a>
+            </p>`        
             })
             .catch(function (error) {
                 console.log('Tu error es: ' + error);
             });
 
-            //kygo
-            let apiKygo = `${proxy}https://api.deezer.com/artist/4768753`;
-            
-            fetch(apiKygo)
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (datos) {
-                    console.log(datos);
-                    let artistasKygo = document.querySelector('#kigo');
-                    artistasKygo.innerHTML = ` 
-                    
-                <h3> <a href="detail-artist.html#kygo_d"> <strong>${datos.name}</strong> </a> </h3>
-                <img src="${datos.picture_big}" class="fotos_artistas">
-                <p class="epigrafe_artistas">
-                Último album: <a href="detail-album.html">Cloud nine</a>
-                <br><br>
-                Canción más popular:<a href="detail-song.html"> Fragile</a>
-                </p>`
-            
-                    
-                })
-                .catch(function (error) {
-                    console.log('Tu error es: ' + error);
-                });
-            //vela puerca
-                let apiVela = `${proxy}https://api.deezer.com/artist/5954`;
+        //Vela puerca
+                
+        let apiVela = `${proxy}https://api.deezer.com/artist/5954`;
 
             
-            fetch(apiVela)
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (datos) {
-                    console.log(datos);
-                    let artistasVela = document.querySelector('#vela1');
-                    artistasVela.innerHTML = ` 
+        fetch(apiVela)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (datos) {
+                console.log(datos);
+                let artistasVela = document.querySelector('#vela1');
+                artistasVela.innerHTML = ` 
                     
-                    <h3><strong><a href="detail-artist.html#vela_d">${datos.name}</a></strong> </h3>
+                <h3><strong><a href="detail-artist.html#vela_d">${datos.name}</a></strong> </h3>
                     <img src="${datos.picture_big}" class="fotos_artistas">
                     <p class="epigrafe_artistas">
                     Último album: <a href="detail-album.html">A contraluz</a>
@@ -106,7 +105,7 @@ window.addEventListener("load", function() {
                     console.log('Tu error es: ' + error);
                 });
 
-                let apiCallejeros = `${proxy}https://api.deezer.com//12134`;
+                let apiCallejeros = `${proxy}https://api.deezer.com/artist/12134`;
 
                 //callejeros
                 fetch(apiCallejeros)
@@ -161,7 +160,7 @@ window.addEventListener("load", function() {
 
                     //ALBUMES
 
-                    let apiAlbumQueen = `${proxy} https://api.deezer.com/album/915785`;
+                let apiAlbumQueen = `${proxy}https://api.deezer.com/album/915785`;
                     
                 fetch(apiAlbumQueen)
                     .then(function (response) {
@@ -191,4 +190,191 @@ window.addEventListener("load", function() {
                         console.log('Tu error ess: ' + error);
                     });
 
+                    //Album Ariana
+                
+                    let apiAlbumAriana = `${proxy}https://api.deezer.com/album/208899972`;
+                    
+                    fetch(apiAlbumAriana)
+                        .then(function (response) {
+                            return response.json();
+                        })
+                        .then(function (datos) {
+                            console.log(datos);
+                            let albumAriana = document.querySelector('#albumA');
+                            albumAriana.innerHTML = ` 
+                            
+                            <img src="${datos.cover_medium}" alt="Portada album positions" class="portadas_albums">
+                            <h3> <a href="detail-album.html">${datos.title}</a> </h3>
+                            <p> <a href="detail-artist.html">Ariana Grande</a></p>
+                            <a href="detail-song.html">Positions</a>
+                            <br>
+                            <a href="detail-song.html">34+35</a>
+                            <br>
+                            <a href="detail-song.html">Just like magic</a>
+                            <br>
+                            <a href="detail-song.html">My hair</a>
+                            <br>
+                            <a href="detail-song.html">Love language</a>`
+                    
+                            
+                        })
+                        .catch(function (error) {
+                            console.log('Tu error ess: ' + error);
+                        });
+    
+        //Album Kygo
+                
+        let apiAlbumKygo = `${proxy}https://api.deezer.com/album/13082674`;
+                    
+        fetch(apiAlbumKygo)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (datos) {
+                console.log(datos);
+                let albumKygo = document.querySelector('#albumK');
+                albumKygo.innerHTML = ` 
+                
+                <img src="${datos.cover_medium}" alt="Portada album Cloud nine" class="portadas_albums">
+                    <h3> <a href="detail-album.html">${datos.title}</a></h3>
+                    <p> <a href="detail-artist.html">Kygo</a></p>
+                    <a href="detail-song.html">Fragile</a>
+                    <br>
+                    <a href="detail-song.html">Firestone</a>
+                    <br>
+                    <a href="detail-song.html">Stole the show</a>
+                    <br>
+                    <a href="detail-song.html">Stay</a>
+                    <br>
+                    <a href="detail-song.html">Carry me</a>`
+        
+                
+            })
+            .catch(function (error) {
+                console.log('Tu error ess: ' + error);
+            });
+
+        //Album La Vela Puerca
+                
+        let apiAlbumLaVela = `${proxy}https://api.deezer.com/album/160753`;
+                    
+        fetch(apiAlbumLaVela)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (datos) {
+                console.log(datos);
+                let albumLaVela = document.querySelector('#albumLV');
+                albumLaVela.innerHTML = ` 
+                
+                <img src="${datos.cover_medium}" alt="Portada album A contraluz" class="portadas_albums">
+                    <h3> <a href="detail-album.html">${datos.title}</a> </h3>
+                    <p> <a href="detail-artist.html">La Vela Puerca</a> </p>
+                    <a href="detail-song.html">Llenos de magia</a>
+                    <br>
+                    <a href="detail-song.html">Sin palabras</a>
+                    <br>
+                    <a href="detail-song.html">Dice</a>
+                    <br>
+                    <a href="detail-song.html">Va a acampar</a>
+                    <br>
+                    <a href="detail-song.html">Escobas</a>`
+        
+                
+            })
+            .catch(function (error) {
+                console.log('Tu error ess: ' + error);
+            });
+
+        //Album Callejeros
+                
+        let apiAlbumCallejeros = `${proxy}https://api.deezer.com/album/11396448`;
+                    
+        fetch(apiAlbumCallejeros)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (datos) {
+                console.log(datos);
+                let albumCallejeros = document.querySelector('#albumC');
+                albumCallejeros.innerHTML = ` 
+                
+                <img src="${datos.cover_medium}" alt="Portada album Señales" class="portadas_albums">
+                    <h3> <a href="detail-album.html">${datos.title}</a> </h3>
+                    <p><a href="detail-artist.html">Callejeros</a></p>
+                    <a href="detail-song.html">Daños</a>
+                    <br>
+                    <a href="detail-song.html">Puede</a>
+                    <br>
+                    <a href="detail-song.html">Límites</a>
+                    <br>
+                    <a href="detail-song.html">Creo</a>
+                    <br>
+                    <a href="detail-song.html">Frente al río</a>`
+        
+                
+            })
+            .catch(function (error) {
+                console.log('Tu error ess: ' + error);
+            });
+
+        //Album BTS
+                
+        let apiAlbumBts = `${proxy}https://api.deezer.com/album/186790522`;
+                    
+        fetch(apiAlbumBts)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (datos) {
+                console.log(datos);
+                let albumBts = document.querySelector('#albumB');
+                albumBts.innerHTML = ` 
+                
+                <img src="${datos.cover_medium}" alt="Portada album BE" class="portadas_albums">
+                <h3> <a href="detail-album.html">${datos.title}</a> </h3>
+                <p> <a href="detail-artist.html">BTS</a></p>
+                <a href="detail-song.html">Life goes on</a>
+                <br>
+                <a href="detail-song.html">Blue & Grey</a>
+                <br>
+                <a href="detail-song.html">Telepathy</a>
+                <br>
+                <a href="detail-song.html">Stay</a>
+                <br>
+                <a href="detail-song.html">Dynamite</a>`
+        
+                
+            })
+            .catch(function (error) {
+                console.log('Tu error ess: ' + error);
+            });
+
+
+        //CANCIONES
+
+        let apiBohemian = `${proxy}https://api.deezer.com/playlist/9165177722`;
+
+        fetch(apiBohemian)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (datos) {
+                console.log(datos);
+                let Bohemian = document.querySelector('#bohemianRhapsody');
+                Bohemian.innerHTML = `
+                    <img src="${datos.tracks.data[2].cover_big}" alt="portada album A night at the opera" class="imagen_cancion">
+                    <h3 class="nombre_canción"> <a href="detail-song.html">Bohemian Rhapsody</a></h3>
+                    <p class="nombre_album"> 
+                    <a href="detail-album.html">A night at the opera</a>
+                    </p>
+                    <i class="fas fa-play"></i> `
+            })
+            .catch(function (error) {
+                console.log('Tu error es: ' + error);
+            });
+
+
 });
+
+
