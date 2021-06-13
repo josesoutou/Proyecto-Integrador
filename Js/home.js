@@ -13,7 +13,7 @@ window.addEventListener("load", function() {
                 let artistas = document.querySelector('#Queen--');
                 artistas.innerHTML = ` 
                 
-                    <h3><strong> <a href="detail-artist.html#queen_d">${datos.name}</a> </strong></h3>
+                    <h3><strong> ${datos.name}</strong></h3>
                     <img src="${datos.picture_big}" class="fotos_artistas" >
                     <p class="epigrafe_artistas">
                         Último album: <a href="detail-album.html">A night at the opera</a>
@@ -38,7 +38,7 @@ window.addEventListener("load", function() {
                 console.log(datos);
                 let artistasAriana = document.querySelector('#ariana--');
                 artistasAriana.innerHTML = ` 
-                    <h3> <strong><a href="detail-artist.html#ariana_d">${datos.name}</a></strong> </h3>
+                    <h3> <strong>${datos.name}</strong> </h3>
                     <img src="${datos.picture_big}" class="fotos_artistas">
                     <p class="epigrafe_artistas">
                         Último album: <a href="detail-album.html"> Positions</a>
@@ -358,15 +358,27 @@ window.addEventListener("load", function() {
                     <img src="${datos.data[2].cover_big}" alt="portada album A night at the opera" class="imagen_cancion">
                     <h3 class="nombre_canción"> <a href="detail-song.html">Bohemian Rhapsody</a></h3>
                     <p class="nombre_album"> 
-                    <a href="detail-album.html">A night at the opera</a>
                     </p>
+                    <a href="detail-album.html">A night at the opera</a>
                     <i class="fas fa-play"></i> `
             })
             .catch(function (error) {
                 console.log('Tu error es: ' + error);
             });
 
+            // Ahora vamos a hacer los links entre paginas con js
 
+        let tituloArtista1 = document.querySelector('.artistas');
+        tituloArtista1.addEventListener("click", function () {
+            location.href="../html/detail-song.html"; 
+        })
+        tituloArtista1.addEventListener("mouseover", function () {
+            tituloArtista1.style.border = '3px solid red';
+        })
+        tituloArtista1.addEventListener("mouseout", function () {
+            tituloArtista1.style.border = '3px solid black';
+        })
+  
 });
 
 
