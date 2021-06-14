@@ -1,8 +1,6 @@
 window.addEventListener("load", function() {
     const proxy = 'https://cors-anywhere.herokuapp.com/';
-    
-    //Queen: cambiamos la imagen y el título del artista
-        let apiQueen = `${proxy}https://api.deezer.com/artist/412`;
+    let apiQueen = `${proxy}https://api.deezer.com/artist/412`;
 
         fetch(apiQueen)
             .then(function (response) {
@@ -38,13 +36,14 @@ window.addEventListener("load", function() {
                 console.log(datos);
                 let artistasAriana = document.querySelector('#ariana--');
                 artistasAriana.innerHTML = ` 
-                    <h3> <strong>${datos.name}</strong> </h3>
-                    <img src="${datos.picture_big}" class="fotos_artistas">
-                    <p class="epigrafe_artistas">
-                        Último album: <a href="detail-album.html"> Positions</a>
-                        <br><br>
-                        Canción más popular: <a href="detail-song.html"> 34+35</a>
-                    </p>`
+                <h3> <strong><a href="detail-artist.html#ariana_d">${datos.name}</a></strong> </h3>
+                <img src="${datos.picture_big}" class="fotos_artistas">
+                <p class="epigrafe_artistas">
+                Último album: <a href="detail-album.html"> Positions</a>
+                <br><br>
+                Canción más popular: <a href="detail-song.html"> 34+35</a>
+                </p>
+                 `
             })
             .catch(function (error) {
                 console.log('Tu error es: ' + error);
@@ -63,7 +62,7 @@ window.addEventListener("load", function() {
                 console.log(datos);
                 let artistasKygo = document.querySelector('#kigo');
                 artistasKygo.innerHTML = `    
-                <h3> <a href="detail-artist.html#kygo_d"> <strong>${datos.name}</strong> </a> </h3>
+                <h3><strong><a href="detail-artist.html#kygo_d">${datos.name}</a></strong></h3>
                 <img src="${datos.picture_big}" class="fotos_artistas">
                 <p class="epigrafe_artistas">
                     Último album: <a href="detail-album.html">Cloud nine</a>
@@ -355,12 +354,12 @@ window.addEventListener("load", function() {
                 console.log(datos);
                 let Bohemian = document.querySelector('#bohemianRhapsody');
                 Bohemian.innerHTML = `
-                    <img src="${datos.data[2].cover_big}" alt="portada album A night at the opera" class="imagen_cancion">
-                    <h3 class="nombre_canción"> <a href="detail-song.html">Bohemian Rhapsody</a></h3>
-                    <p class="nombre_album"> 
-                    </p>
+                <img src="${datos.data[2].cover_big}" alt="portada album A night at the opera" class="imagen_cancion">
+                <h3 class="nombre_canción"> <a href="detail-song.html">Bohemian Rhapsody</a></h3>
+                <p class="nombre_album"> 
                     <a href="detail-album.html">A night at the opera</a>
-                    <i class="fas fa-play"></i> `
+                </p>
+                <i class="fas fa-play"></i> `
             })
             .catch(function (error) {
                 console.log('Tu error es: ' + error);
@@ -370,7 +369,7 @@ window.addEventListener("load", function() {
 
         let tituloArtista1 = document.querySelector('.artistas');
         tituloArtista1.addEventListener("click", function () {
-            location.href="../html/detail-song.html"; 
+            location.href="../html/detail-artist.html"; 
         })
         tituloArtista1.addEventListener("mouseover", function () {
             tituloArtista1.style.border = '3px solid red';
@@ -378,7 +377,8 @@ window.addEventListener("load", function() {
         tituloArtista1.addEventListener("mouseout", function () {
             tituloArtista1.style.border = '3px solid black';
         })
-  
+
+        
 });
 
 

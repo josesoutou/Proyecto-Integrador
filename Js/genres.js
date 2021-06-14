@@ -27,10 +27,3 @@ window.addEventListener("load", function() {
 
     
     
-    // const buscador = document.querySelector(".barra_buscador")
-    // if (buscador == " ") {
-    //     alert("Tiene que completar el campo de busqueda")
-        
-    //  } else {
-        
-    //  }
