@@ -2,7 +2,7 @@
 
 window.addEventListener("load", function() {
     const proxy = 'https://cors-anywhere.herokuapp.com/';
-    let apiQueen = `${proxy}https://api.deezer.com/artist/4123`;
+    let apiQueen = `${proxy}https://api.deezer.com/artist/1400479`;
 
         fetch(apiQueen)
             .then(function (response) {
@@ -17,7 +17,7 @@ window.addEventListener("load", function() {
                 <p>El artista mas escuchado de este genero:</p> 
                 
                 <a href="detail-artist.html"><b> Freddie Mercury</b></a>
-                <img class="img1" src="https://i.pinimg.com/originals/25/3e/5c/253e5c0c99241deec15e2c8c822d38c0.jpg" alt="image"> `
+                <img class="img1" src="datos.${datos.picture_big}" alt="image"> `
 
             })
             .catch(function (error) {

@@ -369,29 +369,29 @@ window.addEventListener("load", function() {
     // Ahora vamos a hacer los links entre paginas con js
 
          
-        // let tituloArtista1 = document.querySelector('.artistas');
-        // // for( let index = 0; index < tituloArtista1.length; index++ ){
-        // tituloArtista1[index].addEventListener("click", function () {
-        //     location.href="../html/detail-artist.html"; 
-        // })
-        // tituloArtista1.addEventListener("mouseover", function () {
-        //     tituloArtista1.style.border = '3px solid red';
-        // })
-        // tituloArtista1.addEventListener("mouseout", function () {
-        //     tituloArtista1.style.border = '3px solid black';
-        // })
+        let tituloArtista1 = document.querySelector('.artistas');
+        // for( let index = 0; index < tituloArtista1.length; index++ ){
+        tituloArtista1.addEventListener("click", function () {
+            location.href="../html/detail-artist.html"; 
+        })
+        tituloArtista1.addEventListener("mouseover", function () {
+            tituloArtista1.style.border = '3px solid red';
+        })
+        tituloArtista1.addEventListener("mouseout", function () {
+            tituloArtista1.style.border = '3px solid black';
+        })
 
         //no entiendo como linkear los query selector de los distintos documentos de html
 
-        let artistaQueenLinkTitulo = document.querySelector(`artistas`);
-        artistaQueenLinkTitulo.classList.add(`nombreArtistaQueen`);
-        let artistaQueenLink = document.querySelector('.nombreArtistaQueen');
-        let primeroQueen = document.querySelector("#queen_d");
-        artistaQueenLink.addEventListener(`click`, function (e) {
-            console.log(e);
-            alert(`hola`);
-            location.href= (primeroQueen); 
-        })
+        // let artistaQueenLinkTitulo = document.querySelector(`artistas`);
+        // artistaQueenLinkTitulo.classList.add(`nombreArtistaQueen`);
+        // let artistaQueenLink = document.querySelector('.nombreArtistaQueen');
+        // let primeroQueen = document.querySelector("#queen_d");
+        // artistaQueenLink.addEventListener(`click`, function (e) {
+        //     console.log(e);
+        //     alert(`hola`);
+        //     location.href= (primeroQueen); 
+        // })
 
 
 
