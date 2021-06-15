@@ -342,24 +342,77 @@ window.addEventListener("load", function() {
             });
 
 
-    //CANCIONES
+    //CANCIONES TERMINAR
 
-        let apiBohemian = `${proxy}https://api.deezer.com/playlist/9165177722`;
+        let apiCancionesHome = `${proxy}https://api.deezer.com/playlist/9165177722`;
 
-        fetch(apiBohemian)
+        fetch(apiCancionesHome)
             .then(function (response) {
                 return response.json();
             })
             .then(function (datos) {
                 console.log(datos);
-                let Bohemian = document.querySelector('#bohemianRhapsody');
-                Bohemian.innerHTML = `
-                <img src="${datos.data[2].cover_big}" alt="portada album A night at the opera" class="imagen_cancion">
-                <h3 class="nombre_canción"> <a href="detail-song.html">Bohemian Rhapsody</a></h3>
-                <p class="nombre_album"> 
-                    <a href="detail-album.html">A night at the opera</a>
+
+                //Bohemian Rhapsody: cambiar portada
+                let bohemian = document.querySelector('#bohemianRhapsody');
+                bohemian.innerHTML = `
+                    <img src="${datos.tracks.data[2].album.cover_big}" alt="portada album A night at the opera" class="imagen_cancion">
+                    <h3 class="nombre_canción"> <a href="detail-song.html">Bohemian Rhapsody</a></h3>
+                    <p class="nombre_album"> 
+                        <a href="detail-album.html">A night at the opera</a>
+                    </p>
+                    <i class="fas fa-play"></i> `
+
+                //Daños: cambiar portada
+                let daños = document.querySelector('#daños_c');
+                daños.innerHTML = `
+                <img src="${datos.tracks.data[10].album.cover_big}" alt="portada album señales de callejeros" class="imagen_cancion">
+                <h3 class="nombre_canción"> <a href="detail-song.html">Daños</a></h3>
+                <p class="nombre_album">
+                    <a href="detail-album.html">Señales</a>
                 </p>
-                <i class="fas fa-play"></i> `
+                <i class="fas fa-play"></i>`
+
+                //Positions: cambiar portada
+                let positions = document.querySelector('#positionsAriana');
+                positions.innerHTML = `
+                    <img src="${datos.tracks.data[0].album.cover_big}" alt="portada album positions" class="imagen_cancion">
+                    <h3 class="nombre_canción"><a href="detail-song.html">Positions</a></h3>
+                    <p class="nombre_album">
+                        <a href="detail-album.html">Positions</a>
+                    </p>
+                    <i class="fas fa-play"></i>`
+
+                //Life goes on: cambiar portada
+                let lifeGoesOn = document.querySelector('#lifeGoesOn_c');
+                lifeGoesOn.innerHTML = `
+                    <img src="${datos.tracks.data[4].album.cover_big}" alt="portada album BE de BTS" class="imagen_cancion">
+                    <h3 class="nombre_canción"> <a href="detail-song.html">Life goes on</a></h3>
+                    <p class="nombre_album">
+                        <a href="detail-album.html">BE</a>
+                    </p>
+                    <i class="fas fa-play"></i>`
+
+                //Fragile: cambiar portada
+                let fragile = document.querySelector('#fragile_c');
+                fragile.innerHTML = `
+                    <img src="${datos.tracks.data[38].album.cover_big}" alt="portada album Cloud nine de kygo" class="imagen_cancion">
+                    <h3 class="nombre_canción"> <a href="detail-song.html">Fragile</a></h3>
+                    <p class="nombre_album">
+                        <a href="detail-album.html">Cloud Nine</a>
+                    </p>
+                    <i class="fas fa-play"></i>`
+
+                //Llenos de magia: cambiar portada
+                let llenosDeMagia = document.querySelector('#llenos_c');
+                llenosDeMagia.innerHTML = `
+                    <img src="${datos.tracks.data[34].album.cover_big}" alt="portada album a contraluz de la vela puerca" class="imagen_cancion">
+                    <h3 class="nombre_canción"> <a href="detail-song.html">Llenos de magia</a> </h3>
+                    <p class="nombre_album">
+                        <a href="detail-album.html">A Contraluz</a>
+                    </p>
+                    <i class="fas fa-play"></i>`
+
             })
             .catch(function (error) {
                 console.log('Tu error es: ' + error);
@@ -369,17 +422,33 @@ window.addEventListener("load", function() {
     // Ahora vamos a hacer los links entre paginas con js
 
          
-        let tituloArtista1 = document.querySelector('.artistas');
-        // for( let index = 0; index < tituloArtista1.length; index++ ){
-        tituloArtista1.addEventListener("click", function () {
-            location.href="../html/detail-artist.html"; 
+        let tituloArtista1 = document.querySelectorAll('.artistas');
+        for(let index = 0; index < tituloArtista1.length; index++){
+            tituloArtista1[0].addEventListener("click", function () {
+                location.href="../html/detail-artist.html#queen_d"; 
+            })
+            tituloArtista1[1].addEventListener("click", function () {
+                location.href="../html/detail-artist.html#ariana_d"; 
+            })
+            tituloArtista1[2].addEventListener("click", function () {
+                location.href="../html/detail-artist.html#kygo_d"; 
+            })
+            tituloArtista1[3].addEventListener("click", function () {
+                location.href="../html/detail-artist.html#vela_d"; 
+            })
+            tituloArtista1[4].addEventListener("click", function () {
+                location.href="../html/detail-artist.html#callejeros_d"; 
+            })
+            tituloArtista1[5].addEventListener("click", function () {
+                location.href="../html/detail-artist.html#bts_d"; 
+            })
+            tituloArtista1[index].addEventListener("mouseover", function () {
+                tituloArtista1[index].style.border = '3px solid #ff6f43';
+            })
+            tituloArtista1[index].addEventListener("mouseout", function () {
+                tituloArtista1[index].style.border = '3px solid black';
         })
-        tituloArtista1.addEventListener("mouseover", function () {
-            tituloArtista1.style.border = '3px solid red';
-        })
-        tituloArtista1.addEventListener("mouseout", function () {
-            tituloArtista1.style.border = '3px solid black';
-        })
+        }
 
         //no entiendo como linkear los query selector de los distintos documentos de html
 
