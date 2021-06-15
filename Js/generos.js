@@ -34,15 +34,72 @@ window.addEventListener("load", function() {
         })
         .then(function (datos) {
             console.log(datos);
-            let artistasAriana = document.querySelector('#ariana--');
+            let artistasAriana = document.querySelector('#ArianaGeneros');
             artistasAriana.innerHTML = ` 
-            <h3> <strong><a href="detail-artist.html#ariana_d">${datos.name}</a></strong> </h3>
-            <img src="${datos.picture_big}" class="fotos_artistas">
-            <p class="epigrafe_artistas">
-            Último album: <a href="detail-album.html"> Positions</a>
-            <br><br>
-            Canción más popular: <a href="detail-song.html"> 34+35</a>
-            </p>
+            <a href="genero_detalle.html#pp" class="links" id="popjava"><h2>Pop</h2></a>
+            <p>El artista mas escuchado de este genero:</p>  
+            <a href="detail-artist.html"> <b>Ariana Grande</b></a>
+            <img class="img1" src="${datos.picture_big}" alt="image" width="200px">
+             `
+        })
+        .catch(function (error) {
+            console.log('Tu error es: ' + error);
+        });
+
+        let apiCallejerosGenero = `${proxy}https://api.deezer.com/artist/12134`;
+
+    fetch(apiCallejerosGenero)
+        .then(function (response) {
+                return response.json();
+        })
+        .then(function (datos) {
+            console.log(datos);
+            let artistasFontanet = document.querySelector('#callejeroG');
+            artistasFontanet.innerHTML = ` 
+            <a href="genero_detalle.html#rn" class="links"><h2>Rock Nacional</h2></a>
+            <p>El artista mas escuchado de este genero:</p> 
+            <a href="detail-artist.html" class="hipervinculo"> <b>Patricio Fontanet</b></a>
+            <img class="img1"src="${datos.picture_big}" alt="image">
+             `
+        })
+        .catch(function (error) {
+            console.log('Tu error es: ' + error);
+        });
+
+        let apiCallejerosGenero1 = `${proxy}https://api.deezer.com/artist/4768753`;
+
+    fetch(apiCallejerosGenero1)
+        .then(function (response) {
+                return response.json();
+        })
+        .then(function (datos) {
+            console.log(datos);
+            let artistasFontanet = document.querySelector('#kkigo');
+            artistasFontanet.innerHTML = ` 
+            <a href="genero_detalle.html#ep" class="links"><h2>Electro Pop</h2></a>
+            <p class="parrafo_g">El artista mas escuchado de este género:</p>  
+            <a href="detail-artist.html" class="hipervinculo"> <b>Kygo</b></a>
+            <img class="img1" src="${datos.picture_big}"alt="image">
+             `
+        })
+        .catch(function (error) {
+            console.log('Tu error es: ' + error);
+        });
+
+        let apiBTS1= `${proxy}https://api.deezer.com/artist/4768753`;
+    
+    fetch(apiBTS1)
+        .then(function (response) {
+                return response.json();
+        })
+        .then(function (datos) {
+            console.log(datos);
+            let artistasJin = document.querySelector('#kkigo');
+            artistasJin.innerHTML = ` 
+            <a href="genero_detalle.html#ep" class="links"><h2>Electro Pop</h2></a>
+            <p class="parrafo_g">El artista mas escuchado de este género:</p>  
+            <a href="detail-artist.html" class="hipervinculo"> <b>Kygo</b></a>
+            <img class="img1" src="${datos.picture_big}"alt="image">
              `
         })
         .catch(function (error) {
