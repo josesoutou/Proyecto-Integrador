@@ -24,4 +24,4 @@ window.addEventListener("load", function() {
             console.log('Tu error es: ' + error);
         });
 
-});
+});                  
