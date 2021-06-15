@@ -367,8 +367,10 @@ window.addEventListener("load", function() {
 
             // Ahora vamos a hacer los links entre paginas con js
 
+         
         let tituloArtista1 = document.querySelector('.artistas');
-        tituloArtista1.addEventListener("click", function () {
+        // for( let index = 0; index < tituloArtista1.length; index++ ){
+        tituloArtista1[index].addEventListener("click", function () {
             location.href="../html/detail-artist.html"; 
         })
         tituloArtista1.addEventListener("mouseover", function () {
