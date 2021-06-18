@@ -356,7 +356,7 @@ window.addEventListener("load", function() {
                 //Bohemian Rhapsody: cambiar portada
                 let bohemian = document.querySelector('#bohemianRhapsody');
                 bohemian.innerHTML = `
-                    <img src="${datos.tracks.data[2].album.cover_big}" alt="portada album A night at the opera" class="imagen_cancion">
+                    <img src="${datos.tracks.data[1].album.cover_big}" alt="portada album A night at the opera" class="imagen_cancion">
                     <h3 class="nombre_canción"> <a href="detail-song.html">Bohemian Rhapsody</a></h3>
                     <p class="nombre_album"> 
                         <a href="detail-album.html">A night at the opera</a>
@@ -376,7 +376,7 @@ window.addEventListener("load", function() {
                 //Positions: cambiar portada
                 let positions = document.querySelector('#positionsAriana');
                 positions.innerHTML = `
-                    <img src="${datos.tracks.data[0].album.cover_big}" alt="portada album positions" class="imagen_cancion">
+                    <img src="${datos.tracks.data[37].album.cover_big}" alt="portada album positions" class="imagen_cancion">
                     <h3 class="nombre_canción"><a href="detail-song.html">Positions</a></h3>
                     <p class="nombre_album">
                         <a href="detail-album.html">Positions</a>

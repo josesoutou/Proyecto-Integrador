@@ -10,7 +10,7 @@ window.addEventListener("load", function() {
         let estrella = document.querySelector(".titulo_canciones_d");
         estrella.addEventListener("click", function () {
             alert("Hola mundo");
-            localStorage.setItem("cancion", JSON.stringify())            
+            localStorage.getItem("cancion", JSON.stringify())            
         })
     })
     .catch(function (error) {
