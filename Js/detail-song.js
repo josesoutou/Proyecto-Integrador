@@ -9,7 +9,7 @@ window.addEventListener("load", function() {
         console.log(datos);
       
         let insertarTitulo = document.querySelectorAll(".cancion_d");
-        for(let index = 0; index < insertarTitulo.length; index++){
+        for(let index=0; index < insertarTitulo.length; index++){
             insertarTitulo[index].innerHTML = `<img src="${datos.tracks.data[index].album.cover}">
             <h2 class="titulo11">${datos.tracks.data[index].title}</h2>
             <h2 > 
@@ -18,13 +18,30 @@ window.addEventListener("load", function() {
             <h2>
                 <a href="detail-album.html">${datos.tracks.data[index].album.title}</a>
             </h2>
-            <p><button type="submit" class="holaMundo123"><i class="far fa-star"></i></button></p>
-            <p id="estrellitafachera"></p>`;
+            <p><button type="submit" id="boton${index}"  class="holaMundo123"><i class="far fa-star"></i></button></p>
+            <p id="estrellitafachera"><iframe src="${datos.tracks.data[index].preview}" width="100px" height="70" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe></p>
+            `;
+
         } 
-        let insertarReproductorDeAudio = document.querySelectorAll('#estrellitafachera'); /* estrellitafachera se refiere a lo que era el boton de play, me confundi con el nombre*/
-        for(let index = 0; index < insertarReproductorDeAudio.length; index++){
-            insertarReproductorDeAudio[index].innerHTML = `<iframe src="${datos.tracks.data[index].preview}" width="100px" height="70" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>`;
-        }   
+        let index11 = document.querySelector(`#boton0`);
+        index
+    //     let index11 = document.querySelectorAll(`#boton${index}`);
+    //     for(let i=0; i<index11.length; i++){
+    //     index11[i].addEventListener ("click", function () {
+    //         alert("hola mundo")
+    //         let infoArtista = {
+    //             nombreCancion : `${datos.tracks.data[index].title}`,
+    //             imagen : `${datos.tracks.data[index].album.cover}`,
+    //             nombreArtista :`${datos.tracks.data[index].artist.name}`,
+    //             albumNombre : `${datos.tracks.data[index].album.title}`,
+    //             preview : `${datos.tracks.data[index].preview}`,
+    //         };
+    //         let infoArtistaAparce = JSON.stringify(infoArtista);
+    //         localStorage.setItem("favoritos", infoArtistaAparce);
+    //         window.location.href="playlist.js";
+    //     })   
+       
+    // }})
     })
     .catch(function (error) {
         console.log('Tu error ess: ' + error);
@@ -32,14 +49,8 @@ window.addEventListener("load", function() {
 
 
 
-    // const agarrandoEstrella = document.getElementsByClassName("fas fa-play");
-    // agarrandoEstrella.addEventListener ("click", function () {
-    //     let infoArtista = [
-    //         nombre : 
-    //     ]
-    //     let infoArtistaAparce = JSON.stringify(infoArtista);
-    //     localStorage.setItem("favoritos", infoArtista);
-    //     window.location.href="playlist.js";
-    //})
+
+
+    
 
 })
