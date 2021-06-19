@@ -366,12 +366,12 @@ window.addEventListener("load", function() {
                 //Daños: cambiar portada
                 let daños = document.querySelector('#daños_c');
                 daños.innerHTML = `
-                <img src="${datos.tracks.data[10].album.cover_big}" alt="portada album señales de callejeros" class="imagen_cancion">
-                <h3 class="nombre_canción"> <a href="detail-song.html">Daños</a></h3>
-                <p class="nombre_album">
-                    <a href="detail-album.html">Señales</a>
-                </p>
-                <i class="fas fa-play"></i>`
+                    <img src="${datos.tracks.data[10].album.cover_big}" alt="portada album señales de callejeros" class="imagen_cancion">
+                    <h3 class="nombre_canción"> <a href="detail-song.html">Daños</a></h3>
+                    <p class="nombre_album">
+                        <a href="detail-album.html">Señales</a>
+                    </p>
+                    <i class="fas fa-play"></i>`
 
                 //Positions: cambiar portada
                 let positions = document.querySelector('#positionsAriana');
