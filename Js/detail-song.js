@@ -53,21 +53,23 @@ window.addEventListener("load", function() {
 
         // })
         // arreglo vacio que te guarde todo, ese arreglo se va al local storage. Saco la info del arreglo
-        let arrayVacio = [];
+        // let arrayVacio = [];
         let botonesFavoritos = document.querySelectorAll(".holaMundo123");
         for (let index = 0; index < botonesFavoritos.length; index++) {
             botonesFavoritos[index].addEventListener("click", function () {
                 alert("hola mundo");
-                let infoArtista = {
-                    nombreCancion : datos.tracks.data[index].title,
-                    imagen : datos.tracks.data[index].album.cover,
-                    nombreArtista : datos.tracks.data[index].artist.name,
-                    albumNombre : datos.tracks.data[index].album.title,
-                    preview : datos.tracks.data[index].preview,
-                };
-                let infoArtistaToArray = arrayVacio.push(infoArtista);  
-                infoArtistaToArrayToString = JSON.stringify(infoArtistaToArray);
-                localStorage.setItem(`favoritos${index}`, infoArtistaToArrayToString);
+                let infoArtista = [
+                    nombreCancion = datos.tracks.data[index].title,
+                    imagen = datos.tracks.data[index].album.cover,
+                    nombreArtista = datos.tracks.data[index].artist.name,
+                    albumNombre = datos.tracks.data[index].album.title,
+                    preview = datos.tracks.data[index].preview,
+                ];
+                // let infoArtistaToArray = arrayVacio.push(infoArtista);  
+                // infoArtistaToArrayToString = JSON.stringify(infoArtistaToArray);
+                // localStorage.setItem(`favoritos${index}`, infoArtistaToArrayToString);
+                infoArtistaToString = JSON.stringify(infoArtista);
+                localStorage.setItem(`favoritos${index}`, infoArtistaToString);
             })            
         }
         console.log(botonesFavoritos);
