@@ -23,7 +23,7 @@ window.addEventListener("load", function() {
             `;
 
         } 
-        let index11 = document.querySelector(`#boton0`);
+        let index11 = document.querySelector(`#boton`);
         index
     //     let index11 = document.querySelectorAll(`#boton${index}`);
     //     for(let i=0; i<index11.length; i++){
