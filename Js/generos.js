@@ -15,7 +15,7 @@ window.addEventListener("load", function() {
                 <a href="genero_detalle.html#rk" class="links"><h2>Rock</h2></a>
                 <p>El artista mas escuchado de este genero:</p> 
                 
-                <a href="detail-artist.html"><b> Freddie Mercury</b></a>
+                <a href="detail-artist.html"><b> ${datos.name}</b></a>
                 <img class="img1" src="${datos.picture_big}" alt="image"> `
 
             })
@@ -38,7 +38,7 @@ window.addEventListener("load", function() {
             artistasAriana.innerHTML = ` 
             <a href="genero_detalle.html#pp" class="links" id="popjava"><h2>Pop</h2></a>
             <p>El artista mas escuchado de este genero:</p>  
-            <a href="detail-artist.html"> <b>Ariana Grande</b></a>
+            <a href="detail-artist.html"> <b>${datos.name}</b></a>
             <img class="img1" src="${datos.picture_big}" alt="image" width="200px">
              `
         })
@@ -78,7 +78,7 @@ window.addEventListener("load", function() {
             artistasFontanet.innerHTML = ` 
             <a href="genero_detalle.html#ep" class="links"><h2>Electro Pop</h2></a>
             <p class="parrafo_g">El artista mas escuchado de este género:</p>  
-            <a href="detail-artist.html" class="hipervinculo"> <b>Kygo</b></a>
+            <a href="detail-artist.html" class="hipervinculo"> <b>${datos.name}</b></a>
             <img class="img1" src="${datos.picture_big}"alt="image">
              `
         })
@@ -86,7 +86,7 @@ window.addEventListener("load", function() {
             console.log('Tu error es: ' + error);
         });
 
-        let apiBTS1= `${proxy}https://api.deezer.com/artist/4768753`;
+        let apiBTS1= `${proxy}https://api.deezer.com/artist/6982223`;
     
     fetch(apiBTS1)
         .then(function (response) {
@@ -94,12 +94,12 @@ window.addEventListener("load", function() {
         })
         .then(function (datos) {
             console.log(datos);
-            let artistasJin = document.querySelector('#kkigo');
+            let artistasJin = document.querySelector('#kpopp');
             artistasJin.innerHTML = ` 
-            <a href="genero_detalle.html#ep" class="links"><h2>Electro Pop</h2></a>
-            <p class="parrafo_g">El artista mas escuchado de este género:</p>  
-            <a href="detail-artist.html" class="hipervinculo"> <b>Kygo</b></a>
-            <img class="img1" src="${datos.picture_big}"alt="image">
+            <a href="genero_detalle.html#kk" class="links"><h2>K-pop</h2></a>
+                <p>El artista mas escuchado de este genero:</p>  
+                <a href="detail-artist.html" class="hipervinculo"> <b>Jin</b></a>
+                <img class="img1"src="https://i.pinimg.com/originals/65/58/51/655851e584065a14fb167f562bb904f6.jpg" alt="image">
              `
         })
         .catch(function (error) {

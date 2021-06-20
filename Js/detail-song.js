@@ -10,21 +10,22 @@ window.addEventListener("load", function() {
       
         let insertarTitulo = document.querySelectorAll(".cancion_d");
         for(let index=0; index < insertarTitulo.length; index++){
-            insertarTitulo[index].innerHTML = `<img src="${datos.tracks.data[index].album.cover}">
-            <h2 class="titulo11">${datos.tracks.data[index].title}</h2>
-            <h2 > 
-                <a href="detail-artist.html#bts_d">${datos.tracks.data[index].artist.name}</a> 
-            </h2>
-            <h2>
-                <a href="detail-album.html">${datos.tracks.data[index].album.title}</a>
-            </h2>
-            <p><button type="submit" id="boton${index}"  class="holaMundo123"><i class="far fa-star"></i></button></p>
-            <p id="estrellitafachera"><iframe src="${datos.tracks.data[index].preview}" width="100px" height="70" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe></p>
-            `;
-
+            insertarTitulo[index].innerHTML = `
+                <img src="${datos.tracks.data[index].album.cover}">
+                <h2 class="titulo11">${datos.tracks.data[index].title}</h2>
+                <h2 > 
+                    <a href="detail-artist.html#bts_d">${datos.tracks.data[index].artist.name}</a> 
+                </h2>
+                <h2>
+                    <a href="detail-album.html">${datos.tracks.data[index].album.title}</a>
+                </h2>
+                <p><button type="submit" id="boton${index}"  class="holaMundo123"><i class="far fa-star"></i></button></p>
+                <p id="estrellitafachera"><iframe src="${datos.tracks.data[index].preview}" width="100px" height="70" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe></p>
+                `;
         } 
-        let index11 = document.querySelector(`#boton`);
-        index
+
+        let index11 = document.querySelector(`#boton0`);
+        //index
     //     let index11 = document.querySelectorAll(`#boton${index}`);
     //     for(let i=0; i<index11.length; i++){
     //     index11[i].addEventListener ("click", function () {
