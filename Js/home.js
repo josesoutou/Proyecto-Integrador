@@ -447,9 +447,14 @@ window.addEventListener("load", function() {
          
         let tituloArtista1 = document.querySelectorAll('.artistas');
         for(let index = 0; index < tituloArtista1.length; index++){
-            tituloArtista1[0].addEventListener("click", function () {
-                location.href="../html/detail-artist.html#queen_d"; 
-            })
+            let codigo = document.querySelector("#kygo_d")
+            tituloArtista1[0].innerHTML = `<a href="../html/detail-artist.html?id=${codigo}"></a>`
+            // tituloArtista1[0].addEventListener("click", function () {
+            //     // location.href="../html/detail-artist.html#queen_d";
+            //     // let codigo = document.querySelector("#kygo_d")
+            //     // location.href=`../html/detail-artist.html?id=${codigo}`;   
+
+            // })
             tituloArtista1[1].addEventListener("click", function () {
                 location.href="../html/detail-artist.html#ariana_d"; 
             })
@@ -472,6 +477,8 @@ window.addEventListener("load", function() {
                 tituloArtista1[index].style.border = '3px solid black';
         })
         }
+
+
 
         //no entiendo como linkear los query selector de los distintos documentos de html
 

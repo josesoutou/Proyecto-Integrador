@@ -8,7 +8,7 @@ window.addEventListener("load", function() {
     .then(function (datos) {
         console.log(datos);
         let probando1234567 = document.querySelectorAll(".cancionP");
-        let agarrandoElLocal = localStorage.getItem(`favoritos0`);
+        let agarrandoElLocal = localStorage.getItem(`favoritos${index}`);
         let convirtiendoAObjeto = JSON.parse(agarrandoElLocal);
         console.log(convirtiendoAObjeto);    
         probando1234567[0].innerHTML = `<img class="imagen_playlist" src="${convirtiendoAObjeto[1]}">
@@ -28,5 +28,5 @@ window.addEventListener("load", function() {
     });
     })
 
-
+    console.log(agarrandoElLocal); 
 // `favoritos${index}`
