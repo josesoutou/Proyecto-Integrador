@@ -23,9 +23,23 @@ window.addEventListener("load", function() {
                 <p id="estrellitafachera"><iframe src="${datos.tracks.data[index].preview}" width="100px" height="70" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe></p>
                 `;
         } 
+        let botonesFavoritos = document.querySelectorAll(".holaMundo123");
+        for (let index = 0; index < botonesFavoritos.length; index++) {
+            botonesFavoritos[index].addEventListener("click", function () {
+                alert("hola mundo");
+                let infoArtista = [
+                    nombreCancion = datos.tracks.data[index].title,
+                    imagen = datos.tracks.data[index].album.cover,
+                    nombreArtista = datos.tracks.data[index].artist.name,
+                    albumNombre = datos.tracks.data[index].album.title,
+                    preview = datos.tracks.data[index].preview,
+                ];
+                infoArtistaToString = JSON.stringify(infoArtista);
+                localStorage.setItem(`favoritos${index}`, infoArtistaToString);
+            })            
+        }
+        console.log(botonesFavoritos);
 
-        let index11 = document.querySelector(`#boton0`);
-        index
     //     let index11 = document.querySelectorAll(`#boton${index}`);
     //     for(let i=0; i<index11.length; i++){
     //     index11[i].addEventListener ("click", function () {
