@@ -7,7 +7,8 @@ window.addEventListener("load", function() {
     })
     .then(function (datos) {
         console.log(datos);
-      
+        let arregloPlaylist = []
+        localStorage.setItem(`favoritos`,JSON.stringify(arregloPlaylist));
         let insertarTitulo = document.querySelectorAll(".cancion_d");
         for(let index=0; index < insertarTitulo.length; index++){
             insertarTitulo[index].innerHTML = `
@@ -26,15 +27,17 @@ window.addEventListener("load", function() {
         let botonesFavoritos = document.querySelectorAll(".holaMundo123");
         for (let index = 0; index < botonesFavoritos.length; index++) {
             botonesFavoritos[index].addEventListener("click", function () {
-                alert("hola mundo");
+                alert("Agregado a su playlist");
                 let infoArtista = [
                     nombreCancion = datos.tracks.data[index].title,
                     imagen = datos.tracks.data[index].album.cover,
                     nombreArtista = datos.tracks.data[index].artist.name,
                     albumNombre = datos.tracks.data[index].album.title,
-                    preview = datos.tracks.data[index].preview,
+                    preview = datos.tracks.data[index].preview
                 ];
                 infoArtistaToString = JSON.stringify(infoArtista);
+                arregloPlaylist.push(`favoritos${index}`);
+                localStorage.setItem(`favoritos`, JSON.stringify(arregloPlaylist))
                 localStorage.setItem(`favoritos${index}`, infoArtistaToString);
             })            
         }

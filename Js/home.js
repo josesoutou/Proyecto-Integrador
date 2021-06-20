@@ -59,7 +59,7 @@ window.addEventListener("load", function() {
                 console.log(datos);
                 let artistasAriana = document.querySelector('#ariana--');
                 artistasAriana.innerHTML = ` 
-                <h3> <strong><a href="detail-artist.html#ariana_d">${datos.name}</a></strong> </h3>
+                <h3> <strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}">${datos.name}</a></strong> </h3>
                 <img src="${datos.picture_big}" class="fotos_artistas">
                 <p class="epigrafe_artistas">
                 Último album: <a href="detail-album.html"> Positions</a>
@@ -85,7 +85,7 @@ window.addEventListener("load", function() {
                 console.log(datos);
                 let artistasKygo = document.querySelector('#kigo');
                 artistasKygo.innerHTML = `    
-                <h3><strong><a href="detail-artist.html#kygo_d">${datos.name}</a></strong></h3>
+                <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}">${datos.name}</a></strong></h3>
                 <img src="${datos.picture_big}" class="fotos_artistas">
                 <p class="epigrafe_artistas">
                     Último album: <a href="detail-album.html">Cloud nine</a>
@@ -110,7 +110,7 @@ window.addEventListener("load", function() {
                 console.log(datos);
                 let artistasVela = document.querySelector('#vela1');
                 artistasVela.innerHTML = ` 
-                    <h3><strong><a href="detail-artist.html#vela_d">${datos.name}</a></strong> </h3>
+                    <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}">${datos.name}</a></strong> </h3>
                     <img src="${datos.picture_big}" class="fotos_artistas">
                     <p class="epigrafe_artistas">
                         Último album: <a href="detail-album.html">A contraluz</a>
@@ -455,9 +455,9 @@ window.addEventListener("load", function() {
             //     // location.href=`../html/detail-artist.html?id=${codigo}`;   
 
             // })
-            tituloArtista1[1].addEventListener("click", function () {
-                location.href="../html/detail-artist.html#ariana_d"; 
-            })
+            // tituloArtista1[1].addEventListener("click", function () {
+            //     location.href="../html/detail-artist.html#ariana_d"; 
+            // })
             tituloArtista1[2].addEventListener("click", function () {
                 location.href="../html/detail-artist.html#kygo_d"; 
             })
