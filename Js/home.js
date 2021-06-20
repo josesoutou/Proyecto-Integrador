@@ -2,7 +2,7 @@ window.addEventListener("load", function() {
     let campoBuscar = document.querySelector("#campoBuscar"); 
     // let isNanFacha = campoBuscar.value; 
     campoBuscar.addEventListener("focus", function () {
-    campoBuscar.style.border = "3px solid black";
+    campoBuscar.style.border = "3px solid green";
     })
     campoBuscar.addEventListener("blur", function () {
         if (campoBuscar.value === '' || campoBuscar.value.length < 3) {
