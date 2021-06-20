@@ -1,4 +1,5 @@
 let queryString = location.search;
+// console.log(queryString);
 let queryStringObj = new URLSearchParams(queryString);
 let valorConsulta = queryStringObj.get("busqueda");
 
@@ -12,6 +13,8 @@ window.addEventListener("load", function() {
         })
         .then(function (datos) {
             console.log(datos);
+            let artista23 = document.querySelector(".imagen")
+            artista23.innerHTML = `<img src="${datos.data[8].artist.picture_medium}">`
             
             
         })
