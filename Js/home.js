@@ -2,7 +2,7 @@ window.addEventListener("load", function() {
     let campoBuscar = document.querySelector("#campoBuscar"); 
     // let isNanFacha = campoBuscar.value; 
     campoBuscar.addEventListener("focus", function () {
-    campoBuscar.style.border = "3px solid black";
+    campoBuscar.style.border = "3px solid green";
     })
     campoBuscar.addEventListener("blur", function () {
         if (campoBuscar.value === '' || campoBuscar.value.length < 3) {
@@ -448,7 +448,7 @@ window.addEventListener("load", function() {
         let tituloArtista1 = document.querySelectorAll('.artistas');
         for(let index = 0; index < tituloArtista1.length; index++){
             tituloArtista1[0].addEventListener("click", function () {
-                location.href="../html/detail-artist.html#queen_d"; 
+                location.href="../html/detail-artist.html?=#queen_d"; 
             })
             tituloArtista1[1].addEventListener("click", function () {
                 location.href="../html/detail-artist.html#ariana_d"; 
