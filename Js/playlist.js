@@ -1,6 +1,6 @@
 let arregloPlaylistString = localStorage.getItem("favoritos");
 let arregloPlaylist = JSON.parse(arregloPlaylistString);
- console.log(arregloPlaylist);
+console.log(arregloPlaylist[0]);
 //  console.log(arregloPlaylist[i[1]]);
 for (let i = 0; i < arregloPlaylist.length; i++) {
     // let arreglo = JSON.parse(localStorage.getItem(arregloPlaylistString[i]))

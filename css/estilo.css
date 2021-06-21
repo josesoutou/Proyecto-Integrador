@@ -9,7 +9,11 @@ body{
     background-color:#395F60;
 }
 /*HEADER*/
+.claseGenero a{
+    text-decoration: none;
+    color: blanchedalmond;
 
+}
 .header{
     width: 100%;
     padding: 20px;
@@ -1120,10 +1124,11 @@ body{
     .detalle{
         width: 310px;
         color: white;
+    
     }
 
     .text1{
-        color:white
+        color:white;
     }
 
     /*BUSCADOR*/

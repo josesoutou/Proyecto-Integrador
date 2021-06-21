@@ -18,21 +18,27 @@ window.addEventListener("load", function() {
         infoArtistaDetalles.innerHTML = `
                     <div class="texto_d_artista">
                     <h1>${nombreArtista}</h1>
-                    <img src="${imagenArtista}" alt="foto de ${nombreArtista}" class="foto_artista_detalle">
+                    <img src="${imagenArtista}" alt="foto de ${nombreArtista}" class="foto_artista_detalle" width="100%">
                     <p class="descripcion_artista"></p>
                     </div>
                     </div>`
-            fetch(`${proxy}https://api.deezer.com/album/${idArtista}`)
+            fetch(`${proxy}https://api.deezer.com/artist/${idArtista}/top`)
 
             .then(function (response1) {
                 return response1.json();
             })
             .then(function (datos1) {
                 console.log(datos1);
-                let probando = document.querySelector(".probando12343433535253")
-                probando.style.border = "3px solid white";
-                for (let index = 0; index < array.length; index++) {
-                    const element = array[index];
+                console.log(datos1.data)
+                let probando = document.querySelector(".texto_d_artista")//Hay que ver como juntarlo con el otro div
+                
+                // probando.style.border = "3px solid white";
+                for (let index = 0; index < 6; index++) {
+                    let track = datos1.data[index].title
+                    probando.innerHTML = `
+                                        <p>holaaa</p>
+                                        `
+                                        
                     
                 }
                 probando.innerHTML = `<p> ${datos1.title} </p>`
