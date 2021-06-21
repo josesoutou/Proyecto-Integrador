@@ -34,7 +34,8 @@ window.addEventListener("load", function() {
                 let artistas = document.querySelector('#Queen--');
                 artistas.innerHTML = ` 
                 
-                    <h3><strong> ${datos.name}</strong></h3>
+                    <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&descripcion=Ariana Grande Butera ​ es una cantante, 
+                    compositora, actriz, productora musical y diseñadora de modas estadounidense."> ${datos.name}</a></strong></h3>
                     <img src="${datos.picture_big}" class="fotos_artistas" >
                     <p class="epigrafe_artistas">
                         Último album: <a href="detail-album.html">A night at the opera</a>
@@ -59,7 +60,8 @@ window.addEventListener("load", function() {
                 console.log(datos);
                 let artistasAriana = document.querySelector('#ariana--');
                 artistasAriana.innerHTML = ` 
-                <h3> <strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}">${datos.name}</a></strong> </h3>
+                <h3> <strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&descripcion=Ariana Grande Butera ​ es una cantante, 
+                compositora, actriz, productora musical y diseñadora de modas estadounidense.">${datos.name}</a></strong> </h3>
                 <img src="${datos.picture_big}" class="fotos_artistas">
                 <p class="epigrafe_artistas">
                 Último album: <a href="detail-album.html"> Positions</a>
@@ -85,7 +87,8 @@ window.addEventListener("load", function() {
                 console.log(datos);
                 let artistasKygo = document.querySelector('#kigo');
                 artistasKygo.innerHTML = `    
-                <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}">${datos.name}</a></strong></h3>
+                <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&descripcion=Ariana Grande Butera ​ es una cantante, 
+                compositora, actriz, productora musical y diseñadora de modas estadounidense.">${datos.name}</a></strong></h3>
                 <img src="${datos.picture_big}" class="fotos_artistas">
                 <p class="epigrafe_artistas">
                     Último album: <a href="detail-album.html">Cloud nine</a>
@@ -110,7 +113,8 @@ window.addEventListener("load", function() {
                 console.log(datos);
                 let artistasVela = document.querySelector('#vela1');
                 artistasVela.innerHTML = ` 
-                    <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}">${datos.name}</a></strong> </h3>
+                    <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&descripcion=Ariana Grande Butera ​ es una cantante, 
+                    compositora, actriz, productora musical y diseñadora de modas estadounidense.">${datos.name}</a></strong> </h3>
                     <img src="${datos.picture_big}" class="fotos_artistas">
                     <p class="epigrafe_artistas">
                         Último album: <a href="detail-album.html">A contraluz</a>
@@ -134,7 +138,8 @@ window.addEventListener("load", function() {
                 console.log(datos);
                 let artistasCalle = document.querySelector('#callejeros_');
                 artistasCalle.innerHTML = ` 
-                    <h3> <strong><a href="detail-artist.html#callejeros_d"> ${datos.name}</a></strong> </h3>
+                    <h3> <strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&descripcion=Ariana Grande Butera ​ es una cantante, 
+                    compositora, actriz, productora musical y diseñadora de modas estadounidense."> ${datos.name}</a></strong> </h3>
                     <img src="${datos.picture_big}" class="fotos_artistas">
                     <p class="epigrafe_artistas">
                         Último album:<a href="detail-album.html"> Señales</a>
@@ -159,7 +164,8 @@ window.addEventListener("load", function() {
                 console.log(datos);
                 let artistasBts = document.querySelector('#Btss');
                 artistasBts.innerHTML = `     
-                    <h3><strong><a href="detail-artist.html#bts_d"> ${datos.name}</a></strong></h3>
+                    <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&descripcion=Ariana Grande Butera ​ es una cantante, 
+                    compositora, actriz, productora musical y diseñadora de modas estadounidense."> ${datos.name}</a></strong></h3>
                     <img src="${datos.picture_big}" alt="Foto grupal BTS" class="fotos_artistas">
                     <p class="epigrafe_artistas">
                         Último album: <a href="detail-song.html"> BE</a>
@@ -445,10 +451,9 @@ window.addEventListener("load", function() {
     // Ahora vamos a hacer los links entre paginas con js
 
          
-        let tituloArtista1 = document.querySelectorAll('.artistas');
-        for(let index = 0; index < tituloArtista1.length; index++){
-            let codigo = document.querySelector("#kygo_d")
-            tituloArtista1[0].innerHTML = `<a href="../html/detail-artist.html?id=${codigo}"></a>`
+        
+        // for(let index = 0; index < tituloArtista1.length; index++){
+        // tituloArtista1[0].innerHTML = `<a href="../html/detail-artist.html#queen_d"></a>`
             // tituloArtista1[0].addEventListener("click", function () {
             //     // location.href="../html/detail-artist.html#queen_d";
             //     // let codigo = document.querySelector("#kygo_d")
@@ -458,26 +463,48 @@ window.addEventListener("load", function() {
             // tituloArtista1[1].addEventListener("click", function () {
             //     location.href="../html/detail-artist.html#ariana_d"; 
             // })
-            tituloArtista1[2].addEventListener("click", function () {
-                location.href="../html/detail-artist.html#kygo_d"; 
-            })
-            tituloArtista1[3].addEventListener("click", function () {
-                location.href="../html/detail-artist.html#vela_d"; 
-            })
-            tituloArtista1[4].addEventListener("click", function () {
-                location.href="../html/detail-artist.html#callejeros_d"; 
-            })
-            tituloArtista1[5].addEventListener("click", function () {
-                location.href="../html/detail-artist.html#bts_d"; 
-            })
-            tituloArtista1[index].addEventListener("mouseover", function () {
+        //     tituloArtista1[2].addEventListener("click", function () {
+        //         location.href="../html/detail-artist.html#kygo_d"; 
+        //     })
+        //     tituloArtista1[3].addEventListener("click", function () {
+        //         location.href="../html/detail-artist.html#vela_d"; 
+        //     })
+        //     tituloArtista1[4].addEventListener("click", function () {
+        //         location.href="../html/detail-artist.html#callejeros_d"; 
+        //     })
+        //     tituloArtista1[5].addEventListener("click", function () {
+        //         location.href="../html/detail-artist.html#bts_d"; 
+        //     
+    // })
+    let tituloArtista1 = document.querySelectorAll('.artistas');
+    for(let index = 0; index < tituloArtista1.length; index++){
+             tituloArtista1[index].addEventListener("mouseover", function () {
                 tituloArtista1[index].style.border = '3px solid #ff6f43';
-            })
+             })
             tituloArtista1[index].addEventListener("mouseout", function () {
-                tituloArtista1[index].style.border = '3px solid black';
+                 tituloArtista1[index].style.border = '3px solid black';
+         })
+         }
+         
+    let tituloAlbum = document.querySelectorAll('.album_artista');
+    for(let index = 0; index < tituloAlbum.length; index++){
+        tituloAlbum[index].addEventListener("mouseover", function () {
+            tituloAlbum[index].style.border = '3px solid #ff6f43';
+            })
+            tituloAlbum[index].addEventListener("mouseout", function () {
+                tituloAlbum[index].style.border = '3px solid black';
         })
-        }
+    }
 
+    let tituloCancion = document.querySelectorAll('.cancion_uno');
+    for(let index = 0; index < tituloAlbum.length; index++){
+        tituloCancion[index].addEventListener("mouseover", function () {
+            tituloCancion[index].style.border = '3px solid #ff6f43';
+            })
+            tituloCancion[index].addEventListener("mouseout", function () {
+                tituloCancion[index].style.border = '3px solid black';
+        })
+    }
 
 
         //no entiendo como linkear los query selector de los distintos documentos de html

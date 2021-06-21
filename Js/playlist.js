@@ -1,7 +1,18 @@
 let arregloPlaylistString = localStorage.getItem("favoritos");
 let arregloPlaylist = JSON.parse(arregloPlaylistString);
+ console.log(arregloPlaylist);
+//  console.log(arregloPlaylist[i[1]]);
+for (let i = 0; i < arregloPlaylist.length; i++) {
+    // let arreglo = JSON.parse(localStorage.getItem(arregloPlaylistString[i]))
+    // console.log(arreglo);
+    console.log(arregloPlaylist[i[1]]);
+    let probando1234567 = document.querySelectorAll(".cancionP");
+    probando1234567[i].innerHTML += `<img class="imagen_playlist" src="${arregloPlaylist[i]}">
+     <div class="textoP"><h2>${arregloPlaylistString[1]}</h2><P>${arregloPlaylistString[2]}</P></div>`
+    
+}
 
-window.addEventListener("load", function() {
+// window.addEventListener("load", function() {
 
 
     // const proxy = 'https://cors-anywhere.herokuapp.com/';
@@ -37,8 +48,8 @@ window.addEventListener("load", function() {
     // console.log(agarrandoElLocal); 
 // `favoritos${index}
 
-    for (let index = 0; index < array.length; index++) {
-        const element = array[index];
+    // for (let index = 0; index < array.length; index++) {
+    //     const element = array[index];
         
-    }
-})
+    // }
+// })

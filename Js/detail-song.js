@@ -8,7 +8,6 @@ window.addEventListener("load", function() {
     .then(function (datos) {
         console.log(datos);
         let arregloPlaylist = []
-        localStorage.setItem(`favoritos`,JSON.stringify(arregloPlaylist));
         let insertarTitulo = document.querySelectorAll(".cancion_d");
         for(let index=0; index < insertarTitulo.length; index++){
             insertarTitulo[index].innerHTML = `
@@ -42,6 +41,7 @@ window.addEventListener("load", function() {
             })            
         }
         console.log(botonesFavoritos);
+        console.log(infoArtista);
 
     //     let index11 = document.querySelectorAll(`#boton${index}`);
     //     for(let i=0; i<index11.length; i++){
