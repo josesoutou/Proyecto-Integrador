@@ -16,36 +16,65 @@ window.addEventListener("load", function() {
         console.log(datos);
         let infoArtistaDetalles = document.querySelector(".infoartista")
         infoArtistaDetalles.innerHTML = `
-                    <div class="texto_d_artista">
-                    <h1>${nombreArtista}</h1>
-                    <img src="${imagenArtista}" alt="foto de ${nombreArtista}" class="foto_artista_detalle" width="100%">
-                    <p class="descripcion_artista"></p>
-                    </div>
-                    </div>`
-            fetch(`${proxy}https://api.deezer.com/artist/${idArtista}/top`)
-
-            .then(function (response1) {
-                return response1.json();
-            })
-            .then(function (datos1) {
-                console.log(datos1);
-                console.log(datos1.data)
-                let probando = document.querySelector(".texto_d_artista")//Hay que ver como juntarlo con el otro div
-                
-                // probando.style.border = "3px solid white";
-                for (let index = 0; index < 6; index++) {
-                    let track = datos1.data[index].title
-                    probando.innerHTML = `
-                                        <p>holaaa</p>
-                                        `
-                                        
+        <h2 class="detalle_artista">${nombreArtista}</h2>
+        <div class="infoartista">
+            <img src="${imagenArtista}" class="foto_artista_detalle" alt="Foto de ${nombreArtista}">
+            
+            <div class="texto_d_artista">
+            <h3 class="bio_artista">¿Quién es?</h3>
+            <br>
+            <p class="descripcion_artista">${nombreArtista} es no se de donde sacar la info f.</p>
+            
+            <br>
+            <h3 class="bio_artista">Sus top canciones:</h3>
+            <br>
+            <p class="descripcion_artista">
+                <ul>
                     
-                }
-                probando.innerHTML = `<p> ${datos1.title} </p>`
-            })
-            .catch(function (error) {
-                console.log('Tu error es: ' + error);
-            });
+                </ul>
+            </p>
+
+            </div>
+        </div>`
+
+            // <div class="infoartista">
+            //     <div class="header_artista">
+            //         <h2 class="detalle_artista">${nombreArtista}</h2>
+            //         <img src="${imagenArtista}" alt="foto de ${nombreArtista}" class="foto_artista_detalle">
+            //     </div>
+            //     <div class="texto_d_artista">
+            //         <h3 class="bio_artista">¿Quién es?</h3>
+            //         <p class="descripcion_artista">
+            //             ${nombreArtista} la info, hago un let y hago de cada una?? porque no hay info de cada artista en la api o es quilometrica
+            //         </p>
+
+            //     </div>
+            // </div>
+            // </div>
+                    
+
+        fetch(`${proxy}https://api.deezer.com/artist/${idArtista}/top`)
+
+        .then(function (response1) {
+            return response1.json();
+        })
+        .then(function (datos1) {
+            console.log(datos1);
+            console.log(datos1.data)
+            let probando = document.querySelector(".texto_d_artista")//Hay que ver como juntarlo con el otro div
+            
+            // probando.style.border = "3px solid white";
+            for (let index = 0; index < 6; index++) {
+                let track = datos1.data[index].title
+                probando.innerHTML = `
+                                    <p>holaaa</p>
+                    `
+            }
+            probando.innerHTML = `<p> ${datos1.title} </p>`
+        })
+        .catch(function (error) {
+            console.log('Tu error es: ' + error);
+        });
                 
     })
     .catch(function (error) {

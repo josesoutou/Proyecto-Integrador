@@ -370,7 +370,7 @@ window.addEventListener("load", function() {
             });
 
 
-    //CANCIONES TERMINAR
+    //CANCIONES 
 
         let apiCancionesHome = `${proxy}https://api.deezer.com/playlist/9165177722`;
 
@@ -449,8 +449,6 @@ window.addEventListener("load", function() {
     
     // Ahora vamos a hacer los links entre paginas con js
 
-         
-        
         // for(let index = 0; index < tituloArtista1.length; index++){
         // tituloArtista1[0].innerHTML = `<a href="../html/detail-artist.html#queen_d"></a>`
             // tituloArtista1[0].addEventListener("click", function () {
@@ -475,14 +473,18 @@ window.addEventListener("load", function() {
         //         location.href="../html/detail-artist.html#bts_d"; 
         //     
     // })
+
     let tituloArtista1 = document.querySelectorAll('.artistas');
     for(let index = 0; index < tituloArtista1.length; index++){
              tituloArtista1[index].addEventListener("mouseover", function () {
                 tituloArtista1[index].style.border = '3px solid #ff6f43';
              })
             tituloArtista1[index].addEventListener("mouseout", function () {
-                 tituloArtista1[index].style.border = '3px solid black';
-         })
+                tituloArtista1[index].style.border = '3px solid black';
+            })
+            tituloArtista1[index].addEventListener("click", function() {
+                
+            })
          }
          
     let tituloAlbum = document.querySelectorAll('.album_artista');
