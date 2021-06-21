@@ -136,10 +136,9 @@ window.addEventListener("load", function() {
             })
             .then(function (datos) {
                 console.log(datos);
-                let artistasCalle = document.querySelector('#callejeros_');
+              let artistasCalle = document.querySelector('#callejeros_');
                 artistasCalle.innerHTML = ` 
-                    <h3> <strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&descripcion=Ariana Grande Butera ​ es una cantante, 
-                    compositora, actriz, productora musical y diseñadora de modas estadounidense."> ${datos.name}</a></strong> </h3>
+                    <h3> <strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&descripcion=hola"> ${datos.name}</a></strong> </h3>
                     <img src="${datos.picture_big}" class="fotos_artistas">
                     <p class="epigrafe_artistas">
                         Último album:<a href="detail-album.html"> Señales</a>
@@ -162,6 +161,7 @@ window.addEventListener("load", function() {
             })
             .then(function (datos) {
                 console.log(datos);
+                
                 let artistasBts = document.querySelector('#Btss');
                 artistasBts.innerHTML = `     
                     <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&descripcion=Ariana Grande Butera ​ es una cantante, 
