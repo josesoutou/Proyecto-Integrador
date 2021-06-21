@@ -693,48 +693,43 @@ body{
 
 
 
-/*generos*/
-*{
-    box-sizing: border-box;
-}
-
-.genero1 h2{
-    height: 10%;
-}
-
+/*GENEROS*/
 
 .parrafo_g{
     height: 10%;
     margin-bottom: 5%;
 }
 
-
 .hipervinculo{
     height: 10%;
     margin: 2%;
+    text-align: center;
+    width: 95%;
 }
 
 .img1{
-    width: 90%;
-    
-    height: 70%;
+    width: 95%;
+    height: 60%;
     margin-top: 5%;
+    justify-content: center;
 }
+
 .titulo{
     text-transform: uppercase;
     text-align: center;
 }
+
 .padre{
-    
     width: 100%;
     display: flex;
     flex-direction: column;
-    
 }
+
 .titulo{
     color: blanchedalmond;
     margin: 15px;
 }
+
 .generos{
     flex-wrap: wrap;
     text-transform: uppercase;
@@ -744,10 +739,6 @@ body{
     justify-content: space-evenly;
     margin-top: 2%;
     margin-bottom: 2%;
-    
-    
-    
-    
 }
 
 .generos a{
@@ -756,30 +747,46 @@ body{
 }
 
 .genero1{
-    
-    width: 230px;
-    height: 600px;
+    width: 250px;
+    height: 400px;
     background-color:black;
     margin: 5px;
     border: black solid;
     padding: 15px;
-    border-radius: 20% 20% 20% 0;
-    
+
+    /* FLEX */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
 .genero1 h2 {
     text-align: center;
     color: blanchedalmond;
+    height: 15%;
+}
 
-}
 .genero1 p{
-    margin: 10px;
+    margin: 2%;
+    margin-bottom: 4%;
     color: blanchedalmond;
-    
+    text-align: center;
+    height: 15%;
 }
+
 .genero22{
     background-color: hotpink;
     width: 300px;
     border-radius: 50%;
+}
+
+.genero1 a{
+    text-align: center;
+    height: 10%;
+}
+
+.genero1 h2{
+    height: 10%;
 }
 
     
