@@ -1,3 +1,5 @@
+
+
 let queryString = location.search;
 // console.log(queryString);
 let queryStringObj = new URLSearchParams(queryString);

@@ -2,7 +2,7 @@ window.addEventListener("load", function() {
     let campoBuscar = document.querySelector("#campoBuscar"); 
     // let isNanFacha = campoBuscar.value; 
     campoBuscar.addEventListener("focus", function () {
-    campoBuscar.style.border = "3px solid green";
+        campoBuscar.style.border = "3px solid green";
     })
     campoBuscar.addEventListener("blur", function () {
         if (campoBuscar.value === '' || campoBuscar.value.length < 3) {
@@ -13,13 +13,12 @@ window.addEventListener("load", function() {
     submit123.addEventListener("submit", function (e) {
         e.preventDefault();
         if (campoBuscar.value === '' || campoBuscar.value.length < 3) {
-            alert("ERROR! El campo no puede estar vacio y debe contener al menos 3 caracteres");
+            alert("¡ERROR! El campo no puede estar vacio y debe contener al menos 3 caracteres");
         }
         else {
             alert("Formulario enviado correctamente");
             this.submit();
         }
-
     })
 
     //aca lo que hicimos fue resolver la cuestion acerca de los formularios. 

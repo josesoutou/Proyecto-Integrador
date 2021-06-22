@@ -389,12 +389,20 @@ body{
 }
 
 .texto_d_artista{
-    width: 45%;
-    margin: 5%;
+    width: 40%;
+    margin-left: 10%;
+}
+
+.texto_d_artista h3{
+    font-size: 30px;
+}
+
+.texto_d_artista p{
+    font-size: 20px;
 }
 
 .foto_artista_detalle{
-    width: 40% ;
+    width: 45% ;
     margin: 2%;
 }
 
