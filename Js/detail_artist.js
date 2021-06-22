@@ -23,7 +23,7 @@ window.addEventListener("load", function() {
             <div class="texto_d_artista">
                 <h3 class="bio_artista">¿Quién es?</h3>
                 <br>
-                <p class="descripcion_artista">${nombreArtista} es no se de donde sacar la info f.</p>
+                <p class="descripcion_artista">${datos.name} es no se de donde sacar la info f.</p>
                 
                 <br>
                 <h3 class="bio_artista">Sus top canciones:</h3>
@@ -49,7 +49,7 @@ window.addEventListener("load", function() {
             for (let index = 0; index < 6; index++) {
                 let track = datos1.data[index].title
                 probando.innerHTML = `
-                    <p>holaaa</p>
+                    <p>${datos.data.title}</p>
                     `
             }
             probando.innerHTML = `<p> ${datos1.title} </p>`
