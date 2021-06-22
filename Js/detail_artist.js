@@ -22,11 +22,6 @@ window.addEventListener("load", function() {
             <img src="${datos.picture_big}" class="foto_artista_detalle" alt="Foto de ${datos.name}">
             
             <div class="texto_d_artista">
-                <h3 class="bio_artista">¿Quién es?</h3>
-                <br>
-                <p class="descripcion_artista">${datos.name}</p>
-                
-                <br>
                 <h3 class="bio_artista">Sus top Albums:</h3>
                 <br>
                 <p class="descripcion_artista"></p>

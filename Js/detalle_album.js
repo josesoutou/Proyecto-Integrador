@@ -2,7 +2,7 @@ window.addEventListener("load", function() {
     const proxy = 'https://cors-anywhere.herokuapp.com/';
     let queryString = location.search;
     let queryStringObj = new URLSearchParams(queryString);
-     let idAlbum = queryStringObj.get("idAlbum"); 
+    let idAlbum = queryStringObj.get("idAlbum"); 
    
 
 
@@ -23,10 +23,10 @@ window.addEventListener("load", function() {
              <p class="año_album">1975</p> 
             <h4>Canciones más populares:</h4>
             <p class="canciones_album">
-                <a href="detail-song.html">${datos.tracks.data[1].title}</a>
+                ${datos.tracks.data[1].title}
             </p>
             <p class="canciones_album">
-                <a href="detail-song.html">${datos.tracks.data[2].title}</a>
+                ${datos.tracks.data[2].title}
             </p>
             `
 

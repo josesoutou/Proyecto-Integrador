@@ -37,9 +37,9 @@ window.addEventListener("load", function() {
                     <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&idArtista=${datos.id}"> ${datos.name}</a></strong></h3>
                     <img src="${datos.picture_big}" class="fotos_artistas" >
                     <p class="epigrafe_artistas">
-                        Último album: <a href="detail-album.html">A night at the opera</a>
+                        Último album: <a href="detail-album.html?idAlbum=915785">A night at the opera</a>
                         <br><br>
-                        Canción más popular:<a href="detail-song.html"> Bohemian Rhapsody</a>
+                        Canción más popular:<a href="detail-song.html?"> Bohemian Rhapsody</a>
                     </p> `
             })
             .catch(function (error) {
@@ -63,7 +63,7 @@ window.addEventListener("load", function() {
                 </strong> </h3>
                 <img src="${datos.picture_big}" class="fotos_artistas">
                 <p class="epigrafe_artistas">
-                Último album: <a href="detail-album.html"> Positions</a>
+                Último album: <a href="detail-album.html?idAlbum=208899972"> Positions</a>
                 <br><br>
                 Canción más popular: <a href="detail-song.html"> 34+35</a>
                 </p>`
@@ -88,7 +88,7 @@ window.addEventListener("load", function() {
                     <h3><strong><a href="detail-artist.html?idArtista=${datos.id}">${datos.name}</a></strong></h3>
                     <img src="${datos.picture_big}" class="fotos_artistas">
                     <p class="epigrafe_artistas">
-                        Último album: <a href="detail-album.html">Cloud nine</a>
+                        Último album: <a href="detail-album.html?idAlbum=13082674">Cloud nine</a>
                         <br><br>
                         Canción más popular:<a href="detail-song.html"> Fragile</a>
                     </p>`        
@@ -113,7 +113,7 @@ window.addEventListener("load", function() {
                     <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&idArtista=${datos.id}">${datos.name}</a></strong> </h3>
                     <img src="${datos.picture_big}" class="fotos_artistas">
                     <p class="epigrafe_artistas">
-                        Último album: <a href="detail-album.html">A contraluz</a>
+                        Último album: <a href="detail-album.html?idAlbum=160753">A contraluz</a>
                         <br><br>
                         Canción más popular:<a href="detail-song.html"> Llenos de magia</a>
                     </p>`   
@@ -137,7 +137,7 @@ window.addEventListener("load", function() {
                     <h3> <strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&idArtista=${datos.id}"> ${datos.name}</a></strong> </h3>
                     <img src="${datos.picture_big}" class="fotos_artistas">
                     <p class="epigrafe_artistas">
-                        Último album:<a href="detail-album.html"> Señales</a>
+                        Último album:<a href="detail-album.html?idAlbum=11396448"> Señales</a>
                         <br><br>
                         Canción más popular:<a href="detail-song.html"> Daños</a>
                     </p>`
@@ -163,9 +163,9 @@ window.addEventListener("load", function() {
                     <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&idArtista=${datos.id}"> ${datos.name}</a></strong></h3>
                     <img src="${datos.picture_big}" alt="Foto grupal BTS" class="fotos_artistas">
                     <p class="epigrafe_artistas">
-                        Último album: <a href="detail-song.html"> BE</a>
+                        Último album: <a href="detail-album.html?idAlbum=186790522"> BE</a>
                         <br><br>
-                        Canción más popular: <a href="detail-album.html"> Life goes on</a>
+                        Canción más popular: <a href="detail-song.html"> Life goes on</a>
                     </p>`
             })
             .catch(function (error) {
@@ -190,7 +190,7 @@ window.addEventListener("load", function() {
                     <img src="${datos.cover_medium}" alt="Portada de A night at the opera" class="portadas_albums">
                     <h3> <a href="detail-album.html?idAlbum=${datos.id}">${datos.title}</h3></a>
                     <p> 
-                        <a href="detail-artist.html">Queen</a> 
+                        <a href="detail-artist.html?idArtista=412">Queen</a> 
                     </p>
                     <a href="detail-song.html">Bohemian Rhapsody</a>
                     <br>
@@ -222,7 +222,7 @@ window.addEventListener("load", function() {
                     <img src="${datos.cover_medium}" alt="Portada album positions" class="portadas_albums">
                     <h3> <a href="detail-album.html?idAlbum=${datos.id}">${datos.title}</a> </h3>
                     <p> 
-                        <a href="detail-artist.html">Ariana Grande</a>
+                        <a href="detail-artist.html?idArtista=1562681">Ariana Grande</a>
                     </p>
                     <a href="detail-song.html">Positions</a>
                     <br>
@@ -253,7 +253,7 @@ window.addEventListener("load", function() {
                 albumKygo.innerHTML = ` 
                     <img src="${datos.cover_medium}" alt="Portada album Cloud nine" class="portadas_albums">
                     <h3> <a href="detail-album.html?idAlbum=${datos.id}">${datos.title}</a></h3>
-                    <p> <a href="detail-artist.html">Kygo</a></p>
+                    <p> <a href="detail-artist.html?idArtista=4768753">Kygo</a></p>
                         <a href="detail-song.html">Fragile</a>
                     <br>
                     <a href="detail-song.html">Firestone</a>
@@ -285,7 +285,7 @@ window.addEventListener("load", function() {
                 <img src="${datos.cover_medium}" alt="Portada album A contraluz" class="portadas_albums">
                 <h3> <a href="detail-album.html?&idAlbum=${datos.id}">${datos.title}</a> </h3>
                 <p> 
-                    <a href="detail-artist.html">La Vela Puerca</a> 
+                    <a href="detail-artist.html?idArtista=5954">La Vela Puerca</a> 
                 </p>
                 <a href="detail-song.html">Llenos de magia</a>
                 <br>
@@ -317,7 +317,7 @@ window.addEventListener("load", function() {
                     <img src="${datos.cover_medium}" alt="Portada album Señales" class="portadas_albums">
                     <h3> <a href="detail-album.html?idAlbum=${datos.id}">${datos.title}</a> </h3>
                     <p>
-                        <a href="detail-artist.html">Callejeros</a>
+                        <a href="detail-artist.html?idArtista=12134">Callejeros</a>
                     </p>
                     <a href="detail-song.html">Daños</a>
                     <br>
@@ -349,7 +349,7 @@ window.addEventListener("load", function() {
                     <img src="${datos.cover_medium}" alt="Portada album BE" class="portadas_albums">
                     <h3> <a href="detail-album.html?idAlbum=${datos.id}">${datos.title}</a> </h3>
                     <p> 
-                        <a href="detail-artist.html">BTS</a>
+                        <a href="detail-artist.html?idArtista=6982223">BTS</a>
                     </p>
                     <a href="detail-song.html">Life goes on</a>
                     <br>
@@ -383,7 +383,7 @@ window.addEventListener("load", function() {
                     <img src="${datos.tracks.data[1].album.cover_big}" alt="portada album A night at the opera" class="imagen_cancion">
                     <h3 class="nombre_canción"> <a href="detail-song.html">Bohemian Rhapsody</a></h3>
                     <p class="nombre_album"> 
-                        <a href="detail-album.html">A night at the opera</a>
+                        <a href="detail-album.html?idAlbum=915785">A night at the opera</a>
                     </p>
                     <i class="fas fa-play"></i> `
 
@@ -393,7 +393,7 @@ window.addEventListener("load", function() {
                     <img src="${datos.tracks.data[10].album.cover_big}" alt="portada album señales de callejeros" class="imagen_cancion">
                     <h3 class="nombre_canción"> <a href="detail-song.html">Daños</a></h3>
                     <p class="nombre_album">
-                        <a href="detail-album.html">Señales</a>
+                        <a href="detail-album.html?idAlbum=11396448">Señales</a>
                     </p>
                     <i class="fas fa-play"></i>`
 
@@ -403,7 +403,7 @@ window.addEventListener("load", function() {
                     <img src="${datos.tracks.data[37].album.cover_big}" alt="portada album positions" class="imagen_cancion">
                     <h3 class="nombre_canción"><a href="detail-song.html">Positions</a></h3>
                     <p class="nombre_album">
-                        <a href="detail-album.html">Positions</a>
+                        <a href="detail-album.html?idAlbum=208899972">Positions</a>
                     </p>
                     <i class="fas fa-play"></i>`
 
@@ -413,7 +413,7 @@ window.addEventListener("load", function() {
                     <img src="${datos.tracks.data[4].album.cover_big}" alt="portada album BE de BTS" class="imagen_cancion">
                     <h3 class="nombre_canción"> <a href="detail-song.html">Life goes on</a></h3>
                     <p class="nombre_album">
-                        <a href="detail-album.html">BE</a>
+                        <a href="detail-album.html?idAlbum=186790522">BE</a>
                     </p>
                     <i class="fas fa-play"></i>`
 
@@ -423,7 +423,7 @@ window.addEventListener("load", function() {
                     <img src="${datos.tracks.data[38].album.cover_big}" alt="portada album Cloud nine de kygo" class="imagen_cancion">
                     <h3 class="nombre_canción"> <a href="detail-song.html">Fragile</a></h3>
                     <p class="nombre_album">
-                        <a href="detail-album.html">Cloud Nine</a>
+                        <a href="detail-album.html?idAlbum=13082674">Cloud Nine</a>
                     </p>
                     <i class="fas fa-play"></i>`
 
@@ -433,7 +433,7 @@ window.addEventListener("load", function() {
                     <img src="${datos.tracks.data[34].album.cover_big}" alt="portada album a contraluz de la vela puerca" class="imagen_cancion">
                     <h3 class="nombre_canción"> <a href="detail-song.html">Llenos de magia</a> </h3>
                     <p class="nombre_album">
-                        <a href="detail-album.html">A Contraluz</a>
+                        <a href="detail-album.html?idAlbum=160753">A Contraluz</a>
                     </p>
                     <i class="fas fa-play"></i>`
 
