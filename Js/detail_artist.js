@@ -3,8 +3,8 @@ window.addEventListener("load", function() {
     let queryString = location.search;
     let queryStringObj = new URLSearchParams(queryString);
     let idArtista = queryStringObj.get("idArtista"); 
-    let nombreArtista = queryStringObj.get("nombre"); 
-    let imagenArtista = queryStringObj.get("imagen");
+    // let nombreArtista = queryStringObj.get("nombre"); 
+    // let imagenArtista = queryStringObj.get("imagen");
 
 
     fetch(`${proxy}https://api.deezer.com/artist/${idArtista}`)
@@ -16,14 +16,14 @@ window.addEventListener("load", function() {
         console.log(datos);
         let infoArtistaDetalles = document.querySelector(".infoartista")
         infoArtistaDetalles.innerHTML = `
-        <h2 class="detalle_artista">${nombreArtista}</h2>
+        <h2 class="detalle_artista">${datos.name}</h2>
         <div class="infoartista">
-            <img src="${imagenArtista}" class="foto_artista_detalle" alt="Foto de ${nombreArtista}">
+            <img src="${datos.picture_big}" class="foto_artista_detalle" alt="Foto de ${datos.name}">
             
             <div class="texto_d_artista">
                 <h3 class="bio_artista">¿Quién es?</h3>
                 <br>
-                <p class="descripcion_artista">${datos.name} es no se de donde sacar la info f.</p>
+                <p class="descripcion_artista">${datos.name}</p>
                 
                 <br>
                 <h3 class="bio_artista">Sus top Albums:</h3>

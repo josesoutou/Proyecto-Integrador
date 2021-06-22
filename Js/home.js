@@ -189,7 +189,7 @@ window.addEventListener("load", function() {
                 let albumQueen = document.querySelector('#albumQ');
                 albumQueen.innerHTML = ` 
                     <img src="${datos.cover_medium}" alt="Portada de A night at the opera" class="portadas_albums">
-                    <h3> <a href="detail-album.html?nombre=${datos.title}&imagen=${datos.cover_medium}&generoAlbum=${datos.genres.data.name}&nombreArtista=${datos.contributors.name}">${datos.title}</a> </h3>
+                    <h3> <a href="detail-album.html?nombre=${datos.title}&imagen=${datos.cover_medium}">${datos.title}</h3></a>
                     <p> 
                         <a href="detail-artist.html">Queen</a> 
                     </p>
@@ -221,7 +221,7 @@ window.addEventListener("load", function() {
                 let albumAriana = document.querySelector('#albumA');
                 albumAriana.innerHTML = `        
                     <img src="${datos.cover_medium}" alt="Portada album positions" class="portadas_albums">
-                    <h3> <a href="detail-album.html?nombre=${datos.title}&imagen=${datos.cover_medium}&descripcion=">${datos.title}</a> </h3>
+                    <h3> <a href="detail-album.html?nombre=${datos.title}&imagen=${datos.cover_medium}&nombreArtista=${datos.contributors[0].name}&generoAlbum=${datos.genres.data[0].name}">${datos.title}</a> </h3>
                     <p> 
                         <a href="detail-artist.html">Ariana Grande</a>
                     </p>

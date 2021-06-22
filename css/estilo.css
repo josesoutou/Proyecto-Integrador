@@ -9,6 +9,11 @@ body{
     background-color:#395F60;
 }
 /*HEADER*/
+.error{
+    
+    text-decoration: none;
+    margin-left: 3%;
+}
 .claseGenero a{
     text-decoration: none;
     color: blanchedalmond;
