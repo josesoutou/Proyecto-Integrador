@@ -19,6 +19,7 @@ window.addEventListener("load", function() {
                 <div ><img src="${datos.data[index].artist.picture_medium}">
                 <h2>${datos.data[index].artist.name}</h2>
                 <h3> Mejor Album : ${datos.data[index].album.title}</h3>
+                
                 </div>
             `
             }
@@ -27,6 +28,10 @@ window.addEventListener("load", function() {
         })
         .catch(function (error) {
             console.log('Tu error es: ' + error);
+            // window.location.href = "../html.error.hmtl"
+            let error11 = document.querySelector(".error")
+            error11.innerHTML = `<h1><ERROR/H1>`
+
             
         });
 
