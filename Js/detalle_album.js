@@ -5,6 +5,8 @@ window.addEventListener("load", function() {
     let idAlbum = queryStringObj.get("idArtista"); 
     let nombreAlbum = queryStringObj.get("nombre"); 
     let imagenAlbum = queryStringObj.get("imagen");
+    let nombreArtistaAlbum = queryStringObj.get("artista");
+    let generoAlbum  = queryStringObj.get("genero");
 
 
     fetch(`${proxy}https://api.deezer.com/album/${idAlbum}`)
@@ -16,9 +18,19 @@ window.addEventListener("load", function() {
         console.log(datos);
         let infoArtistaDetalles = document.querySelector(".album_d")
         infoArtistaDetalles.innerHTML = `
-                    <img src="${imagenAlbum}" alt="Portada de A night at the opera" class="portadas_albums">
-                    <h3> ${nombreAlbum}</h3>
-                                        `
+            <h2>${nombreAlbum}</h2>
+            <img src="${imagenAlbum}" alt="Portada del album ${nombreAlbum}">
+            <h3>${nombreArtistaAlbum}</h3>
+            <h5>${generoAlbum}</h5>
+            /* <p class="año_album">1975</p> 
+            <h4>Canciones más populares:</h4>
+            <p class="canciones_album">
+                <a href="detail-song.html">Bohemian Rhapsody</a>
+            </p>
+            <p class="canciones_album">
+                <a href="detail-song.html">Love of my life</a>
+            </p>*/`
+
             // fetch(`${proxy}https://api.deezer.com/artist/${idArtista}/top`)
 
             // .then(function (response1) {

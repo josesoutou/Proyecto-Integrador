@@ -29,28 +29,11 @@ window.addEventListener("load", function() {
             <h3 class="bio_artista">Sus top canciones:</h3>
             <br>
             <p class="descripcion_artista">
-                <ul>
-                    
-                </ul>
+                
             </p>
 
             </div>
         </div>`
-
-            // <div class="infoartista">
-            //     <div class="header_artista">
-            //         <h2 class="detalle_artista">${nombreArtista}</h2>
-            //         <img src="${imagenArtista}" alt="foto de ${nombreArtista}" class="foto_artista_detalle">
-            //     </div>
-            //     <div class="texto_d_artista">
-            //         <h3 class="bio_artista">¿Quién es?</h3>
-            //         <p class="descripcion_artista">
-            //             ${nombreArtista} la info, hago un let y hago de cada una?? porque no hay info de cada artista en la api o es quilometrica
-            //         </p>
-
-            //     </div>
-            // </div>
-            // </div>
                     
 
         fetch(`${proxy}https://api.deezer.com/artist/${idArtista}/top`)
