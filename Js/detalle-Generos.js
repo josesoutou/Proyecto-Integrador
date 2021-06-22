@@ -1,4 +1,29 @@
 window.addEventListener("load", function() {
+
+    //BUSCADOR
+
+    let campoBuscar = document.querySelector("#campoBuscar"); 
+    // let isNanFacha = campoBuscar.value; 
+    campoBuscar.addEventListener("focus", function () {
+        campoBuscar.style.border = "3px solid green";
+    })
+    campoBuscar.addEventListener("blur", function () {
+        if (campoBuscar.value === '' || campoBuscar.value.length < 3) {
+            campoBuscar.style.border = "3px solid red";
+        }
+    })
+    let submit123 = document.querySelector("#submit123");
+    submit123.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (campoBuscar.value === '' || campoBuscar.value.length < 3) {
+            alert("¡ERROR! El campo no puede estar vacio y debe contener al menos 3 caracteres");
+        }
+        else {
+            alert("Formulario enviado correctamente");
+            this.submit();
+        }
+    })
+
     const proxy = 'https://cors-anywhere.herokuapp.com/';
     let apiBob = `${proxy}https://api.deezer.com/artist/808`;
 

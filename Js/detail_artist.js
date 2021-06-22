@@ -1,4 +1,5 @@
 window.addEventListener("load", function() {
+    
     const proxy = 'https://cors-anywhere.herokuapp.com/';
     let queryString = location.search;
     let queryStringObj = new URLSearchParams(queryString);
@@ -21,16 +22,10 @@ window.addEventListener("load", function() {
             <img src="${imagenArtista}" class="foto_artista_detalle" alt="Foto de ${nombreArtista}">
             
             <div class="texto_d_artista">
-                <h3 class="bio_artista">¿Quién es?</h3>
-                <br>
-                <p class="descripcion_artista">${datos.name} es no se de donde sacar la info f.</p>
-                
                 <br>
                 <h3 class="bio_artista">Sus top Albums:</h3>
                 <br>
-                <p class="descripcion_artista">
-
-                </p>
+                <p class="descripcion_artista"></p>
             </div>
         </div>`
                     
@@ -63,6 +58,30 @@ window.addEventListener("load", function() {
     .catch(function (error) {
         console.log('Tu error es: ' + error);
     });
+
+    //BUSCADOR
+
+    let campoBuscar = document.querySelector("#campoBuscar"); 
+    // let isNanFacha = campoBuscar.value; 
+    campoBuscar.addEventListener("focus", function () {
+        campoBuscar.style.border = "3px solid green";
+    })
+    campoBuscar.addEventListener("blur", function () {
+        if (campoBuscar.value === '' || campoBuscar.value.length < 3) {
+            campoBuscar.style.border = "3px solid red";
+        }
+    })
+    let submit123 = document.querySelector("#submit123");
+    submit123.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (campoBuscar.value === '' || campoBuscar.value.length < 3) {
+            alert("¡ERROR! El campo no puede estar vacio y debe contener al menos 3 caracteres");
+        }
+        else {
+            alert("Formulario enviado correctamente");
+            this.submit();
+        }
+    })
 
 // let queryString = location.search;
 // let queryStringObj = new URLSearchParams(queryString);
