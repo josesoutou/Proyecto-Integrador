@@ -14,13 +14,14 @@ window.addEventListener("load", function() {
         .then(function (datos) {
             console.log(datos);
             let artista23 = document.querySelector(".resultadosBusqueda")
-            artista23.innerHTML = `
-                                    <p class="p">Resultados de la busqueda:</p>
-                                    <img src="${datos.data[1].artist.picture_medium}">
-                                    <h2>${datos.data[1].artist.name}</h2>
-                                    <h3> Mejor Album : ${datos.data[1].album.title}</h3>
-            
-                                `
+            for (let index = 0; index < api.length; index++) {
+                artista23.innerHTML += `
+                <img src="${datos.data[index].artist.picture_medium}">
+                <h2>${datos.data[index].artist.name}</h2>
+                <h3> Mejor Album : ${datos.data[index].album.title}</h3>
+
+            `
+            }
             
             
         })
