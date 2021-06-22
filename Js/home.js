@@ -85,7 +85,7 @@ window.addEventListener("load", function() {
                 console.log(datos);
                 let artistasKygo = document.querySelector('#kigo');
                 artistasKygo.innerHTML = `    
-                    <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&idArtista=${datos.id}">${datos.name}</a></strong></h3>
+                    <h3><strong><a href="detail-artist.html?idArtista=${datos.id}">${datos.name}</a></strong></h3>
                     <img src="${datos.picture_big}" class="fotos_artistas">
                     <p class="epigrafe_artistas">
                         Último album: <a href="detail-album.html">Cloud nine</a>
@@ -188,7 +188,7 @@ window.addEventListener("load", function() {
                 let albumQueen = document.querySelector('#albumQ');
                 albumQueen.innerHTML = ` 
                     <img src="${datos.cover_medium}" alt="Portada de A night at the opera" class="portadas_albums">
-                    <h3> <a href="detail-album.html?nombre=${datos.title}&imagen=${datos.cover_medium}">${datos.title}</h3></a>
+                    <h3> <a href="detail-album.html?idAlbum=${datos.id}">${datos.title}</h3></a>
                     <p> 
                         <a href="detail-artist.html">Queen</a> 
                     </p>
@@ -220,7 +220,7 @@ window.addEventListener("load", function() {
                 let albumAriana = document.querySelector('#albumA');
                 albumAriana.innerHTML = `        
                     <img src="${datos.cover_medium}" alt="Portada album positions" class="portadas_albums">
-                    <h3> <a href="detail-album.html?nombre=${datos.title}&imagen=${datos.cover_medium}&nombreArtista=${datos.contributors[0].name}&generoAlbum=${datos.genres.data[0].name}">${datos.title}</a> </h3>
+                    <h3> <a href="detail-album.html?idAlbum=${datos.id}">${datos.title}</a> </h3>
                     <p> 
                         <a href="detail-artist.html">Ariana Grande</a>
                     </p>
@@ -252,7 +252,7 @@ window.addEventListener("load", function() {
                 let albumKygo = document.querySelector('#albumK');
                 albumKygo.innerHTML = ` 
                     <img src="${datos.cover_medium}" alt="Portada album Cloud nine" class="portadas_albums">
-                    <h3> <a href="detail-album.html?nombre=${datos.title}&imagen=${datos.cover_medium}&descripcion=">${datos.title}</a></h3>
+                    <h3> <a href="detail-album.html?idAlbum=${datos.id}">${datos.title}</a></h3>
                     <p> <a href="detail-artist.html">Kygo</a></p>
                         <a href="detail-song.html">Fragile</a>
                     <br>
@@ -283,7 +283,7 @@ window.addEventListener("load", function() {
                 albumLaVela.innerHTML = ` 
                 
                 <img src="${datos.cover_medium}" alt="Portada album A contraluz" class="portadas_albums">
-                <h3> <a href="detail-album.html?nombre=${datos.title}&imagen=${datos.cover_medium}&idAlbum=${datos.id}">${datos.title}</a> </h3>
+                <h3> <a href="detail-album.html?&idAlbum=${datos.id}">${datos.title}</a> </h3>
                 <p> 
                     <a href="detail-artist.html">La Vela Puerca</a> 
                 </p>
@@ -315,7 +315,7 @@ window.addEventListener("load", function() {
                 let albumCallejeros = document.querySelector('#albumC');
                 albumCallejeros.innerHTML = ` 
                     <img src="${datos.cover_medium}" alt="Portada album Señales" class="portadas_albums">
-                    <h3> <a href="detail-album.html?nombre=${datos.title}&imagen=${datos.cover_medium}&descripcion=">${datos.title}</a> </h3>
+                    <h3> <a href="detail-album.html?idAlbum=${datos.id}">${datos.title}</a> </h3>
                     <p>
                         <a href="detail-artist.html">Callejeros</a>
                     </p>
@@ -347,7 +347,7 @@ window.addEventListener("load", function() {
                 let albumBts = document.querySelector('#albumB');
                 albumBts.innerHTML = ` 
                     <img src="${datos.cover_medium}" alt="Portada album BE" class="portadas_albums">
-                    <h3> <a href="detail-album.html?nombre=${datos.title}&imagen=${datos.cover_medium}&descripcion=">${datos.title}</a> </h3>
+                    <h3> <a href="detail-album.html?idAlbum=${datos.id}">${datos.title}</a> </h3>
                     <p> 
                         <a href="detail-artist.html">BTS</a>
                     </p>

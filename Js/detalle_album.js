@@ -2,36 +2,33 @@ window.addEventListener("load", function() {
     const proxy = 'https://cors-anywhere.herokuapp.com/';
     let queryString = location.search;
     let queryStringObj = new URLSearchParams(queryString);
-    // let idAlbum = queryStringObj.get("idArtista"); 
-    let nombreAlbum = queryStringObj.get("nombre"); 
-    let imagenAlbum = queryStringObj.get("imagen");
-    let nombreArtista= queryStringObj.get("nombreArtista");
-    let generoAlbum = queryStringObj.get("generoAlbum");
-    // let nombreArtistaAlbum = queryStringObj.get("artista");
-    // let generoAlbum  = queryStringObj.get("genero");
+     let idAlbum = queryStringObj.get("idAlbum"); 
+   
 
 
-    // fetch(`${proxy}https://api.deezer.com/album/${idAlbum}`)
+    fetch(`${proxy}https://api.deezer.com/album/${idAlbum}`)
 
-    // .then(function (response) {
-    //     return response.json();
-    // })
-    // .then(function (datos) {
-    //     console.log(datos);
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (datos) {
+        console.log(datos);
         let infoArtistaDetalles = document.querySelector(".album_d")
         infoArtistaDetalles.innerHTML = `
-            <h2>${nombreAlbum}</h2>  
-            <img src="${imagenAlbum}" alt="Portada del album">
-            <h2>${nombreArtista}</h2>
-            <h5>${generoAlbum}</h5>
+            
+            <h2>${datos.title}</h2>  
+            <img src="${datos.cover_medium}" alt="Portada del album">
+            <h2>${datos.contributors[0].name}</h2>
+            <h5>${datos.genres.data[0].name}</h5>
              <p class="año_album">1975</p> 
             <h4>Canciones más populares:</h4>
             <p class="canciones_album">
-                <a href="detail-song.html">Bohemian Rhapsody</a>
+                <a href="detail-song.html">${datos.tracks.data[1].title}</a>
             </p>
             <p class="canciones_album">
-                <a href="detail-song.html">Love of my life</a>
-            </p>`
+                <a href="detail-song.html">${datos.tracks.data[2].title}</a>
+            </p>
+            `
 
             // fetch(`${proxy}https://api.deezer.com/artist/${idArtista}/top`)
 
@@ -61,7 +58,9 @@ window.addEventListener("load", function() {
     })
     .catch(function (error) {
         console.log('Tu error es: ' + error);
-    });
+        document.querySelector(".errorAlbum").innerHTML = `<iframe src="https://giphy.com/embed/mq5y2jHRCAqMo" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/windows-vaporwave-error-mq5y2jHRCAqMo%22%3Evia GIPHY</a></p>
+        `
+    });//COMO LA API NO ENCUENTRA CIERTOS ALBUMES HACEMOS ESTO
 
     //BUSCADOR
 

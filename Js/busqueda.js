@@ -25,7 +25,7 @@ window.addEventListener("load", function() {
                     <img src="${datos.data[index].artist.picture_medium}">
                     <div class="infoResultados">
                         <h2><a href="detail-artist.html?idArtista=${datos.data[index].artist.id}">${datos.data[index].artist.name}</h2></a>
-                        <h3> Mejor Album: ${datos.data[index].album.title}</h3>
+                        <h3><a href="detail-album.html?idAlbum=${datos.data[index].album.id}"> Mejor Album: ${datos.data[index].album.title}</h3></a>
                     </div>
                 </div>`
             }
