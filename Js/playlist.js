@@ -1,12 +1,18 @@
 let arregloPlaylistString = localStorage.getItem("favoritos");
 let arregloPlaylist = JSON.parse(arregloPlaylistString);
-let arregloPlaylistInside = JSON.parse(localStorage.getItem("favoritos2"))
-console.log(arregloPlaylistInside)
+let favoritos = [];
+for (let index = 0; index < arregloPlaylist.length; index++) {
+    let favoritoString = localStorage.getItem(`favoritos${index}`)
+    let favorito = JSON.parse(favoritoString);
+    favoritos.push(favorito);
+}
+console.log(favoritos)
 
-for (let i = 0; i < arregloPlaylist.length; i++) {
-    let probando1234567 = document.querySelectorAll(".cancionP");
-    probando1234567[i].innerHTML += `<img class="imagen_playlist" src="${arregloPlaylist[nombreCancion]}">
-     <div class="textoP"><h2>${arregloPlaylistString[nombreCancion]}</h2><P>${arregloPlaylistString[nombreCancion]}</P></div>`
+for (let i = 0; i < favoritos.length; i++) {
+    console.log(favoritos[i]);
+    let probando1234567 = document.querySelector(".playlist10");
+    probando1234567.innerHTML += `<div class="cancionP"> <img class="imagen_playlist" src="${favoritos[i][1]}">
+    <div class="textoP"><h2>${favoritos[i][0]}</h2><P></P></div></div>`
     
 }
 

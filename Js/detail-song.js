@@ -22,18 +22,18 @@ window.addEventListener("load", function() {
                 <p><button type="submit" id="boton${index}"  class="holaMundo123"><i class="far fa-star"></i></button></p>
                 <p id="estrellitafachera"><iframe src="${datos.tracks.data[index].preview}" width="100px" height="70" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe></p>
                 `;
-        } 
+        }
         let botonesFavoritos = document.querySelectorAll(".holaMundo123");
         for (let index = 0; index < botonesFavoritos.length; index++) {
             botonesFavoritos[index].addEventListener("click", function () {
                 alert("Agregado a su playlist");
-                let infoArtista = [
+                var infoArtista = [
                     nombreCancion = datos.tracks.data[index].title,
                     imagen = datos.tracks.data[index].album.cover,
                     nombreArtista = datos.tracks.data[index].artist.name,
                     albumNombre = datos.tracks.data[index].album.title,
                     preview = datos.tracks.data[index].preview
-                ];
+                ] ;
                 infoArtistaToString = JSON.stringify(infoArtista);
                 localStorage.setItem(`favoritos${index}`, infoArtistaToString);
                 arregloPlaylist.push(`favoritos${index}`);

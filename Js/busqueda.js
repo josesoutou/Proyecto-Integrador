@@ -27,6 +27,7 @@ window.addEventListener("load", function() {
         })
         .catch(function (error) {
             console.log('Tu error es: ' + error);
+            alert("No hay coincidencias")
             
         });
 
