@@ -35,9 +35,9 @@ window.addEventListener("load", function() {
                     preview = datos.tracks.data[index].preview
                 ];
                 infoArtistaToString = JSON.stringify(infoArtista);
+                localStorage.setItem(`favoritos${index}`, infoArtistaToString);
                 arregloPlaylist.push(`favoritos${index}`);
                 localStorage.setItem(`favoritos`, JSON.stringify(arregloPlaylist))
-                localStorage.setItem(`favoritos${index}`, infoArtistaToString);
             })            
         }
         console.log(botonesFavoritos);

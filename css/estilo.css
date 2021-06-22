@@ -880,7 +880,15 @@ body{
     text-decoration: none;
 }
 .resultadosBusqueda{
-    flex-wrap: wrap;
+    
+    display: flex;
+    
+    color: white;
+    margin: 5%;
+    margin-top: 0%;
+    background-color: black;
+    border-radius: 15px;
+
 }
 .p{
     background-color: #ff6f43;
