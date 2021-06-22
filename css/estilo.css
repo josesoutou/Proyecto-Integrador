@@ -876,114 +876,55 @@ body{
 
 /*pagina resultados*/
 
-.links{
-    text-decoration: none;
-}
-.resultadosBusqueda{
-    
-    display: flex;
-    
-    color: white;
-    margin: 5%;
-    margin-top: 0%;
-    background-color: black;
-    border-radius: 15px;
-
-}
-.p{
-    background-color: #ff6f43;
-    width: 30%;
-    margin: 5%;
-    font-size: 200%;
-}
-
-.titt{
-    font-size:300%;
-    text-align: center;
-    color: white;
-    margin-top: 7%;
-}
-
-.h32{
-    background-color: honeydew;
-    margin-top: 20px;
-    width: 50%;
-}
-.textopop{
-    display: flex;
-    flex-direction: column;
-    margin: 55px;
-    
-}
-
-.hist{
-    background-color:black;
-    color: rgb(46, 36, 36);
-    margin: 10px;
-    list-style-type: none;
-    color: blanchedalmond;
-    padding: 10px;
-    
-}
-.hist li{
-    background-color: rgb(27, 27, 27);
-    color: rgb(243, 236, 236);
-    margin: 10px;
-    list-style-type: none;
-    font-size: 200%;
-}
-.hist p, .hist h2{
-    font-size: 200%;
-}
-.artistapop {
-    background-color: rgba(255, 255, 255, 0.747);
-    width: 100%;
-    font-size: 200%;
-    display: flex;
-    margin-top: 4%;
-    padding: 2%;
-}
-
-.artistapop img{
-    width: 25%;
-    height: 80%;
-}
-
-.artistapop p{
-    width: 50%;
+.tituloResultados{
+    margin-top: 5%;
+    margin-bottom: 5%;
     margin-left: 5%;
+    font-size: 30px;
+    color: white;
 }
 
-.hola{
+.resultado{
+    color: white;
+    margin-top: 2%;
+    margin-bottom: 5%;
+
+    /*FLEX*/
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    
+    flex-flow: row wrap;
 }
-.hola h2{
-    font-size: 200%;
-    text-align: center;
+
+.cajaResultados{
+    margin-left: 2%;
+    margin-bottom: 2%;
+    background-color: black;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    border-radius: 15px;
+    width: 30%;
 }
-.info{
-    background-color: #ff6f43;
+
+.resultadosBusqueda img{
     width: 30%;
     margin: 2%;
-    font-size: 150%;
+    border-radius: 5px;
 }
 
-.error {
-    background-color: #ff6f43;
-    font-size: 150%;
-    list-style-type: none; 
-    padding-left: 3%;
+.infoResultados{
+    width: 45%;
 }
 
-.links3{
-    text-decoration: none;
+.infoResultados h2{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-size: 30px;
     color: white;
 }
 
-
+.infoResultados h3{
+    font-size: 14px;
+}
 
 
 
@@ -1139,35 +1080,21 @@ body{
     }
 
     /*BUSCADOR*/
-    .artistaPop{
-        flex-flow: column wrap;
-        justify-content: center;
-        align-content: center;
+
+    .resultado{
+    color: white;
+    margin-top: 2%;
+    margin-bottom: 5%;
+
+    /*FLEX*/
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
     }
 
-    .artistapop img{
-        align-self: center;
-        width: 60%;
+    .cajaResultados{
+    width: 50%;
     }
-
-    .artistapop p{
-        margin: 0%;
-        margin-top: 2%;
-        width: 60%;
-        font-size: 18px;
-        text-align: justify;
-    }
-
-    .h32{
-        width: 100%;
-    }
-
-    .p{
-        margin: 0%;
-        margin-top: 5%;
-        width: 100%;
-        text-align: center;
-    } */
 
 }
 
@@ -1436,51 +1363,20 @@ body{
     }
 
     /* Resultados */
-    .hist{
-        margin: 5px;
-    }
-    .textopop{
-        margin: 0%;
-    }
-    .p{
-        width: 90%;
-    }
-    .hist h2{
-        font-size: 30px;
-    }
-    .hist p{
-        font-size: 18px;
-    }
-    .hist li{
-        font-size: 20px;
+    .resultado{
+    color: white;
+    margin-top: 2%;
+    margin-bottom: 5%;
 
-    }
-    .h32{
-        width: 100%;
-    }
-    .artistapop img{
-        width: 100%;
-    }
-    
-    .artistapop p{
-        font-size: 18px;
-        margin: 5%;
-        text-align: justify;
-    }
-    
-    
-    .info{
-        width: 100%;
-        margin: 0%;
-        margin-bottom: 10px;
-        margin-top:10px ;
-        
+    /*FLEX*/
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
     }
 
-    
-.nombreArtistaQueen{
-    color: aqua;
-}
+    .cajaResultados{
+    width: 90%;
+    }
 
 
     
