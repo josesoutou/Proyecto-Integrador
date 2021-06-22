@@ -1131,7 +1131,7 @@ body{
     }
 
     /*BUSCADOR*/
-    .artistapop{
+    /* .artistaPop{
         flex-flow: column wrap;
         justify-content: center;
         align-content: center;
@@ -1159,14 +1159,27 @@ body{
         margin-top: 5%;
         width: 100%;
         text-align: center;
+    } */
+
+    .busquedaR{
+        background-color: black;
+
+        /*FLEX*/
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-content: center;
     }
 
+    .headerResultados{
+        margin-top: 2%;
+        width: 60%;
+        font-size: 18px;
+        text-align: justify;
+        color: white;
+    }
 
 }
-
-
-
-
 
 
 @media(max-width:420px){

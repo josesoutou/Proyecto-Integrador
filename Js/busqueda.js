@@ -13,16 +13,14 @@ window.addEventListener("load", function() {
         })
         .then(function (datos) {
             console.log(datos);
-            let artista23 = document.querySelector(".resultadosBusqueda")
-            artista23.innerHTML = `
-                                    <p class="p">Resultados de la busqueda:</p>
-                                    <img src="${datos.data[1].artist.picture_medium}">
-                                    <h2>${datos.data[1].artist.name}</h2>
-                                    <h3> Mejor Album : ${datos.data[1].album.title}</h3>
-            
-                                `
-            
-            
+            let paginaBusqueda = document.querySelector(".resultadosBusqueda")
+            paginaBusqueda.innerHTML = `
+                <p class="headerResultados">Resultados de la busqueda:</p>
+                <div class="busquedaR">
+                    <img src="${datos.data[1].artist.picture_medium}">
+                    <h2 class="nombreResultado">${datos.data[1].artist.name}</h2>
+                    <h3 class="albumResultado"> Mejor Album: ${datos.data[1].album.title}</h3>
+                </div>`
         })
         .catch(function (error) {
             console.log('Tu error es: ' + error);

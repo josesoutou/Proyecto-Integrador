@@ -21,6 +21,7 @@ window.addEventListener("load", function() {
         }
 
     })
+
     //aca lo que hicimos fue resolver la cuestion acerca de los formularios. 
     const proxy = 'https://cors-anywhere.herokuapp.com/';
     let apiQueen = `${proxy}https://api.deezer.com/artist/412`;
@@ -34,7 +35,6 @@ window.addEventListener("load", function() {
                 let artistas = document.querySelector('#Queen--');
                 let probando = 
                 artistas.innerHTML = ` 
-                
                     <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&descripcion=Ariana Grande Butera ​ es una cantante, 
                     compositora, actriz, productora musical y diseñadora de modas estadounidense."> ${datos.name}</a></strong></h3>
                     <img src="${datos.picture_big}" class="fotos_artistas" >
@@ -43,7 +43,6 @@ window.addEventListener("load", function() {
                         <br><br>
                         Canción más popular:<a href="detail-song.html"> Bohemian Rhapsody</a>
                     </p> `
-
             })
             .catch(function (error) {
                 console.log('Tu error es: ' + error);
@@ -61,14 +60,15 @@ window.addEventListener("load", function() {
                 console.log(datos);
                 let artistasAriana = document.querySelector('#ariana--');
                 artistasAriana.innerHTML = ` 
-                <h3> <strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&descripcion=${datos.share}">${datos.name}</a></strong> </h3>
+                <h3> <strong>
+                    <a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&descripcion=${datos.share}">${datos.name}</a>
+                </strong> </h3>
                 <img src="${datos.picture_big}" class="fotos_artistas">
                 <p class="epigrafe_artistas">
                 Último album: <a href="detail-album.html"> Positions</a>
                 <br><br>
                 Canción más popular: <a href="detail-song.html"> 34+35</a>
-                </p>
-                 `
+                </p>`
             })
             .catch(function (error) {
                 console.log('Tu error es: ' + error);
@@ -87,14 +87,14 @@ window.addEventListener("load", function() {
                 console.log(datos);
                 let artistasKygo = document.querySelector('#kigo');
                 artistasKygo.innerHTML = `    
-                <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&descripcion=Ariana Grande Butera ​ es una cantante, 
-                compositora, actriz, productora musical y diseñadora de modas estadounidense.">${datos.name}</a></strong></h3>
-                <img src="${datos.picture_big}" class="fotos_artistas">
-                <p class="epigrafe_artistas">
-                    Último album: <a href="detail-album.html">Cloud nine</a>
-                    <br><br>
-                    Canción más popular:<a href="detail-song.html"> Fragile</a>
-                </p>`        
+                    <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&descripcion=Ariana Grande Butera es una cantante, 
+                    compositora, actriz, productora musical y diseñadora de modas estadounidense.">${datos.name}</a></strong></h3>
+                    <img src="${datos.picture_big}" class="fotos_artistas">
+                    <p class="epigrafe_artistas">
+                        Último album: <a href="detail-album.html">Cloud nine</a>
+                        <br><br>
+                        Canción más popular:<a href="detail-song.html"> Fragile</a>
+                    </p>`        
             })
             .catch(function (error) {
                 console.log('Tu error es: ' + error);
