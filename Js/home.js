@@ -60,7 +60,7 @@ window.addEventListener("load", function() {
                 let artistasAriana = document.querySelector('#ariana--');
                 artistasAriana.innerHTML = ` 
                 <h3> <strong>
-                    <a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&descripcion=${datos.share}">${datos.name}</a>
+                    <a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&idArtista=${datos.id}">${datos.name}</a>
                 </strong> </h3>
                 <img src="${datos.picture_big}" class="fotos_artistas">
                 <p class="epigrafe_artistas">
@@ -86,8 +86,7 @@ window.addEventListener("load", function() {
                 console.log(datos);
                 let artistasKygo = document.querySelector('#kigo');
                 artistasKygo.innerHTML = `    
-                    <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&descripcion=Ariana Grande Butera es una cantante, 
-                    compositora, actriz, productora musical y diseñadora de modas estadounidense.">${datos.name}</a></strong></h3>
+                    <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&idArtista=${datos.id}">${datos.name}</a></strong></h3>
                     <img src="${datos.picture_big}" class="fotos_artistas">
                     <p class="epigrafe_artistas">
                         Último album: <a href="detail-album.html">Cloud nine</a>
@@ -112,8 +111,7 @@ window.addEventListener("load", function() {
                 console.log(datos);
                 let artistasVela = document.querySelector('#vela1');
                 artistasVela.innerHTML = ` 
-                    <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&descripcion=Ariana Grande Butera ​ es una cantante, 
-                    compositora, actriz, productora musical y diseñadora de modas estadounidense.">${datos.name}</a></strong> </h3>
+                    <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&idArtista=${datos.id}">${datos.name}</a></strong> </h3>
                     <img src="${datos.picture_big}" class="fotos_artistas">
                     <p class="epigrafe_artistas">
                         Último album: <a href="detail-album.html">A contraluz</a>
@@ -137,7 +135,7 @@ window.addEventListener("load", function() {
                 console.log(datos);
               let artistasCalle = document.querySelector('#callejeros_');
                 artistasCalle.innerHTML = ` 
-                    <h3> <strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&descripcion=hola"> ${datos.name}</a></strong> </h3>
+                    <h3> <strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&idArtista=${datos.id}"> ${datos.name}</a></strong> </h3>
                     <img src="${datos.picture_big}" class="fotos_artistas">
                     <p class="epigrafe_artistas">
                         Último album:<a href="detail-album.html"> Señales</a>

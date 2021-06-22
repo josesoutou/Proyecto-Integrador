@@ -26,7 +26,7 @@ window.addEventListener("load", function() {
                 <p class="descripcion_artista">${datos.name} es no se de donde sacar la info f.</p>
                 
                 <br>
-                <h3 class="bio_artista">Sus top canciones:</h3>
+                <h3 class="bio_artista">Sus top Albums:</h3>
                 <br>
                 <p class="descripcion_artista">
 
@@ -35,7 +35,7 @@ window.addEventListener("load", function() {
         </div>`
                     
 
-        fetch(`${proxy}https://api.deezer.com/artist/${idArtista}/top`)
+        fetch(`${proxy}https://api.deezer.com/artist/${idArtista}/albums`)
 
         .then(function (response1) {
             return response1.json();
@@ -43,13 +43,14 @@ window.addEventListener("load", function() {
         .then(function (datos1) {
             console.log(datos1);
             console.log(datos1.data)
-            let probando = document.querySelector(".texto_d_artista")//Hay que ver como juntarlo con el otro div
+            // let probando = document.querySelector(".texto_d_artista")//Hay que ver como juntarlo con el otro div
             
             // probando.style.border = "3px solid white";
-            for (let index = 0; index < 6; index++) {
+            for (let index = 0; index < 5; index+=1) {
                 let track = datos1.data[index].title
-                probando.innerHTML = `
-                    <p>${datos.data.title}</p>
+                let probando = document.querySelector(".texto_d_artista")
+                probando.innerHTML += `
+                    <p>${track}</p>
                     `
             }
             probando.innerHTML = `<p> ${datos1.title} </p>`

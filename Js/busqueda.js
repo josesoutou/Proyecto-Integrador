@@ -13,13 +13,13 @@ window.addEventListener("load", function() {
         })
         .then(function (datos) {
             console.log(datos);
-            let artista23 = document.querySelector(".resultadosBusqueda")
+            let artista23 = document.querySelector(".resultado")
             for (let index = 0; index < 3; index++) {
                 artista23.innerHTML += `
-                <img src="${datos.data[index].artist.picture_medium}">
+                <div ><img src="${datos.data[index].artist.picture_medium}">
                 <h2>${datos.data[index].artist.name}</h2>
                 <h3> Mejor Album : ${datos.data[index].album.title}</h3>
-
+                </div>
             `
             }
             
