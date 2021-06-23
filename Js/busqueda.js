@@ -24,8 +24,8 @@ window.addEventListener("load", function() {
                 <div class="cajaResultados">
                     <img src="${datos.data[index].artist.picture_medium}">
                     <div class="infoResultados">
-                        <h2><a href="detail-artist.html?idArtista=${datos.data[index].artist.id}">${datos.data[index].artist.name}</h2></a>
-                        <h3><a href="detail-album.html?idAlbum=${datos.data[index].album.id}"> Mejor Album: ${datos.data[index].album.title}</h3></a>
+                        <a href="detail-artist.html?idArtista=${datos.data[index].artist.id}" class="nombreResultado">${datos.data[index].artist.name}</a>
+                        <a href="detail-album.html?idAlbum=${datos.data[index].album.id}" class="albumResultado"> Mejor Album: ${datos.data[index].album.title}</a>
                     </div>
                 </div>`
             }
@@ -34,13 +34,15 @@ window.addEventListener("load", function() {
             console.log('Tu error es: ' + error);
             // alert("No hay coincidencias")
             document.querySelector(".esperando").innerHTML = `<iframe src="https://giphy.com/embed/zLCiUWVfex7ji" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cartoonhangover-cartoon-hangover-god-of-the-internet-no-results-found-zLCiUWVfex7ji%22%3Evia GIPHY</a></p>/p> `
-            document.querySelector(".error").innerHTML = `<p class="mas_sugerencias">Más sugerencias: </p>
-            <a href="playlist.html" class="links3"> Playlist </a>
-            <br>
-            <a href="generos.html" class="links3"> Géneros </a>
-            <br>
-            <a href="detail-song.html" class="links3"> Canciones </a>
-            </p>`
+            document.querySelector(".error").innerHTML = `
+            <div class="masSugerencias">
+                <p>Más sugerencias: </p>
+                <a href="playlist.html" class="links3"> Playlist </a>
+                <br>
+                <a href="generos.html" class="links3"> Géneros </a>
+                <br>
+                <a href="detail-song.html" class="links3"> Canciones </a>
+            </div>`
             
         });
 

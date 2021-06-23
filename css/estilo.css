@@ -412,7 +412,7 @@ body{
 }
 
 .descripcion_artista a:hover{
-    background-color: #262626;
+    color: gainsboro;
 }
 
 
@@ -911,11 +911,13 @@ body{
     margin-left: 2%;
     margin-bottom: 2%;
     background-color: black;
+    border-radius: 15px;
+    width: 30%;
+
+    /*FLEX*/
     display: flex;
     flex-flow: row wrap;
     align-items: stretch;
-    border-radius: 15px;
-    width: 30%;
 }
 
 .resultadosBusqueda img{
@@ -926,19 +928,58 @@ body{
 
 .infoResultados{
     width: 45%;
+
+    /*FLEX*/
+    display: flex;
+    flex-flow: column wrap;
 }
 
-.infoResultados h2{
-    margin-top: 10%;
-    margin-bottom: 5%;
-    font-size: 30px;
+.infoResultados a:hover{
+    color: gainsboro;
+}
+
+.infoResultados a{
+    text-decoration: none;
     color: white;
 }
 
-.infoResultados h3{
+.nombreResultado{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.albumResultado{
     font-size: 14px;
 }
 
+/*PÁGINA ERROR*/
+
+.esperando{
+    width: 40%;
+    margin-left: 5%;
+}
+
+.error{
+    color: white;
+}
+
+.masSugerencias{
+    margin-bottom: 5%;
+    margin-left: 2%;
+}
+
+.masSugerencias p{
+    font-size: 30px;
+}
+
+.masSugerencias a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
 
 
 
