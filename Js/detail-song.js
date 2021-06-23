@@ -15,10 +15,10 @@ window.addEventListener("load", function() {
                 <img src="${datos.tracks.data[index].album.cover}">
                 <h2 class="titulo11">${datos.tracks.data[index].title}</h2>
                 <h2 > 
-                    <a href="detail-artist.html#bts_d">${datos.tracks.data[index].artist.name}</a> 
+                    <a href="detail-artist.html?idArtista=${datos.tracks.data[index].artist.id}">${datos.tracks.data[index].artist.name}</a> 
                 </h2>
                 <h2>
-                    <a href="detail-album.html">${datos.tracks.data[index].album.title}</a>
+                    <a href="detail-album.html?idAlbum=${datos.tracks.data[index].album.id}">${datos.tracks.data[index].album.title}</a>
                 </h2>
                 <p><button type="submit" id="boton${index}"  class="holaMundo123"><i class="far fa-star"></i></button></p>
                 <p id="estrellitafachera"><iframe src="${datos.tracks.data[index].preview}" width="100px" height="70" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe></p>

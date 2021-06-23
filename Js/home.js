@@ -32,9 +32,8 @@ window.addEventListener("load", function() {
             .then(function (datos) {
                 console.log(datos);
                 let artistas = document.querySelector('#Queen--');
-                let probando = 
                 artistas.innerHTML = ` 
-                    <h3><strong><a href="detail-artist.html?nombre=${datos.name}&imagen=${datos.picture_big}&idArtista=${datos.id}"> ${datos.name}</a></strong></h3>
+                    <h3><strong><a href="detail-artist.html?idArtista=${datos.id}"> ${datos.name}</a></strong></h3>
                     <img src="${datos.picture_big}" class="fotos_artistas" >
                     <p class="epigrafe_artistas">
                         Último album: <a href="detail-album.html?idAlbum=915785">A night at the opera</a>

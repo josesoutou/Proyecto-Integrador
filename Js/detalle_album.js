@@ -18,9 +18,9 @@ window.addEventListener("load", function() {
             
             <h2>${datos.title}</h2>  
             <img src="${datos.cover_medium}" alt="Portada del album">
-            <h2>${datos.contributors[0].name}</h2>
-            <h5>${datos.genres.data[0].name}</h5>
-             <p class="año_album">1975</p> 
+            <a href="detail-artist.html?idArtista=${datos.artist.id}"><h2>${datos.contributors[0].name}</h2></a>
+            <a href="genero_detalle.html?idGenero=${datos.genre_id}"><h5>${datos.genres.data[0].name}</h5></a>
+            <p class="año_album">${datos.release_date}</p> 
             <h4>Canciones más populares:</h4>
             <p class="canciones_album">
                 ${datos.tracks.data[1].title}

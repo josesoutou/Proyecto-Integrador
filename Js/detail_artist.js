@@ -41,10 +41,9 @@ window.addEventListener("load", function() {
             
             // probando.style.border = "3px solid white";
             for (let index = 0; index < 5; index+=1) {
-                let track = datos1.data[index].title
                 let probando = document.querySelector(".texto_d_artista")
                 probando.innerHTML += `
-                    <p>${track}</p>
+                <a href="detail-album.html?idAlbum=${datos1.data[index].id}"<p>${datos1.data[index].title}</p>
                     `
             }
             probando.innerHTML = `<p> ${datos1.title} </p>`
