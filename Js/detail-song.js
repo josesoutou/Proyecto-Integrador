@@ -8,7 +8,9 @@ window.addEventListener("load", function() {
     })
     .then(function (datos) {
         console.log(datos);
-        let arregloPlaylist = []
+        // let arregloPlaylist = [];
+        // localStorage.setItem("agregar", JSON.stringify(arregloPlaylist));
+        // localStorage.clear();
         let insertarTitulo = document.querySelectorAll(".cancion_d");
         for(let index=0; index < insertarTitulo.length; index++){
             insertarTitulo[index].innerHTML = `
@@ -28,22 +30,24 @@ window.addEventListener("load", function() {
         for (let index = 0; index < botonesFavoritos.length; index++) {
             botonesFavoritos[index].addEventListener("click", function () {
                 alert("Agregado a su playlist");
-                var infoArtista = [
-                    nombreCancion = datos.tracks.data[index].title,
-                    imagen = datos.tracks.data[index].album.cover,
-                    nombreArtista = datos.tracks.data[index].artist.name,
-                    albumNombre = datos.tracks.data[index].album.title,
-                    preview = datos.tracks.data[index].preview
-                ] ;
-                infoArtistaToString = JSON.stringify(infoArtista);
-                localStorage.setItem(`favoritos${index}`, infoArtistaToString);
-                arregloPlaylist.push(`favoritos${index}`);
-                localStorage.setItem(`favoritos`, JSON.stringify(arregloPlaylist))
-            })            
-        }
-        console.log(botonesFavoritos);
-        console.log(infoArtista);
+                let agarroElArrayVacio = localStorage.getItem("agregar");
+                let parseArrayVacio = JSON.parse(agarroElArrayVacio);
+                parseArrayVacio.push(datos.tracks.data[index].id);
+                localStorage.setItem("agregar", JSON.stringify(parseArrayVacio));
 
+            //     var infoArtista = [
+            //         nombreCancion = datos.tracks.data[index].title,
+            //         imagen = datos.tracks.data[index].album.cover,
+            //         nombreArtista = datos.tracks.data[index].artist.name,
+            //         albumNombre = datos.tracks.data[index].album.title,
+            //         preview = datos.tracks.data[index].preview
+            //     ] ;
+            //     infoArtistaToString = JSON.stringify(infoArtista);
+            //     localStorage.setItem(`favoritos${index}`, infoArtistaToString);
+            //     arregloPlaylist.push(`favoritos${index}`);
+            //     localStorage.setItem(`favoritos`, JSON.stringify(arregloPlaylist))
+            // })            
+        })}
     //     let index11 = document.querySelectorAll(`#boton${index}`);
     //     for(let i=0; i<index11.length; i++){
     //     index11[i].addEventListener ("click", function () {
