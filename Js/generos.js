@@ -76,7 +76,7 @@ window.addEventListener("load", function() {
             console.log(datos);
             let artistasJin = document.querySelector('#kpopp');
             artistasJin.innerHTML = ` 
-            <a href="genero_detalle.html#kk" class="links"><h2>K-pop</h2></a>
+            <a href="genero_detalle.html?idGenero=16" class="links"><h2>K-pop</h2></a>
                 <p>El artista mas escuchado de este genero:</p>  
                 <a href="detail-artist.html?idArtista=${datos.id}"><b>BTS</b></a>
                 <img class="img1"src="${datos.picture_big}" alt="image">

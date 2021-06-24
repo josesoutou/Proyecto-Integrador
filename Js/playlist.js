@@ -1,23 +1,3 @@
-let arregloPlaylistString = localStorage.getItem("favoritos");
-let arregloPlaylist = JSON.parse(arregloPlaylistString);
-let favoritos = [];
-for (let index = 0; index < arregloPlaylist.length; index++) {
-    let favoritoString = localStorage.getItem(`favoritos${index}`)
-    let favorito = JSON.parse(favoritoString);
-    favoritos.push(favorito);
-}
-console.log(favoritos)
-
-for (let i = 0; i < favoritos.length; i++) {
-    console.log(favoritos[i]);
-    let probando1234567 = document.querySelector(".playlist10");
-    probando1234567.innerHTML += `<div class="cancionP"> <img class="imagen_playlist" src="${favoritos[i][1]}">
-    <div class="textoP"><h2>${favoritos[i][0]}</h2><P></P></div></div>`
-    
-}
-
-//BUSCADOR
-
 let campoBuscar = document.querySelector("#campoBuscar"); 
 // let isNanFacha = campoBuscar.value; 
 campoBuscar.addEventListener("focus", function () {
@@ -39,6 +19,33 @@ submit123.addEventListener("submit", function (e) {
         this.submit();
     }
 })
+
+let arregloPlaylistString = localStorage.getItem("favoritos");
+let arregloPlaylist = JSON.parse(arregloPlaylistString);
+let favoritos = [];
+for (let index = 0; index < 44; index++) {
+    let favoritoString = localStorage.getItem(`favoritos${index}`)
+    let favorito = JSON.parse(favoritoString);
+    favoritos.push(favorito);
+    console.log(favoritos)
+}
+    
+
+for (let i = 0; i < favoritos.length; i++) {
+    console.log(favoritos[i]);
+    let probando1234567 = document.querySelector(".playlist10");
+    probando1234567.innerHTML += `<div class="cancionP"> <img class="imagen_playlist" src="${favoritos[i][1]}">
+    <div class="textoP"><h2>${favoritos[i][0]}</h2><P></P></div></div>`
+    
+}
+ let limpiar = document.querySelector(".limpiar");
+ limpiar.addEventListener("click", function(e){
+(e).preventDefault();
+localStorage.removeItem("favoritos1");
+})
+//BUSCADOR
+
+
 
 // window.addEventListener("load", function() {
 
