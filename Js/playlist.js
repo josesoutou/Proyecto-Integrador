@@ -29,7 +29,7 @@ window.addEventListener("load", function () {
         .then(function (datos) {
             console.log(datos);
             agarrandoDivGrande[z].innerHTML+=`
-            <div class="cancionP"> <img class="imagen_playlist" src="${datos.contributors[0].picture_big}"> 
+            <div class="cancionP"> <img class="imagen_playlist" src="${datos.contributors[0].album.cover_medium}"> 
             <div class="textoP"><h2>${datos.title}</h2><P></P></div></div>
             `
         })
@@ -42,6 +42,7 @@ window.addEventListener("load", function () {
     }
 
 
+//BUSCADOR
 
 let campoBuscar = document.querySelector("#campoBuscar"); 
 // let isNanFacha = campoBuscar.value; 
