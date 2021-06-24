@@ -393,6 +393,15 @@ body{
     margin-left: 10%;
 }
 
+.texto_d_artista a{
+    text-decoration: none;
+    color: white;
+}
+
+.texto_d_artista a:hover{
+    color: gainsboro;
+}
+
 .texto_d_artista h3{
     font-size: 30px;
 }
@@ -847,7 +856,6 @@ body{
     text-decoration: none;
     color: white;
 }
-
 
 /*pagina resultados*/
 
