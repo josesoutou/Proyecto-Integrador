@@ -55,7 +55,7 @@ window.addEventListener("load", function() {
                         for (let index = 0; index < 3; index++) {
                             let cadaGenero = document.querySelector(".hola123");
                             cadaGenero.innerHTML += `  
-                            <a href="detail-artist.html?idArtista=${datos1.data[index].id}"><b>${datos1.data[index].name}</b></a>
+                            <a href="detail-artist.html?idArtista=${datos1.data[index].id}" class="nombresG"><b>${datos1.data[index].name}</b></a>
                             <img class="img1" src="${datos1.data[index].picture_big}" alt="image"> `                          
                         }
                     })
