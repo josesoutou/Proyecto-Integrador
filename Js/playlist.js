@@ -31,7 +31,7 @@ window.addEventListener("load", function () {
             agarrandoDivGrande[z].innerHTML+=`
             <div class="cancionP"> <img class="imagen_playlist" src="${datos.album.cover_medium}"> 
             <div class="textoP"><h2>${datos.title}</h2><P>${datos.artist.name}</P></div>
-            <iframe src="${datos.preview}" width="170px" height="70" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe></p>
+            <p><iframe src="${datos.preview}" width="170px" height="70" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe></p>
             
             </div>
             `

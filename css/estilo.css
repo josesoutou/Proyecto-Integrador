@@ -617,15 +617,47 @@ body{
 
 
 /*playlist*/
-.ocultateWeon { 
-    display: none;
+
+.juancaPicuzzi{
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 2%;
 }
 
-.fa-trash{
-    font-size: 10px;
-    margin:100px;
-    background-color: orange;
+.soyTuPadre{
+    background-color: rgb(31, 29, 29);
+    width: 100%;
+
+    /*FLEX*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: center;
 }
+
+.playlist10{
+    width: 80%;
+}
+
+.playlist10 p{
+    margin-left: 30%;
+}
+
+.cancion P{
+    width: 30%;
+}
+
+.textoP{
+    width: 60%;
+}
+
+.borrar{
+    width: 10%;
+    font-size: 20px;
+    text-align: center;
+    align-self: center;
+}
+
 .tit{
     color: white;
     width: 20%;
@@ -633,11 +665,11 @@ body{
     font-size: 200%;
 }
 
-/* .fa-play-circle{
+.fa-play-circle{
     margin-left: auto;
 
     padding: 17px;
-}    */
+}   
 
 .PadreP{
     margin: 50px;
@@ -654,27 +686,9 @@ body{
     display: flex;
 }
     
-.imagen_playlist{
-    width: 7%;
-}
 .A{
     
     margin-left: auto;
-}
-
-.MINUTOS{
-    padding: 0.9%;
-    margin-left: auto;
-    align-self: center;
-}
-
-
-
-.textoP{
-    /* background-color: darkblue;  */
-    margin-left: 2%;
-    color: white;
-    width: 80%;
 }
 
 .buttonP{
@@ -864,6 +878,8 @@ body{
     text-decoration: none;
     color: white;
 }
+
+
 
 /*pagina resultados*/
 

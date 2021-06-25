@@ -8,7 +8,7 @@ window.addEventListener("load", function() {
     })
     .then(function (datos) {
         console.log(datos);
-        //  let arregloPlaylist = [];
+        // let arregloPlaylist = [];
         // localStorage.setItem("agregar", JSON.stringify(arregloPlaylist));
         // localStorage.clear();
 
