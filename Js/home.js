@@ -442,7 +442,7 @@ window.addEventListener("load", function() {
             });
 
     
-    
+    //Aca le agregamos un borde a los artistas/albums/canciones cuando pasamos el mouse sobre ellos
 
     let tituloArtista1 = document.querySelectorAll('.artistas');
 
@@ -452,9 +452,6 @@ window.addEventListener("load", function() {
              })
             tituloArtista1[index].addEventListener("mouseout", function () {
                 tituloArtista1[index].style.border = '3px solid black';
-            })
-            tituloArtista1[index].addEventListener("click", function() {
-                
             })
          }
          

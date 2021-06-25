@@ -46,7 +46,10 @@ window.addEventListener("load", function() {
             console.log('Tu error es: ' + error);
         });
 
-        let apiKygo = `${proxy}https://api.deezer.com/artist/4768753`;
+
+    //Kygo
+
+    let apiKygo = `${proxy}https://api.deezer.com/artist/4768753`;
 
     fetch(apiKygo)
         .then(function (response) {
@@ -66,49 +69,51 @@ window.addEventListener("load", function() {
             console.log('Tu error es: ' + error);
         });
 
-        let apiBTS1= `${proxy}https://api.deezer.com/artist/6982223`;
+    //BTS
+
+    let apiBTS1= `${proxy}https://api.deezer.com/artist/6982223`;
+
+    fetch(apiBTS1)
+        .then(function (response) {
+                return response.json();
+        })
+        .then(function (datos) {
+            console.log(datos);
+            let artistasJin = document.querySelector('#kpopp');
+            artistasJin.innerHTML = ` 
+                <a href="genero_detalle.html?idGenero=16" class="links"><h2>K-pop</h2></a>
+                <p>El artista mas escuchado de este genero:</p>  
+                <a href="detail-artist.html?idArtista=${datos.id}"><b>BTS</b></a>
+                <img class="img1"src="${datos.picture_big}" alt="image">
+            `
+        })
+        .catch(function (error) {
+            console.log('Tu error es: ' + error);
+        });
+
+    //BUSCADOR
+
+    let campoBuscar = document.querySelector("#campoBuscar"); 
     
-        fetch(apiBTS1)
-            .then(function (response) {
-                    return response.json();
-            })
-            .then(function (datos) {
-                console.log(datos);
-                let artistasJin = document.querySelector('#kpopp');
-                artistasJin.innerHTML = ` 
-                    <a href="genero_detalle.html?idGenero=16" class="links"><h2>K-pop</h2></a>
-                    <p>El artista mas escuchado de este genero:</p>  
-                    <a href="detail-artist.html?idArtista=${datos.id}"><b>BTS</b></a>
-                    <img class="img1"src="${datos.picture_big}" alt="image">
-                `
-            })
-            .catch(function (error) {
-                console.log('Tu error es: ' + error);
-            });
+    campoBuscar.addEventListener("focus", function () {
+        campoBuscar.style.border = "3px solid green";
+    })
+    campoBuscar.addEventListener("blur", function () {
+        if (campoBuscar.value === '' || campoBuscar.value.length < 3) {
+            campoBuscar.style.border = "3px solid red";
+        }
+    })
 
-        //BUSCADOR
+    let submit123 = document.querySelector("#submit123");
 
-        let campoBuscar = document.querySelector("#campoBuscar"); 
-     
-        campoBuscar.addEventListener("focus", function () {
-            campoBuscar.style.border = "3px solid green";
-        })
-        campoBuscar.addEventListener("blur", function () {
-            if (campoBuscar.value === '' || campoBuscar.value.length < 3) {
-                campoBuscar.style.border = "3px solid red";
-            }
-        })
-
-        let submit123 = document.querySelector("#submit123");
-
-        submit123.addEventListener("submit", function (e) {
-            e.preventDefault();
-            if (campoBuscar.value === '' || campoBuscar.value.length < 3) {
-                alert("¡ERROR! El campo no puede estar vacio y debe contener al menos 3 caracteres");
-            }
-            else {
-                alert("Formulario enviado correctamente");
-                this.submit();
-            }
-        })
+    submit123.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (campoBuscar.value === '' || campoBuscar.value.length < 3) {
+            alert("¡ERROR! El campo no puede estar vacio y debe contener al menos 3 caracteres");
+        }
+        else {
+            alert("Formulario enviado correctamente");
+            this.submit();
+        }
+    })
 });

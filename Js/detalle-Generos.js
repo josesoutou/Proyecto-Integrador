@@ -42,11 +42,11 @@ window.addEventListener("load", function() {
         console.log(datos);
         let generoId = document.querySelector(".diego")
         generoId.innerHTML = `
-        <h3 class="text1">${datos.name}</h3>
-        <br>
-        <p>Los artistas mas escuchado de este genero:</p>
-        <br>`
-            let apiGeneroArtista = `${proxy}https://api.deezer.com/genre/${idGenero}/artists`;
+            <h3 class="text1">${datos.name}</h3>
+            <br>
+            <p>Los artistas mas escuchado de este genero:</p>
+            <br>`
+                let apiGeneroArtista = `${proxy}https://api.deezer.com/genre/${idGenero}/artists`;
                 fetch(apiGeneroArtista)
                     .then(function (response1) {
                         return response1.json();
