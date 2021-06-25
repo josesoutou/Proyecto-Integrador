@@ -8,10 +8,10 @@ window.addEventListener("load", function () {
 
     for (let i = 0; i < parseoOficial.length; i++) {
         probando1234567.innerHTML += `
-        
+        <div class="soyTuPadre"> 
             <div class="playlist10"></div>
             <div class="borrar"></div>
-        
+        </div>
         `
         ;   
     }
@@ -40,20 +40,21 @@ window.addEventListener("load", function () {
             console.log('Tu error es: ' + error);
         });
 
-        let basura = document.querySelector(".borrar")
+        let basura = document.querySelectorAll(".borrar")
         console.log(basura);
 
         for (let j = 0; j < basura.length; j++){
-            basura[j].innerHTML += `
-            <p><button type="submit" class="botonLimpiar"><i class="fas fa-trash"></i></button></p>
+            basura[j].innerHTML = `
+            <i id="icono" class="fas fa-trash"></i>
             `
             basura[j].addEventListener("click", function(){
-                
+                let ocultar = document.querySelectorAll(".soyTuPadre");
+                ocultar[j].classList.add("ocultateWeon");
 
                 let eliminarCancion = parseoOficial.indexOf(parseoOficial[j]);
                 parseoOficial.splice(eliminarCancion,1);
                 localStorage.setItem("agregar", JSON.stringify(parseoOficial));
-            })
+            });
             
             
         }

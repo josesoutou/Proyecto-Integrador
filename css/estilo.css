@@ -617,12 +617,14 @@ body{
 
 
 /*playlist*/
-
+.ocultateWeon { 
+    display: none;
+}
 
 .fa-trash{
     font-size: 10px;
     margin:100px;
-    background-color: chartreuse;
+    background-color: orange;
 }
 .tit{
     color: white;
