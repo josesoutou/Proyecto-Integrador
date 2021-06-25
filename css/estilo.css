@@ -618,6 +618,12 @@ body{
 
 /*playlist*/
 
+
+.fa-trash{
+    font-size: 10px;
+    margin:100px;
+    background-color: chartreuse;
+}
 .tit{
     color: white;
     width: 20%;
@@ -625,11 +631,11 @@ body{
     font-size: 200%;
 }
 
-.fa-play-circle{
+/* .fa-play-circle{
     margin-left: auto;
 
     padding: 17px;
-}   
+}    */
 
 .PadreP{
     margin: 50px;

@@ -8,9 +8,9 @@ window.addEventListener("load", function() {
     })
     .then(function (datos) {
         console.log(datos);
-        let arregloPlaylist = [];
-        localStorage.setItem("agregar", JSON.stringify(arregloPlaylist));
-        localStorage.clear();
+        //  let arregloPlaylist = [];
+        // localStorage.setItem("agregar", JSON.stringify(arregloPlaylist));
+        // localStorage.clear();
 
         let insertarTitulo = document.querySelectorAll(".cancion_d");
         for(let index=0; index < insertarTitulo.length; index++){

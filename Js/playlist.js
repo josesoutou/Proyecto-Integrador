@@ -8,10 +8,10 @@ window.addEventListener("load", function () {
 
     for (let i = 0; i < parseoOficial.length; i++) {
         probando1234567.innerHTML += `
-        <div class="divgrande">
+        
             <div class="playlist10"></div>
             <div class="borrar"></div>
-        </div>
+        
         `
         ;   
     }
@@ -29,15 +29,35 @@ window.addEventListener("load", function () {
         .then(function (datos) {
             console.log(datos);
             agarrandoDivGrande[z].innerHTML+=`
-            <div class="cancionP"> <img class="imagen_playlist" src="${datos.contributors[0].album.cover_medium}"> 
-            <div class="textoP"><h2>${datos.title}</h2><P></P></div></div>
+            <div class="cancionP"> <img class="imagen_playlist" src="${datos.album.cover_medium}"> 
+            <div class="textoP"><h2>${datos.title}</h2><P>${datos.artist.name}</P></div>
+            <iframe src="${datos.preview}" width="170px" height="70" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe></p>
+            
+            </div>
             `
         })
         .catch(function (error) {
             console.log('Tu error es: ' + error);
         });
 
-;
+        let basura = document.querySelector(".borrar")
+        console.log(basura);
+
+        for (let j = 0; j < basura.length; j++){
+            basura[j].innerHTML += `
+            <p><button type="submit" class="botonLimpiar"><i class="fas fa-trash"></i></button></p>
+            `
+            basura[j].addEventListener("click", function(){
+                
+
+                let eliminarCancion = parseoOficial.indexOf(parseoOficial[j]);
+                parseoOficial.splice(eliminarCancion,1);
+                localStorage.setItem("agregar", JSON.stringify(parseoOficial));
+            })
+            
+            
+        }
+          console.log(parseoOficial); 
         
     }
 
