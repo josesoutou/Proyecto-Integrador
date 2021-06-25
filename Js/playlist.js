@@ -30,7 +30,8 @@ window.addEventListener("load", function () {
             console.log(datos);
             agarrandoDivGrande[z].innerHTML+=`
             <div class="cancionP"> <img class="imagen_playlist" src="${datos.album.cover_medium}"> 
-            <div class="textoP"><h2>${datos.title}</h2><P>${datos.artist.name}</P></div>
+            <div class="textoP"><h2><a href="detail-song.html">${datos.title}</a></h2>
+            <a href="detail-artist.html?idArtista=${datos.contributors[0].id}"><P>${datos.artist.name}</P></div></a>
             <iframe src="${datos.preview}" width="170px" height="70" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe></p>
             
             </div>
