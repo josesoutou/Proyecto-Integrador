@@ -4,24 +4,24 @@ window.addEventListener("load", function() {
     const proxy = 'https://cors-anywhere.herokuapp.com/';
     let apiQueenGenero = `${proxy}https://api.deezer.com/artist/412`;
 
-        fetch(apiQueenGenero)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (datos) {
-                console.log(datos);
-                let artistas = document.querySelector('.CantanteQ');
-                artistas.innerHTML = ` 
-                <a href="genero_detalle.html?idGenero=152" class="links"><h2>Rock</h2></a>
-                <p>El artista mas escuchado de este genero:</p> 
-                
-                <a href="detail-artist.html?idArtista=${datos.id}"><b>${datos.name}</b></a>
-                <img class="img1" src="${datos.picture_big}" alt="image"> `
+    fetch(apiQueenGenero)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (datos) {
+            console.log(datos);
+            let artistas = document.querySelector('.CantanteQ');
+            artistas.innerHTML = ` 
+            <a href="genero_detalle.html?idGenero=152" class="links"><h2>Rock</h2></a>
+            <p>El artista mas escuchado de este genero:</p> 
+            
+            <a href="detail-artist.html?idArtista=${datos.id}"><b>${datos.name}</b></a>
+            <img class="img1" src="${datos.picture_big}" alt="image"> `
 
-            })
-            .catch(function (error) {
-                console.log('Tu error es: ' + error);
-            });
+        })
+        .catch(function (error) {
+            console.log('Tu error es: ' + error);
+        });
 
     
     //Ariana Grande
@@ -68,28 +68,28 @@ window.addEventListener("load", function() {
 
         let apiBTS1= `${proxy}https://api.deezer.com/artist/6982223`;
     
-    fetch(apiBTS1)
-        .then(function (response) {
-                return response.json();
-        })
-        .then(function (datos) {
-            console.log(datos);
-            let artistasJin = document.querySelector('#kpopp');
-            artistasJin.innerHTML = ` 
-            <a href="genero_detalle.html?idGenero=16" class="links"><h2>K-pop</h2></a>
-                <p>El artista mas escuchado de este genero:</p>  
-                <a href="detail-artist.html?idArtista=${datos.id}"><b>BTS</b></a>
-                <img class="img1"src="${datos.picture_big}" alt="image">
-             `
-        })
-        .catch(function (error) {
-            console.log('Tu error es: ' + error);
-        });
+        fetch(apiBTS1)
+            .then(function (response) {
+                    return response.json();
+            })
+            .then(function (datos) {
+                console.log(datos);
+                let artistasJin = document.querySelector('#kpopp');
+                artistasJin.innerHTML = ` 
+                    <a href="genero_detalle.html?idGenero=16" class="links"><h2>K-pop</h2></a>
+                    <p>El artista mas escuchado de este genero:</p>  
+                    <a href="detail-artist.html?idArtista=${datos.id}"><b>BTS</b></a>
+                    <img class="img1"src="${datos.picture_big}" alt="image">
+                `
+            })
+            .catch(function (error) {
+                console.log('Tu error es: ' + error);
+            });
 
         //BUSCADOR
 
         let campoBuscar = document.querySelector("#campoBuscar"); 
-        // let isNanFacha = campoBuscar.value; 
+     
         campoBuscar.addEventListener("focus", function () {
             campoBuscar.style.border = "3px solid green";
         })
@@ -98,7 +98,9 @@ window.addEventListener("load", function() {
                 campoBuscar.style.border = "3px solid red";
             }
         })
+
         let submit123 = document.querySelector("#submit123");
+
         submit123.addEventListener("submit", function (e) {
             e.preventDefault();
             if (campoBuscar.value === '' || campoBuscar.value.length < 3) {

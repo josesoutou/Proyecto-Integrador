@@ -618,6 +618,7 @@ body{
 
 /*playlist*/
 
+
 .juancaPicuzzi{
     display: flex;
     flex-flow: column wrap;
@@ -625,8 +626,9 @@ body{
 }
 
 .soyTuPadre{
-    background-color: rgb(31, 29, 29);
+    background-color: black;
     width: 100%;
+    padding: 1%;
 
     /*FLEX*/
     display: flex;
@@ -637,18 +639,44 @@ body{
 
 .playlist10{
     width: 80%;
+
+    /*FLEX*/
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .playlist10 p{
     margin-left: 30%;
 }
 
-.cancion P{
-    width: 30%;
+.playlist10 img{
+    width: 10%;
 }
 
-.textoP{
-    width: 60%;
+.textoPlaylist{
+    width: 40%;
+    margin-left: 2%;
+
+    /*FLEX*/
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.textoPlaylist h2{
+    font-size: 30px
+}
+
+.textoPlaylist h3{
+    font-size: 25px;
+}
+
+.textoPlaylist a{
+    text-decoration: none;
+    color: white;
+}
+
+.textoPlaylist a:hover{
+    color: rgb(160, 157, 157);
 }
 
 .borrar{
@@ -656,6 +684,7 @@ body{
     font-size: 20px;
     text-align: center;
     align-self: center;
+    color: white;
 }
 
 .tit{
@@ -676,49 +705,29 @@ body{
 }
 
 .infoP{
-    background-color: rgb(31, 29, 29);
     width: 97%;
-    margin: auto;
     margin-top: 2%;
     height: 40px;
     color: cornsilk;
     padding: 0.9%;
+    font-size: 25px;
+
+    /*FLEX*/
     display: flex;
 }
-    
-.A{
-    
-    margin-left: auto;
+
+.P{
+   margin-left: 56%; 
 }
 
-.buttonP{
-    background-color:black;
-    font-size: 180%;
-    text-decoration: none;
-    width: 200px;
-    height: 50px;
-    color: blanchedalmond;    
+.C{
+    margin-left: 10%;
 }
 
 .tituloP{
     text-align: center;
     color: cornsilk;
     font-size: 130%;
-}
-.cancionP {
-    display: flex;
-    background-color: rgb(56, 49, 45);
-    height: 80px;
-    margin-top: 1%;
-    margin: 2%;
-    margin-bottom: 1%;
-    font-size: 150%;
-    padding: 5px;
-    color: white;
-}
-
-.cancionP i{
-    align-self: center;
 }
 
 .AGREGAR {
@@ -735,7 +744,9 @@ body{
 
 }
 
-
+.ocultateWeon{
+    display: none ;
+}
 
 
 
@@ -958,11 +969,18 @@ body{
 
 .error{
     color: white;
+    font-size: 20px;
+}
+
+.error a{
+    text-decoration: none;
+    color: white;
 }
 
 .masSugerencias{
     margin-bottom: 5%;
     margin-left: 2%;
+    font-size: 30px;
 }
 
 .masSugerencias p{
@@ -1361,6 +1379,9 @@ body{
     .textoP{
         font-size: 50%;
     }
+    a {
+        text-decoration: none;
+        }
 
     .imagen_playlist{
         width: 10%;

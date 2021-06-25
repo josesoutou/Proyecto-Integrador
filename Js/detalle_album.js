@@ -18,8 +18,12 @@ window.addEventListener("load", function() {
             
             <h2>${datos.title}</h2>  
             <img src="${datos.cover_medium}" alt="Portada del album">
-            <a href="detail-artist.html?idArtista=${datos.artist.id}"><h2>${datos.contributors[0].name}</h2></a>
-            <a href="genero_detalle.html?idGenero=${datos.genre_id}"><h5>${datos.genres.data[0].name}</h5></a>
+            <a href="detail-artist.html?idArtista=${datos.artist.id}">
+                <h2>${datos.contributors[0].name}</h2>
+            </a>
+            <a href="genero_detalle.html?idGenero=${datos.genre_id}">
+                <h5>${datos.genres.data[0].name}</h5>
+            </a>
             <p class="año_album">${datos.release_date}</p> 
             <h4>Canciones más populares:</h4>
             <p class="canciones_album">
@@ -28,33 +32,7 @@ window.addEventListener("load", function() {
             <p class="canciones_album">
                 ${datos.tracks.data[2].title}
             </p>
-            `
-
-            // fetch(`${proxy}https://api.deezer.com/artist/${idArtista}/top`)
-
-            // .then(function (response1) {
-            //     return response1.json();
-            // })
-            // .then(function (datos1) {
-            //     console.log(datos1);
-            //     console.log(datos1.data)
-            //     let probando = document.querySelector(".texto_d_artista")//Hay que ver como juntarlo con el otro div
-                
-            //     // probando.style.border = "3px solid white";
-            //     for (let index = 0; index < 6; index++) {
-            //         let track = datos1.data[index].title
-            //         probando.innerHTML = `
-            //                             <p>holaaa</p>
-            //                             `
-                                        
-                    
-            //     }
-            //     probando.innerHTML = `<p> ${datos1.title} </p>`
-            // })
-            // .catch(function (error) {
-            //     console.log('Tu error es: ' + error);
-            // });
-                
+            `   
     })
     .catch(function (error) {
         console.log('Tu error es: ' + error);
@@ -65,7 +43,7 @@ window.addEventListener("load", function() {
     //BUSCADOR
 
     let campoBuscar = document.querySelector("#campoBuscar"); 
-    // let isNanFacha = campoBuscar.value; 
+
     campoBuscar.addEventListener("focus", function () {
         campoBuscar.style.border = "3px solid green";
     })
@@ -75,6 +53,7 @@ window.addEventListener("load", function() {
         }
     })
     let submit123 = document.querySelector("#submit123");
+    
     submit123.addEventListener("submit", function (e) {
         e.preventDefault();
         if (campoBuscar.value === '' || campoBuscar.value.length < 3) {

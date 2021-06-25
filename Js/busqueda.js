@@ -36,7 +36,6 @@ window.addEventListener("load", function() {
         })
         .then(function (datos) {
             console.log(datos);
-            // document.querySelector(".esperando").innerHTML = `<p> esperraaaaa</p> `
             document.querySelector(".tituloResultados").innerText = `Resultados de "${valorConsulta}"`
             
             let artista23 = document.querySelector(".resultado")

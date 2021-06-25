@@ -445,6 +445,7 @@ window.addEventListener("load", function() {
     
 
     let tituloArtista1 = document.querySelectorAll('.artistas');
+
     for(let index = 0; index < tituloArtista1.length; index++){
              tituloArtista1[index].addEventListener("mouseover", function () {
                 tituloArtista1[index].style.border = '3px solid #ff6f43';
@@ -458,6 +459,7 @@ window.addEventListener("load", function() {
          }
          
     let tituloAlbum = document.querySelectorAll('.album_artista');
+
     for(let index = 0; index < tituloAlbum.length; index++){
         tituloAlbum[index].addEventListener("mouseover", function () {
             tituloAlbum[index].style.border = '3px solid #ff6f43';
@@ -468,6 +470,7 @@ window.addEventListener("load", function() {
     }
 
     let tituloCancion = document.querySelectorAll('.cancion_uno');
+    
     for(let index = 0; index < tituloAlbum.length; index++){
         tituloCancion[index].addEventListener("mouseover", function () {
             tituloCancion[index].style.border = '3px solid #ff6f43';

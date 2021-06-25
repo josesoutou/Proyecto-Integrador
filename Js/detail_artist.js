@@ -4,8 +4,6 @@ window.addEventListener("load", function() {
     let queryString = location.search;
     let queryStringObj = new URLSearchParams(queryString);
     let idArtista = queryStringObj.get("idArtista"); 
-    // let nombreArtista = queryStringObj.get("nombre"); 
-    // let imagenArtista = queryStringObj.get("imagen");
 
 
     fetch(`${proxy}https://api.deezer.com/artist/${idArtista}`)
@@ -31,26 +29,26 @@ window.addEventListener("load", function() {
 
         fetch(`${proxy}https://api.deezer.com/artist/${idArtista}/albums`)
 
-        .then(function (response1) {
-            return response1.json();
-        })
-        .then(function (datos1) {
-            console.log(datos1);
-            console.log(datos1.data)
-            // let probando = document.querySelector(".texto_d_artista")//Hay que ver como juntarlo con el otro div
-            
-            // probando.style.border = "3px solid white";
-            for (let index = 0; index < 5; index+=1) {
-                let probando = document.querySelector(".texto_d_artista")
-                probando.innerHTML += `
-                <a href="detail-album.html?idAlbum=${datos1.data[index].id}"<p>${datos1.data[index].title}</p>
-                    `
-            }
-            probando.innerHTML = `<p> ${datos1.title} </p>`
-        })
-        .catch(function (error) {
-            console.log('Tu error es: ' + error);
-        });
+            .then(function (response1) {
+                return response1.json();
+            })
+            .then(function (datos1) {
+                console.log(datos1);
+                console.log(datos1.data)
+                // let probando = document.querySelector(".texto_d_artista")//Hay que ver como juntarlo con el otro div
+                
+                // probando.style.border = "3px solid white";
+                for (let index = 0; index < 5; index+=1) {
+                    let probando = document.querySelector(".texto_d_artista")
+                    probando.innerHTML += `
+                    <a href="detail-album.html?idAlbum=${datos1.data[index].id}"<p>${datos1.data[index].title}</p>
+                        `
+                }
+                probando.innerHTML = `<p> ${datos1.title} </p>`
+            })
+            .catch(function (error) {
+                console.log('Tu error es: ' + error);
+            });
                 
     })
     .catch(function (error) {
@@ -60,7 +58,7 @@ window.addEventListener("load", function() {
     //BUSCADOR
 
     let campoBuscar = document.querySelector("#campoBuscar"); 
-    // let isNanFacha = campoBuscar.value; 
+    
     campoBuscar.addEventListener("focus", function () {
         campoBuscar.style.border = "3px solid green";
     })
@@ -69,7 +67,9 @@ window.addEventListener("load", function() {
             campoBuscar.style.border = "3px solid red";
         }
     })
+
     let submit123 = document.querySelector("#submit123");
+    
     submit123.addEventListener("submit", function (e) {
         e.preventDefault();
         if (campoBuscar.value === '' || campoBuscar.value.length < 3) {

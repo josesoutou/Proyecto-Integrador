@@ -14,7 +14,7 @@ window.addEventListener("load", function() {
 
         let insertarTitulo = document.querySelectorAll(".cancion_d");
         for(let index=0; index < insertarTitulo.length; index++){
-            insertarTitulo[index].innerHTML = `
+            insertarTitulo[index].innerHTML += `
                 <img src="${datos.tracks.data[index].album.cover}">
                 <h2 class="titulo11">${datos.tracks.data[index].title}</h2>
                 <h2 > 
@@ -35,37 +35,7 @@ window.addEventListener("load", function() {
                 let parseArrayVacio = JSON.parse(agarroElArrayVacio);
                 parseArrayVacio.push(datos.tracks.data[index].id);
                 localStorage.setItem("agregar", JSON.stringify(parseArrayVacio));
-
-            //     var infoArtista = [
-            //         nombreCancion = datos.tracks.data[index].title,
-            //         imagen = datos.tracks.data[index].album.cover,
-            //         nombreArtista = datos.tracks.data[index].artist.name,
-            //         albumNombre = datos.tracks.data[index].album.title,
-            //         preview = datos.tracks.data[index].preview
-            //     ] ;
-            //     infoArtistaToString = JSON.stringify(infoArtista);
-            //     localStorage.setItem(`favoritos${index}`, infoArtistaToString);
-            //     arregloPlaylist.push(`favoritos${index}`);
-            //     localStorage.setItem(`favoritos`, JSON.stringify(arregloPlaylist))
-            // })            
         })}
-    //     let index11 = document.querySelectorAll(`#boton${index}`);
-    //     for(let i=0; i<index11.length; i++){
-    //     index11[i].addEventListener ("click", function () {
-    //         alert("hola mundo")
-    //         let infoArtista = {
-    //             nombreCancion : `${datos.tracks.data[index].title}`,
-    //             imagen : `${datos.tracks.data[index].album.cover}`,
-    //             nombreArtista :`${datos.tracks.data[index].artist.name}`,
-    //             albumNombre : `${datos.tracks.data[index].album.title}`,
-    //             preview : `${datos.tracks.data[index].preview}`,
-    //         };
-    //         let infoArtistaAparce = JSON.stringify(infoArtista);
-    //         localStorage.setItem("favoritos", infoArtistaAparce);
-    //         window.location.href="playlist.js";
-    //     })   
-       
-    // }})
     })
     .catch(function (error) {
         console.log('Tu error ess: ' + error);
@@ -75,7 +45,7 @@ window.addEventListener("load", function() {
     //BUSCADOR
 
     let campoBuscar = document.querySelector("#campoBuscar"); 
-    // let isNanFacha = campoBuscar.value; 
+
     campoBuscar.addEventListener("focus", function () {
         campoBuscar.style.border = "3px solid green";
     })
@@ -85,6 +55,7 @@ window.addEventListener("load", function() {
         }
     })
     let submit123 = document.querySelector("#submit123");
+    
     submit123.addEventListener("submit", function (e) {
         e.preventDefault();
         if (campoBuscar.value === '' || campoBuscar.value.length < 3) {
